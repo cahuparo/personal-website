@@ -5,16 +5,37 @@
 # Configure the English version of the site.
 [en]
   languageCode = "en-us"
-  # contentDir = "content/en"  # Uncomment for multi-lingual sites, and move English content into `en` sub-folder.
+  contentDir = "content/en"  # Uncomment for multi-lingual sites, and move English content into `en` sub-folder.
 
-# Uncomment the lines below to configure your website in a second language.
-#[zh]
-#  languageCode = "zh-Hans"
-#  contentDir = "content/zh"
-#  title = "Chinese website title..."
-#  [zh.params]
-#    description = "Site description in Chinese..."
-#  [[zh.menu.main]]
-#    name = "Wo"
+# # Uncomment the lines below to configure your website in a second language.
+# [de]
+#  languageCode = "de-de"
+#  contentDir = "content/de"
+#  title = "Julian Pawlowski"
+#  [de.params]
+#    description = "Seitenbeschreibung auf Deutsch..."
+#
+#  [[de.menu.main]]
+#    name = "Über mich"
 #    url = "#about"
-#    weight = 1
+#    weight = 10
+#
+#  [[de.menu.main]]
+#    name = "Blog"
+#    url = "#posts"
+#    weight = 20
+#
+#  [[de.menu.main]]
+#    name = "Projekte"
+#    url = "#projects"
+#    weight = 30
+#
+#  [[de.menu.main]]
+#    name = "Veröffentlichungen"
+#    url = "#featured"
+#    weight = 40
+#
+#  [[de.menu.main]]
+#    name = "Kontakt"
+#    url = "#contact"
+#    weight = 60
