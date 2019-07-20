@@ -1,0 +1,2 @@
+# Redirect default Netlify subdomain to primary domain
+https://jpawlowski.netlify.com/* https://julian.pawlowski.me/:splat 301!
