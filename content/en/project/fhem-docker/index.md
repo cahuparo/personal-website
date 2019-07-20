@@ -25,13 +25,16 @@ links:
   icon_pack: fab
   name: Pre-build images
   url: https://hub.docker.com/r/fhem/fhem
+- icon: server
+  icon_pack: fa
+  name: Build status
+  url: https://travis-ci.com/fhem/fhem-docker
 - icon: paypal
   icon_pack: fab
   name: Make a donation via PayPal
   url: https://paypal.me/pools/c/8gDLrIWrG9
 - icon: patreon
   icon_pack: fab
-  name: Make a donation via Patreon
+  name: Support me on Patreon
   url: https://www.patreon.com/loredo
 ---
-

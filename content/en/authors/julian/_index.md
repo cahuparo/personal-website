@@ -72,4 +72,4 @@ He is a strategic business consultant for a modern workplace and for secure, clo
 
 As a technical architect, Julian provides consultancy to implement, deploy and maintain [Azure Information Protection](https://docs.microsoft.com/azure/information-protection/) since the early days of its evolution. In the meantime, he played a key role to successfully bring such services into active use by more than 150,000 employees.
 
-Julian is also an active part of the development community of the famous Home Automation system [FHEM](https://fhem.de/).
+Since 2013, Julian is also an active part of the development community of the famous Home Automation system [FHEM](https://fhem.de/).
