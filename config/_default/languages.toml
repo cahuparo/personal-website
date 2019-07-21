@@ -12,11 +12,13 @@
 #  languageCode = "de-de"
 #  contentDir = "content/de"
 #  title = "Julian Pawlowski"
+#  copyright = "Copyright &copy; {year} Julian Pawlowski · [Impressum](/de/impressum/) · [Datenschutz](/de/datenschutz/)"
+#
 #  [de.params]
 #    description = "Seitenbeschreibung auf Deutsch..."
 #
 #  [[de.menu.main]]
-#    name = "Über mich"
+#    name = "Home"
 #    url = "#about"
 #    weight = 10
 #

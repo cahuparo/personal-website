@@ -18,7 +18,7 @@ organizations:
   url: "https://digatus.de/"
 
 # Short bio (displayed in user profile at end of posts)
-bio: As a digatus employee of the first hour, he guides customers through the jungle of digitization. His enthusiasm for new technologies has been unbroken for 25 years. When he's not marking the way out of the digital jungle, he's programming his smart home - to the amazement of his Jack-Russel Terrier "Eddie". Even as a hobby programmer for the open source and smarthome community, he always pursues the goal of making the world a better place through technology.
+bio: Als digatus Mitarbeiter erster Stunde führt er Kunden durch den Dschungel der Digitalisierung. Seine Begeisterung für neue Technologien ist seit 25 Jahren ungebrochen. Wenn er nicht gerade den Weg aus dem digitalen Dschungel heraus absteckt, dann beschäftigt er sich mit der Programmierung seines Smarthomes – ganz zum Erstaunen seines Jack-Russel Terriers „Eddie“. Auch als Hobby Programmierer für die Open Source und Smarthome Community verfolgt er stets das Ziel, die Welt durch Technologie ein Stück weit besser zu machen.
 
 interests:
 - Cultural change of digitization
