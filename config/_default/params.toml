@@ -3,7 +3,7 @@
 
 # Color theme.
 #   Choose from `default`, `ocean`, `forest`, `dark`, `apogee`, `1950s`, `coffee`, `rose`, `strawberry`, `mr_robot`.
-color_theme = "forest"
+color_theme = "Julian"
 # Enable users to switch between day and night mode?
 day_night = true
 
@@ -22,7 +22,7 @@ twitter = "loredo"
 
 # Diplay a logo in navigation bar rather than title (optional).
 #   To enable, place an image in `static/img/` and reference its filename below. To disable, set the value to "".
-logo = ""
+logo = "logo.svg"
 
 # Enable source code highlighting? true/false
 # Documentation: https://sourcethemes.com/academic/docs/writing-markdown-latex/#highlighting-options
