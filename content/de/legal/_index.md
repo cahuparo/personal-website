@@ -25,6 +25,13 @@ Pählstraße 6 B<br/>
 Deutschland
 
 
+### Verwendete Software und Werkzeuge
+
+Diese Website wurde mit dem 
+<a href="https://sourcethemes.com/academic/" target="_blank" rel="noopener">Academic Motiv</a> für
+<a href="https://gohugo.io" target="_blank" rel="noopener">Hugo</a> erstellt.
+
+
 ### Quellenangabe für Grafiken und Bilder
 
 Externe Quellen sind innerhalb der jeweiligen Seiten erwähnt.

@@ -25,6 +25,13 @@ Pählstraße 6 B<br/>
 Germany
 
 
+### Used Software and Tools
+
+This website is powered by the
+<a href="https://sourcethemes.com/academic/" target="_blank" rel="noopener">Academic theme</a> for
+<a href="https://gohugo.io" target="_blank" rel="noopener">Hugo</a>.
+
+
 ### Graphics and Image Sources
 
 External sources are mentioned as part of the individual pages.
