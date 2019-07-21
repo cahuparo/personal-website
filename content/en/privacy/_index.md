@@ -107,7 +107,7 @@ title: Data Privacy Policy
 <p>Further information about the collection and use of data as well as your rights and protection options in Google's privacy policy found at</p>
 <p><a href="https://policies.google.com/privacy" target="_blank" rel="noopener">https://policies.google.com/privacy</a></p> -->
 
-<!-- <h4>CloudFlare</h4>
+<h4>CloudFlare</h4>
 <p>To secure our website and to optimize loading times, we use the CloudFlare CDN (content delivery network). This is a service of Cloudflare Inc., 101 Townsend Street, San Francisco, California 94107, USA, hereinafter referred to as "CloudFlare".</p>
 <p>Through certification according to the EU-US Privacy Shield</p>
 <p>(<a href="https://www.privacyshield.gov/participant?id=a2zt0000000GnZKAA0&amp;status=Active" target="_blank" rel="noopener">https://www.privacyshield.gov/participant?id=a2zt0000000GnZKAA0&amp;status=Active</a>)</p>
@@ -124,7 +124,7 @@ title: Data Privacy Policy
 <p>The data is used by CloudFlare for statistical evaluations of the accesses as well as for the security and optimization of the offer.</p>
 <p>If you do not agree to this processing, you have the option of preventing the installation of cookies by making the appropriate settings in your browser. Further details can be found in the section about cookies above.</p>
 <p>CloudFlare offers further information about its data collection and processing as well your rights and your options for protecting your privacy at this link:</p>
-<p><a href="https://www.cloudflare.com/privacypolicy/" target="_blank" rel="noopener">https://www.cloudflare.com/privacypolicy/</a>.</p> -->
+<p><a href="https://www.cloudflare.com/privacypolicy/" target="_blank" rel="noopener">https://www.cloudflare.com/privacypolicy/</a>.</p>
 
 
 <sup><a href="https://www.ratgeberrecht.eu/leistungen/muster-datenschutzerklaerung.html" target="_blank" rel="noopener">Model Data Protection Statement</a> for <a href="https://www.ratgeberrecht.eu/" target="_blank">Anwaltskanzlei Weiß &amp; Partner</a></sup>
