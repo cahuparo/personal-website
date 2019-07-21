@@ -18,5 +18,5 @@ Den kompletten Artikel finden Sie hier:
 
 Alternativ können Sie beide Teile des Artikels als PDF Datei herunterladen:
 
-1. [Weshalb Passwörter ein Auslaufmodel sind und warum sie uns trotzdem noch lange begleiten werden](/download/publication/State of the Union zum Ändere-Dein-Passwort-Tag 2019 - digatus.pdf)
-2. [Modernes Passwort Management in Unternehmen und warum Passwörter weniger wichtig werden](/download/publication/State of the Union zum Ändere-Dein-Passwort-Tag 2019 - Teil 2 - digatus.pdf)
+1. [Weshalb Passwörter ein Auslaufmodel sind und warum sie uns trotzdem noch lange begleiten werden](/download/publication/State of the Union zum Aendere-Dein-Passwort-Tag 2019 - digatus.pdf)
+2. [Modernes Passwort Management in Unternehmen und warum Passwörter weniger wichtig werden](/download/publication/State of the Union zum Aendere-Dein-Passwort-Tag 2019 - Teil 2 - digatus.pdf)
