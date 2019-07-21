@@ -11,6 +11,8 @@ tags:
 - Continuous Integration
 - DevOps
 - Shell Script
+- Raspberry Pi
+- Multi-Platform
 date: "2018-07-28T00:00:00Z"
 
 # Optional external URL for project (replaces project detail page).
@@ -35,7 +37,7 @@ links:
   url: https://travis-ci.com/fhem/fhem-docker
 - icon: paypal
   icon_pack: fab
-  name: Make a donation via PayPal
+  name: Donate via PayPal
   url: https://paypal.me/pools/c/8gDLrIWrG9
 - icon: patreon
   icon_pack: fab

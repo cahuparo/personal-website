@@ -26,7 +26,7 @@ links:
   url: https://svn.fhem.de/#contributors
 - icon: paypal
   icon_pack: fab
-  name: Make a donation via PayPal
+  name: Donate via PayPal
   url: https://paypal.me/pools/c/8gDLrIWrG9
 - icon: patreon
   icon_pack: fab
