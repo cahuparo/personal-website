@@ -66,7 +66,7 @@ email: ""
 
 Julian Pawlowski is a visionary innovation and technology evangelist.
 
-As part of the [digatus](https://digatus.de/) team, he is offering sustainable support in IT governance, IT strategy, and the future corporate vision on CIO-like level. This is very much appreciated by customers who want to expand their business and improve their attractiveness for employees of the generations [Y](https://en.wikipedia.org/wiki/Millennials) and [Z](https://en.wikipedia.org/wiki/Millennials).
+As part of the [digatus](https://digatus.de/) team, he is offering sustainable support in IT governance, IT strategy, and the future corporate vision on CIO-like level. This is very much appreciated by customers who want to expand their business and improve their attractiveness for employees of the generations [Y](https://en.wikipedia.org/wiki/Millennials) and [Z](https://en.wikipedia.org/wiki/Generation_Z).
 
 He is a strategic business consultant for a modern workplace and for secure, cloud-driven identity management and infrastructure. With sleek concepts, he integrates bleeding-edge [Microsoft 365](https://www.microsoft.com/microsoft-365) cloud technologies with on-premises line of business applications of all sizes.
 
