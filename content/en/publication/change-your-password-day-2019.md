@@ -16,3 +16,7 @@ You may find the complete article here:
 
 [digatus.de/magazin/](https://digatus.de/weshalb-passwoerter-ein-auslaufmodel-sind-und-warum-sie-uns-trotzdem-noch-lange-begleiten-werden/)
 
+Alternatively you may download a PDF file for both parts of the article :
+
+1. [Weshalb Passwörter ein Auslaufmodel sind und warum sie uns trotzdem noch lange begleiten werden](/download/publication/State of the Union zum Ändere-Dein-Passwort-Tag - digatus.pdf)
+2. [Modernes Passwort Management in Unternehmen und warum Passwörter weniger wichtig werden](/download/publication/State of the Union zum Ändere-Dein-Passwort-Tag - Teil 2 - digatus.pdf)

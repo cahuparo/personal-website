@@ -9,7 +9,7 @@ title: Datenschutzerklärung
 <p>I. Informationen über uns als Verantwortliche<br>II. Rechte der Nutzer und Betroffenen<br>III. Informationen zur Datenverarbeitung</p>
 <h3>I. Informationen über uns als Verantwortliche</h3>
 <p>Verantwortlicher Anbieter dieses Internetauftritts im datenschutzrechtlichen Sinne ist:</p>
-<p>Julian Pawlowski<br>Pählstraße 6 B<br>81377 Munich<br>Germany</p>
+<p>Julian Pawlowski<br>Pählstraße 6 B<br>81377 München<br>Deutschland</p>
 <p>E-Mail: &#106;&#117;&#108;&#105;&#097;&#110;&#064;&#112;&#097;&#119;&#108;&#111;&#119;&#115;&#107;&#105;&#046;&#109;&#101;</p>
 <p>Datenschutzbeauftragte/r beim Anbieter ist:</p>
 <p>Julian Pawlowski</p>
@@ -94,7 +94,7 @@ title: Datenschutzerklärung
 <p><a href="https://wiki.osmfoundation.org/wiki/Privacy_Policy" target="_blank" rel="noopener">https://wiki.osmfoundation.org/wiki/Privacy_Policy</a></p>
 <p>weitere Informationen zur Erhebung und Nutzung der Daten sowie zu Ihren Rechten und Möglichkeiten zum Schutz Ihrer Privatsphäre an.</p>
 
-<h4>YouTube</h4>
+<!-- <h4>YouTube</h4>
 <p>In unserem Internetauftritt setzen wir YouTube ein. Hierbei handelt es sich um ein Videoportal der YouTube LLC., 901 Cherry Ave., 94066 San Bruno, CA, USA, nachfolgend nur „YouTube“ genannt.</p>
 <p>YouTube ist ein Tochterunternehmen der Google LLC., Gordon House, Barrow Street, Dublin 4, Irland, nachfolgend nur „Google“ genannt.</p>
 <p>Durch die Zertifizierung nach dem EU-US-Datenschutzschild („EU-US Privacy Shield“)</p>
@@ -107,9 +107,9 @@ title: Datenschutzerklärung
 <p>Zum Zwecke der Funktionalität sowie zur Analyse des Nutzungsverhaltens speichert YouTube dauerhaft Cookies über Ihren Internet-Browser auf Ihrem Endgerät. Falls Sie mit dieser Verarbeitung nicht einverstanden sind, haben Sie die Möglichkeit, die Speicherung der Cookies durch eine Einstellung in Ihrem Internet-Browsers zu verhindern. Nähere Informationen hierzu finden Sie vorstehend unter „Cookies“.</p>
 <p>Weitergehende Informationen über die Erhebung und Nutzung von Daten sowie Ihre diesbezüglichen Rechte und Schutzmöglichkeiten hält Google in den unter</p>
 <p><a target="_blank" rel="noopener" href="https://policies.google.com/privacy">https://policies.google.com/privacy</a></p>
-<p>abrufbaren Datenschutzhinweisen bereit.</p>
+<p>abrufbaren Datenschutzhinweisen bereit.</p> -->
 
-<h4>CloudFlare</h4>
+<!-- <h4>CloudFlare</h4>
 <p>Zur Absicherung unseres Internetauftritts sowie zur Optimierung der Ladezeiten setzen wir den Dienst CloudFlare als sog. CDN (Content-Delivery-Network) ein. Es handelt sich hierbei um einen Dienst der Cloudflare Inc., 101 Townsend Street, San Francisco, California 94107, USA, nachfolgend nur „CloudFlare“ genannt.</p>
 <p>Durch die Zertifizierung nach dem EU-US-Datenschutzschild („EU-US Privacy Shield“)</p>
 <p><a href="https://www.privacyshield.gov/participant?id=a2zt0000000GnZKAA0&amp;status=Active" target="_blank" rel="noopener">https://www.privacyshield.gov/participant?id=a2zt0000000GnZKAA0&amp;status=Active</a></p>
@@ -127,7 +127,7 @@ title: Datenschutzerklärung
 <p>Sofern Sie mit dieser Verarbeitung nicht einverstanden sind, haben Sie die Möglichkeit, die Installation der Cookies durch die entsprechenden Einstellungen in Ihrem Internet-Browser zu verhindern. Einzelheiten hierzu finden Sie vorstehend unter dem Punkt „Cookies“.</p>
 <p>CloudFlare bietet unter</p>
 <p><a href="https://www.cloudflare.com/privacypolicy/" target="_blank" rel="noopener">https://www.cloudflare.com/privacypolicy/</a></p>
-<p>weitere Informationen zur Erhebung und Nutzung der Daten sowie zu Ihren Rechten und Möglichkeiten zum Schutz Ihrer Privatsphäre an.</p>
+<p>weitere Informationen zur Erhebung und Nutzung der Daten sowie zu Ihren Rechten und Möglichkeiten zum Schutz Ihrer Privatsphäre an.</p> -->
 
 <p>
 <a target="_blank" href="https://www.ratgeberrecht.eu/leistungen/muster-datenschutzerklaerung.html">Muster-Datenschutzerklärung</a> der <a target="_blank" href="https://www.ratgeberrecht.eu/">Anwaltskanzlei Weiß &amp; Partner</a></p>

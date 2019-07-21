@@ -1,35 +1,36 @@
 ---
-title: FHEM Module Development
-summary: Developing and maintaining popular home automation modules
+title: FHEM Modul Entwicklung
+summary: Entwicklung und Betreuung von beliebten Modulen zur Hausautomatisierung
 tags:
 - Home Automation
 - FHEM
+- Perl
 date: "2013-09-23T00:00:00Z"
 
 image:
-  caption: Photo by Toa Heftiba on Unsplash
+  caption: Foto von Markus Spiske auf Unsplash
   focal_point: Smart
 
 links:
 - icon: globe
   icon_pack: fa
-  name: FHEM website
+  name: FHEM Webseite
   url: https://fhem.de/
 - icon: comments
   icon_pack: fa
-  name: FHEM support community
+  name: FHEM Support Community
   url: https://forum.fhem.de/
 - icon: users
   icon_pack: fa
-  name: FHEM contributors
+  name: FHEM Modulautoren
   url: https://svn.fhem.de/#contributors
 - icon: paypal
   icon_pack: fab
-  name: Make a donation via PayPal
+  name: Spende über PayPal
   url: https://paypal.me/pools/c/8gDLrIWrG9
 - icon: patreon
   icon_pack: fab
-  name: Support me on Patreon
+  name: Unterstütze mich auf Patreon
   url: https://www.patreon.com/loredo
 ---
 

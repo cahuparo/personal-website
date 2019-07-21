@@ -1,6 +1,6 @@
 ---
 title: FHEM Community Management
-summary: Organizing core and 3rd-party developers for FHEM
+summary: Organisation von Core und 3rd-party Entwicklern für FHEM auf Github
 tags:
 - Home Automation
 - FHEM
@@ -11,7 +11,7 @@ date: "2019-05-01T00:00:00Z"
 #external_link: "https://github.com/fhem/fhem-docker"
 
 image:
-  caption: Photo by rawpixel on Unsplash
+  caption: Foto von John Schnobrich auf Unsplash
   focal_point: Smart
 
 links:
@@ -19,5 +19,13 @@ links:
   icon_pack: fab
   name: FHEM Github Community
   url: https://github.com/fhem
+- icon: paypal
+  icon_pack: fab
+  name: Spende über PayPal
+  url: https://paypal.me/pools/c/8gDLrIWrG9
+- icon: patreon
+  icon_pack: fab
+  name: Unterstütze mich auf Patreon
+  url: https://www.patreon.com/loredo
 ---
 

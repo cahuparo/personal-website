@@ -7,37 +7,42 @@
   languageCode = "en-us"
   contentDir = "content/en"  # Uncomment for multi-lingual sites, and move English content into `en` sub-folder.
 
-# # Uncomment the lines below to configure your website in a second language.
-# [de]
-#  languageCode = "de-de"
-#  contentDir = "content/de"
-#  title = "Julian Pawlowski"
-#  copyright = "Copyright &copy; {year} Julian Pawlowski · [Impressum](/de/impressum/) · [Datenschutz](/de/datenschutz/)"
-#
-#  [de.params]
-#    description = "Seitenbeschreibung auf Deutsch..."
-#
-#  [[de.menu.main]]
-#    name = "Home"
-#    url = "#about"
-#    weight = 10
-#
-#  [[de.menu.main]]
-#    name = "Blog"
-#    url = "#posts"
-#    weight = 20
-#
-#  [[de.menu.main]]
-#    name = "Projekte"
-#    url = "#projects"
-#    weight = 30
-#
-#  [[de.menu.main]]
-#    name = "Veröffentlichungen"
-#    url = "#featured"
-#    weight = 40
-#
-#  [[de.menu.main]]
-#    name = "Kontakt"
-#    url = "#contact"
-#    weight = 60
+# Uncomment the lines below to configure your website in a second language.
+[de]
+ languageCode = "de-de"
+ contentDir = "content/de"
+ title = "Julian Pawlowski"
+ copyright = "Copyright &copy; {year} Julian Pawlowski · [Impressum](/de/legal/) · [Datenschutzerklärung](/de/privacy/)"
+
+ [de.params]
+   description = "Julian Pawlowski ist ein Berater für Digital Strategie & Innovation"
+   address = "Elsenheimerstraße 61, München, Deutschland"
+   contact_links = [
+     {icon = "twitter", icon_pack = "fab", name = "Direktnachricht an @Loredo", link = "https://twitter.com/loredo"},
+	 {icon = "telegram", icon_pack = "fab", name = "Textnachricht an @Loredo", link = "https://telegram.me/Loredo"},
+   ]
+
+ [[de.menu.main]]
+   name = "Home"
+   url = "#about"
+   weight = 10
+
+ [[de.menu.main]]
+   name = "Blog"
+   url = "#posts"
+   weight = 20
+
+ [[de.menu.main]]
+   name = "Projekte"
+   url = "#projects"
+   weight = 30
+
+ [[de.menu.main]]
+   name = "Publikationen"
+   url = "#featured"
+   weight = 40
+
+ [[de.menu.main]]
+   name = "Kontakt"
+   url = "#contact"
+   weight = 60

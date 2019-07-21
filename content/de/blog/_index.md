@@ -1,5 +1,5 @@
 ---
-title: Blog posts
+title: Blog Beiträge
 
 # View.
 #   1 = List

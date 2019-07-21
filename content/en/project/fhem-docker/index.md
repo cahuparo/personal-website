@@ -5,15 +5,19 @@ tags:
 - Home Automation
 - FHEM
 - Docker
+- Debian
+- Linux
 - Travis CI
 - Continuous Integration
+- DevOps
+- Shell Script
 date: "2018-07-28T00:00:00Z"
 
 # Optional external URL for project (replaces project detail page).
 #external_link: "https://github.com/fhem/fhem-docker"
 
 image:
-  caption: Photo by rawpixel on Unsplash
+  caption: Photo by Joshua Sortino on Unsplash
   focal_point: Smart
 
 links:

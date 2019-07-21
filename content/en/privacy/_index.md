@@ -93,7 +93,7 @@ title: Data Privacy Policy
 <p>Vimeo offers further information about its data collection and processing as well your rights and your options for protecting your privacy at this link:</p>
 <p><a href="https://wiki.osmfoundation.org/wiki/Privacy_Policy" target="_blank" rel="noopener">https://wiki.osmfoundation.org/wiki/Privacy_Policy</a>.</p>
 
-<h4>YouTube</h4>
+<!-- <h4>YouTube</h4>
 <p>We use YouTube on our website. This is a video portal operated by YouTube LLC, 901 Cherry Ave, 94066 San Bruno, CA, USA, hereinafter referred to as "YouTube".</p>
 <p>YouTube is a subsidiary of Google LLC, Gordon House, Barrow Street, Dublin 4, Irland, hereinafter referred to as "Google".</p>
 <p>Through certification according to the EU-US Privacy Shield</p>
@@ -105,9 +105,9 @@ title: Data Privacy Policy
 <p>If you are logged in to YouTube when you access our site, YouTube will assign the connection information to your YouTube account. To prevent this, you must either log out of YouTube before visiting our site or make the appropriate settings in your YouTube account.</p>
 <p>For the purpose of functionality and analysis of usage behavior, YouTube permanently stores cookies on your device via your browser. If you do not agree to this processing, you have the option of preventing the installation of cookies by making the appropriate settings in your browser. Further details can be found in the section about cookies above.</p>
 <p>Further information about the collection and use of data as well as your rights and protection options in Google's privacy policy found at</p>
-<p><a href="https://policies.google.com/privacy" target="_blank" rel="noopener">https://policies.google.com/privacy</a></p>
+<p><a href="https://policies.google.com/privacy" target="_blank" rel="noopener">https://policies.google.com/privacy</a></p> -->
 
-<h4>CloudFlare</h4>
+<!-- <h4>CloudFlare</h4>
 <p>To secure our website and to optimize loading times, we use the CloudFlare CDN (content delivery network). This is a service of Cloudflare Inc., 101 Townsend Street, San Francisco, California 94107, USA, hereinafter referred to as "CloudFlare".</p>
 <p>Through certification according to the EU-US Privacy Shield</p>
 <p>(<a href="https://www.privacyshield.gov/participant?id=a2zt0000000GnZKAA0&amp;status=Active" target="_blank" rel="noopener">https://www.privacyshield.gov/participant?id=a2zt0000000GnZKAA0&amp;status=Active</a>)</p>
@@ -124,6 +124,7 @@ title: Data Privacy Policy
 <p>The data is used by CloudFlare for statistical evaluations of the accesses as well as for the security and optimization of the offer.</p>
 <p>If you do not agree to this processing, you have the option of preventing the installation of cookies by making the appropriate settings in your browser. Further details can be found in the section about cookies above.</p>
 <p>CloudFlare offers further information about its data collection and processing as well your rights and your options for protecting your privacy at this link:</p>
-<p><a href="https://www.cloudflare.com/privacypolicy/" target="_blank" rel="noopener">https://www.cloudflare.com/privacypolicy/</a>.</p>
+<p><a href="https://www.cloudflare.com/privacypolicy/" target="_blank" rel="noopener">https://www.cloudflare.com/privacypolicy/</a>.</p> -->
 
-<p><a href="https://www.ratgeberrecht.eu/leistungen/muster-datenschutzerklaerung.html" target="_blank" rel="noopener">Model Data Protection Statement</a> for <a href="https://www.ratgeberrecht.eu/" target="_blank">Anwaltskanzlei Weiß &amp; Partner</a></p>
+
+<sup><a href="https://www.ratgeberrecht.eu/leistungen/muster-datenschutzerklaerung.html" target="_blank" rel="noopener">Model Data Protection Statement</a> for <a href="https://www.ratgeberrecht.eu/" target="_blank">Anwaltskanzlei Weiß &amp; Partner</a></sup>

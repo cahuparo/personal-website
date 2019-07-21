@@ -18,18 +18,18 @@ organizations:
   url: "https://digatus.de/"
 
 # Short bio (displayed in user profile at end of posts)
-bio: Als digatus Mitarbeiter erster Stunde führt er Kunden durch den Dschungel der Digitalisierung. Seine Begeisterung für neue Technologien ist seit 25 Jahren ungebrochen. Wenn er nicht gerade den Weg aus dem digitalen Dschungel heraus absteckt, dann beschäftigt er sich mit der Programmierung seines Smarthomes – ganz zum Erstaunen seines Jack-Russel Terriers „Eddie“. Auch als Hobby Programmierer für die Open Source und Smarthome Community verfolgt er stets das Ziel, die Welt durch Technologie ein Stück weit besser zu machen.
+bio: Er führt Kunden durch den Dschungel der Digitalisierung. Seine Begeisterung für neue Technologien ist seit 25 Jahren ungebrochen. Wenn er nicht gerade den Weg aus dem digitalen Dschungel heraus absteckt, dann beschäftigt er sich mit der Programmierung seines Smarthomes – ganz zum Erstaunen seines Jack-Russel Terriers „Eddie“. Auch als Hobby Programmierer für die Open Source und Smarthome Community verfolgt er stets das Ziel, die Welt durch Technologie ein Stück weit besser zu machen.
 
 interests:
-- Cultural change of digitization
-- Employee satisfaction of young generations
-- Modern workplace & collaboration
-- Cloud transition strategies
-- B2B collaboration
-- Office 365 continuous change management
-- Secure public enterprise network
-- Home automation
-- Eddie the [:dog2:](https://twitter.com/DogEddie17)
+- Kulturwandel durch die Digitalisierung
+- Mitarbeiter Zufriedenheit von jüngeren Generationen
+- Moderner Arbeitsplatz & Zusammenarbeit
+- Cloud Migrationsstrategien
+- B2B Collaboration
+- Kontinuierliches Change Management für Office 365
+- Übergang vom privaten zum öffentlichen Firmennetz und dessen sicherheit
+- Hausautomatisierung
+- Eddie der [:dog2:](https://twitter.com/DogEddie17)
 
 # Social/Academic Networking
 # For available icons, see: https://sourcethemes.com/academic/docs/widgets/#icons
@@ -64,12 +64,12 @@ social:
 email: ""
 ---
 
-Julian Pawlowski is a visionary innovation and technology evangelist.
+Julian Pawlowski ist ein visionärer Innovations- und Technologieevangelist.
 
-As part of the [digatus](https://digatus.de/) team, he is offering sustainable support in IT governance, IT strategy, and future business vision on CIO-like level. This is highly valued by customers who would like to extend their company and improve their attractiveness for employees of the generations [Y](https://en.wikipedia.org/wiki/Millennials) and [Z](https://en.wikipedia.org/wiki/Millennials).
+Als Teil des [digatus](https://digatus.de/) Teams bietet er nachhaltige Unterstützung in den Bereichen IT-Governance, IT-Strategie und der zukünftigen Unternehmensvision auf CIO-gleicher Ebene. Kunden, die ihr Unternehmen ausbauen und ihre Attraktivität für Mitarbeiter der Generationen [Y](https://en.wikipedia.org/wiki/Millennials) und [Z](https://en.wikipedia.org/wiki/Millennials) verbessern möchten, schätzen dies sehr.
 
-He is a strategic business consultant for a modern workplace and for secure, cloud-driven identity management and infrastructure. Sleek concepts integrate bleeding-edge [Microsoft 365](https://www.microsoft.com/microsoft-365) cloud technologies with on-premises line of business applications of all sizes.
+Er ist strategischer Unternehmensberater für einen modernen Arbeitsplatz und für sicheres, Cloud-basiertes Identity Management und Infrastruktur. Mit schlanken Konzepten integriert er hochmoderne [Microsoft 365](https://www.microsoft.com/microsoft-365) Cloud-Technologien mit selbst betriebenen Geschäftsanwendungen jeder Größe.
 
-As a technical architect, Julian provides consultancy to implement, deploy and maintain [Azure Information Protection](https://docs.microsoft.com/azure/information-protection/) since the early days of its evolution. In the meantime, he played a key role to successfully bring such services into active use by more than 150,000 employees.
+Als technischer Architekt berät Julian seit den Anfängen von [Azure Information Protection] (https://docs.microsoft.com/azure/information-protection/) bei der Implementierung, Bereitstellung und Wartung. Er hat maßgeblich dazu beigetragen, dass diese Dienste inzwischen von mehr als 150.000 Mitarbeitern erfolgreich genutzt werden können.
 
-Since 2013, Julian is also an active part of the development community of the famous Home Automation system [FHEM](https://fhem.de/).
+Seit 2013 ist Julian auch ein aktiver Teil der Entwickler Gemeinschaft des beliebten Hausautomatisierungs-Systems [FHEM] (https://fhem.de/).
