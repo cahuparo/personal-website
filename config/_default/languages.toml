@@ -15,7 +15,6 @@
  copyright = "Copyright &copy; {year} Julian Pawlowski &middot; [Impressum](/de/legal/) &middot; [Datenschutzerklärung](/de/privacy/)"
 
  [de.params]
-   description = "Julian Pawlowski ist ein Berater für Digital Strategie & Innovation"
    address = "Elsenheimerstraße 61, München, Deutschland"
    contact_links = [
      {icon = "twitter", icon_pack = "fab", name = "Direktnachricht an @Loredo", link = "https://twitter.com/loredo"},
