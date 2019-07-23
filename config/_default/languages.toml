@@ -11,37 +11,4 @@
 [de]
  languageCode = "de-de"
  contentDir = "content/de"
- title = "Julian Pawlowski"
- copyright = "Copyright &copy; {year} Julian Pawlowski &middot; [Impressum](/de/legal/) &middot; [Datenschutzerklärung](/de/privacy/)"
-
- [de.params]
-   address = "Elsenheimerstraße 61, München, Deutschland"
-   contact_links = [
-     {icon = "twitter", icon_pack = "fab", name = "Direktnachricht an @Loredo", link = "https://twitter.com/loredo"},
-	 {icon = "telegram", icon_pack = "fab", name = "Textnachricht an @Loredo", link = "https://telegram.me/Loredo"},
-   ]
-
- [[de.menu.main]]
-   name = "Home"
-   url = "#about"
-   weight = 10
-
- [[de.menu.main]]
-   name = "Blog"
-   url = "#posts"
-   weight = 20
-
- [[de.menu.main]]
-   name = "Projekte"
-   url = "#projects"
-   weight = 30
-
- [[de.menu.main]]
-   name = "Publikationen"
-   url = "#featured"
-   weight = 40
-
- [[de.menu.main]]
-   name = "Kontakt"
-   url = "#contact"
-   weight = 60
+ copyright = "Julian Pawlowski &middot; [Impressum](/de/legal/) &middot; [Datenschutzerklärung](/de/privacy/)"

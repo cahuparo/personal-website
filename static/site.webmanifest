@@ -16,4 +16,5 @@
     "theme_color": "#1b5e20",
     "background_color": "#1b5e20",
     "display": "standalone"
+    "start_url": "./?utm_source=web_app_manifest"
 }
