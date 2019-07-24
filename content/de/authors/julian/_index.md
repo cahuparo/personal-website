@@ -70,6 +70,6 @@ Als Teil des [digatus](https://digatus.de/) Teams bietet er nachhaltige Unterst�
 
 Er ist strategischer Unternehmensberater für einen modernen Arbeitsplatz und für sicheres, Cloud-basiertes Identity Management und Infrastruktur. Mit schlanken Konzepten integriert er hochmoderne [Microsoft 365](https://www.microsoft.com/microsoft-365) Cloud-Technologien mit selbst betriebenen Geschäftsanwendungen jeder Größe.
 
-Als technischer Architekt berät Julian seit den Anfängen von [Azure Information Protection] (https://docs.microsoft.com/azure/information-protection/) bei der Implementierung, Bereitstellung und Wartung. Er hat maßgeblich dazu beigetragen, dass diese Dienste inzwischen von mehr als 150.000 Mitarbeitern erfolgreich genutzt werden können.
+Als technischer Architekt berät Julian seit den Anfängen von [Azure Information Protection](https://docs.microsoft.com/azure/information-protection/) bei der Implementierung, Bereitstellung und Wartung. Er hat maßgeblich dazu beigetragen, dass diese Dienste inzwischen von mehr als 150.000 Mitarbeitern erfolgreich genutzt werden können.
 
-Seit 2013 ist Julian auch ein aktiver Teil der Entwickler Gemeinschaft des beliebten Hausautomatisierungs-Systems [FHEM] (https://fhem.de/).
+Seit 2013 ist Julian ein aktiver Teil der Entwickler Gemeinschaft des beliebten Hausautomatisierungs-Systems [FHEM](https://fhem.de/).

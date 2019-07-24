@@ -1,5 +1,6 @@
 ---
 title: Impressum
+translationKey: "legal"
 ---
 
 ### Angaben gemäß § 5 TMG

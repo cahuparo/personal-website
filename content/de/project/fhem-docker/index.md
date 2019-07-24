@@ -1,26 +1,38 @@
 ---
+# Documentation: https://sourcethemes.com/academic/docs/managing-content/
+
 title: FHEM Docker Image
+subtitle: ""
 summary: Ein fertiges FHEM Image für Docker
 tags:
-- Home Automation
-- FHEM
-- Docker
-- Debian
-- Linux
-- Travis CI
-- Continuous Integration
-- DevOps
-- Shell Script
-- Raspberry Pi
-- Multi-Platform
-date: "2018-07-28T00:00:00Z"
+  - Hausautomation
+  - FHEM
+  - Docker
+  - Debian
+  - Linux
+  - Travis CI
+  - Continuous Integration
+  - DevOps
+  - Shell Script
+  - Raspberry Pi
+  - Multi-Plattform
+categories:
+  - Hausautomation
+date: 2018-07-28T00:00:00+02:00
+lastmod: 2019-07-24T15:12:2+02:00
+featured: true
+draft: false
+
+# Featured image
+# To use, add an image named `featured.jpg/png` to your page's folder.
+# Focal points: Smart, Center, TopLeft, Top, TopRight, Left, Right, BottomLeft, Bottom, BottomRight.
+image:
+  caption: "Foto von Joshua Sortino auf Unsplash"
+  focal_point: "Smart"
+  preview_only: false
 
 # Optional external URL for project (replaces project detail page).
 #external_link: "https://github.com/fhem/fhem-docker"
-
-image:
-  caption: Foto von Joshua Sortino auf Unsplash
-  focal_point: Smart
 
 links:
 - icon: github
