@@ -2,7 +2,7 @@
 title: Gemeinschaft PBX GS5
 summary: Build environment and Continuous Integration
 tags:
-- FreeSWTICH
+- FreeSWITCH
 - PBX
 - VoIP
 - Continuous Integration

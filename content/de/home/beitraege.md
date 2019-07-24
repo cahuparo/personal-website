@@ -65,3 +65,5 @@ subtitle = ""
  # CSS class.
  css_class = ""
 +++
+
+[Alle deutschen Beiträge]({{< relref path="../blog/_index.md" >}})&nbsp;&nbsp;|&nbsp;&nbsp;[More posts in english]({{< relref path="../blog/_index.md" lang="en" >}})

@@ -12,3 +12,7 @@ header:
   caption: ""
   image: ""
 ---
+
+{{% alert note %}}
+Not every post is multilingual. [More posts in German language]({{< relref path="blog/_index.md" lang="de" >}}).
+{{% /alert %}}
