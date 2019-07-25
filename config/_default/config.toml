@@ -11,9 +11,9 @@ title = "Julian Pawlowski"
 # End your URL with a `/` trailing slash, e.g. `https://example.com/`.
 baseurl = "https://julian.pawlowski.me/"
 
-# Enter a copyright notice to display in the site footer.
-# To display a copyright symbol, type `&copy;`. For current year, type `{year}`.
-copyright = "Julian Pawlowski &middot; [Legal Notice](/legal/) &middot; [Data Privacy Policy](/privacy/)"
+# Enter a copyright notice to display in feeds.
+# For site footer, see params `copyrighthtml`.
+copyright = "Julian Pawlowski"
 
 # Enable analytics by entering your Google Analytics tracking ID
 googleAnalytics = "UA-144239485-1"

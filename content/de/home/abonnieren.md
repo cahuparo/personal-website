@@ -9,7 +9,7 @@ subtitle: ""
 
 Verpassen Sie nichts und abonnieren Sie meine Beiträge in Ihrem favorisierten RSS Reader:
 
-* [Blog (Deutsch)](feed:{{< ref path="blog/_index.md" outputFormat="rss" >}})
-* [Blog (English)](feed:{{< ref path="blog/_index.md" outputFormat="rss" lang="en" >}})
+* [Blog (Deutsch)](feed:{{< ref path="blog/_index.md" outputFormat="rss" >}} "RSS Feed für Beiträge in Deutsch")
+* [Blog (English)](feed:{{< ref path="blog/_index.md" outputFormat="rss" lang="en" >}} "RSS Feed für Beiträge in Englisch")
 
 Alle Einträge beinhalten den kompletten Inhalt, so dass Sie das volle Leseerlebnis genießen können.

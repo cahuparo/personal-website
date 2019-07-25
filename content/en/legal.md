@@ -1,5 +1,5 @@
 ---
-title: Legal Disclosure
+title: Legal Notice
 ---
 
 ### Information in accordance with Section 5 TMG
