@@ -1,10 +1,18 @@
-# Redirect domain aliases to primary domain
-https://www.jps-networks.eu/* https://julian.pawlowski.me/:splat 301!
-https://jps-networks.eu/* https://julian.pawlowski.me/:splat 301!
+https://loredo.me/rss https://julian.pawlowski.me/rss.xml 301!
 https://loredo.me/* https://julian.pawlowski.me/:splat 301!
 https://www.loredo.me/* https://julian.pawlowski.me/:splat 301!
-https://www.jps-networks.com/* https://julian.pawlowski.me/:splat 301!
-https://jps-networks.com/* https://julian.pawlowski.me/:splat 301!
+
+https://de.julian.pawlowski.me/* https://julian.pawlowski.me/de/:splat 301!
+https://en.julian.pawlowski.me/* https://julian.pawlowski.me/:splat 301!
+https://blog.julian.pawlowski.me/* https://julian.pawlowski.me/post/:splat 301!
+https://en.blog.julian.pawlowski.me/* https://julian.pawlowski.me/post/:splat 301!
+https://de.blog.julian.pawlowski.me/* https://julian.pawlowski.me/de/post/:splat 301!
+
+# Redirect domain aliases to primary domain
+https://www.jps-networks.eu/* https://julian.pawlowski.me/:splat 302!
+https://jps-networks.eu/* https://julian.pawlowski.me/:splat 302!
+https://www.jps-networks.com/* https://julian.pawlowski.me/:splat 302!
+https://jps-networks.com/* https://julian.pawlowski.me/:splat 302!
 https://www.julian.pawlowski.me/* https://julian.pawlowski.me/:splat 301!
 
 # Optional: Redirect default Netlify subdomain to primary domain

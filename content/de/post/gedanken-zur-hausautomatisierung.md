@@ -5,6 +5,8 @@ title: "Gedanken Zur Hausautomatisierung"
 subtitle: ""
 summary: "Über meine Anfänge bei der Hausautomation und welche Rolle Philips HUE und Homematic dabei spielten."
 translationKey: "thoughts-on-home-automation"
+aliases:
+  - /post/181548978860/gedanken-zur-hausautomatisierung
 tags:
   - FHEM
   - Home Assistant

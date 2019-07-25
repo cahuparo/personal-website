@@ -4,7 +4,7 @@ name: Julian Pawlowski
 
 # Username (this should match the folder name)
 authors:
-- julian
+- Julian
 
 # Is this the primary user of the site?
 superuser: true
@@ -18,7 +18,9 @@ organizations:
   url: "https://digatus.de/"
 
 # Short bio (displayed in user profile at end of posts)
-bio: Er führt Kunden durch den Dschungel der Digitalisierung. Seine Begeisterung für neue Technologien ist seit 25 Jahren ungebrochen. Wenn er nicht gerade den Weg aus dem digitalen Dschungel heraus absteckt, dann beschäftigt er sich mit der Programmierung seines Smarthomes – ganz zum Erstaunen seines Jack-Russel Terriers „Eddie“. Auch als Hobby Programmierer für die Open Source und Smarthome Community verfolgt er stets das Ziel, die Welt durch Technologie ein Stück weit besser zu machen.
+bio: "<span style='font-style:italic;'>Über den Autor:</span>
+<br />
+Julian führt Kunden durch den Dschungel der Digitalisierung. Seine Begeisterung für neue Technologien ist seit 25 Jahren ungebrochen. Wenn er nicht gerade den Weg aus dem digitalen Dschungel heraus absteckt, dann beschäftigt er sich mit der Programmierung seines Smarthomes – ganz zum Erstaunen seines Jack-Russel Terriers &bdquo;Eddie&rdquo;. Auch als Hobby Programmierer für die Open Source und Smarthome Community verfolgt er stets das Ziel, die Welt durch Technologie ein Stück weit besser zu machen."
 
 interests:
 - Kulturwandel durch die Digitalisierung
@@ -53,7 +55,7 @@ social:
   link: https://www.xing.com/profile/Julian_Pawlowski
 - icon: envelope
   icon_pack: fas
-  link: '#contact'  # For a direct email link, use "mailto:test@example.org".
+  link: '#kontakt'  # For a direct email link, use "mailto:test@example.org".
 # Link to a PDF of your resume/CV from the About widget.
 # To enable, copy your resume/CV to `static/files/cv.pdf` and uncomment the lines below.  
 # - icon: cv
@@ -64,12 +66,14 @@ social:
 email: ""
 ---
 
-Julian Pawlowski ist ein visionärer Innovations- und Technologieevangelist.
+# Über mich
 
-Als Teil des [digatus](https://digatus.de/) Teams bietet er nachhaltige Unterstützung in den Bereichen IT-Governance, IT-Strategie und der zukünftigen Unternehmensvision auf CIO-gleicher Ebene. Kunden, die ihr Unternehmen ausbauen und ihre Attraktivität für Mitarbeiter der Generationen [Y](https://de.wikipedia.org/wiki/Generation_Y) und [Z](https://de.wikipedia.org/wiki/Generation_Z) verbessern möchten, schätzen dies sehr.
+Ich bin ein visionärer Innovations- und Technologieevangelist.
 
-Er ist strategischer Unternehmensberater für einen modernen Arbeitsplatz und für sicheres, Cloud-basiertes Identity Management und Infrastruktur. Mit schlanken Konzepten integriert er hochmoderne [Microsoft 365](https://www.microsoft.com/microsoft-365) Cloud-Technologien mit selbst betriebenen Geschäftsanwendungen jeder Größe.
+Als Teil des [digatus](https://digatus.de/) Teams biete ich nachhaltige Unterstützung in den Bereichen IT-Governance, IT-Strategie und der zukünftigen Unternehmensvision auf CIO-gleicher Ebene. Kunden, die ihr Unternehmen ausbauen und ihre Attraktivität für Mitarbeiter der Generationen [Y](https://de.wikipedia.org/wiki/Generation_Y) und [Z](https://de.wikipedia.org/wiki/Generation_Z) verbessern möchten, schätzen dies sehr.
 
-Als technischer Architekt berät Julian seit den Anfängen von [Azure Information Protection](https://docs.microsoft.com/azure/information-protection/) bei der Implementierung, Bereitstellung und Wartung. Er hat maßgeblich dazu beigetragen, dass diese Dienste inzwischen von mehr als 150.000 Mitarbeitern erfolgreich genutzt werden können.
+Ich bin strategischer Unternehmensberater für einen modernen Arbeitsplatz und für sicheres, Cloud-basiertes Identity Management und Infrastruktur. Mit schlanken Konzepten integriere ich hochmoderne [Microsoft 365](https://www.microsoft.com/microsoft-365) Cloud-Technologien mit selbst betriebenen Geschäftsanwendungen jeder Größe.
 
-Seit 2013 ist Julian ein aktiver Teil der Entwickler Gemeinschaft des beliebten Hausautomatisierungs-Systems [FHEM](https://fhem.de/).
+Als technischer Architekt berate ich seit den Anfängen von [Azure Information Protection](https://docs.microsoft.com/azure/information-protection/) bei der Implementierung, Bereitstellung und Wartung. Ich habe maßgeblich dazu beigetragen, dass diese Dienste inzwischen von mehr als 150.000 Mitarbeitern erfolgreich genutzt werden können.
+
+Seit 2013 bin ich ein aktiver Teil der Entwickler Gemeinschaft des beliebten Hausautomatisierungs-Systems [FHEM](https://fhem.de/).

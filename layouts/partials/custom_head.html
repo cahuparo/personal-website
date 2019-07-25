@@ -9,3 +9,7 @@
 <meta name="msapplication-TileColor" content="#59bb2f">
 <meta name="msapplication-TileImage" content="/mstile-144x144.png?v=gAdNNvE9vr">
 {{/* <meta name="theme-color" content="#1b5e20"> */}}
+
+{{ with .OutputFormats.Get "ATOM" }}
+<link rel="alternate" href="{{.RelPermalink}}" type="application/atom+xml" title="{{site.Title}}">
+{{ end }}

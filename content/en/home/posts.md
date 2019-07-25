@@ -12,7 +12,7 @@ subtitle = ""
 
 [content]
   # Page type to display. E.g. post, talk, or publication.
-  page_type = "blog"
+  page_type = "post"
   
   # Choose how much pages you would like to display (0 = all pages)
   count = 5
@@ -66,4 +66,4 @@ subtitle = ""
  css_class = ""
 +++
 
-[All english posts]({{< relref path="../blog/_index.md" >}})&nbsp;&nbsp;|&nbsp;&nbsp;[Mehr Beiträge auf Deutsch]({{< relref path="../blog/_index.md" lang="de" >}})
+[All english posts]({{< relref path="../post/_index.md" >}})&nbsp;&nbsp;|&nbsp;&nbsp;[Mehr Beiträge auf Deutsch]({{< relref path="../post/_index.md" lang="de" >}})

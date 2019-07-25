@@ -4,7 +4,7 @@ name: Julian Pawlowski
 
 # Username (this should match the folder name)
 authors:
-- julian
+- Julian
 
 # Is this the primary user of the site?
 superuser: true
@@ -18,7 +18,9 @@ organizations:
   url: "https://digatus.de/"
 
 # Short bio (displayed in user profile at end of posts)
-bio: He guides customers through the jungle of digitization. His enthusiasm for new technologies has been unbroken for 25 years. When he's not marking the way out of the digital jungle, he's programming his smart home – to the amazement of his Jack-Russel Terrier "Eddie". Even as a hobby programmer for the open source and smarthome community, he always pursues the goal of making the world a better place through technology.
+bio: "<span style='font-style:italic;'>About the author:</span>
+<br />
+Julian guides customers through the jungle of digitization. His enthusiasm for new technologies has been unbroken for 25 years. When he's not marking the way out of the digital jungle, he's programming his smart home – to the amazement of his Jack-Russel Terrier &ldquo;Eddie&rdquo;. Even as a hobby programmer for the open source and smarthome community, he always pursues the goal of making the world a better place through technology."
 
 interests:
 - Cultural change due to digitization
@@ -64,12 +66,14 @@ social:
 email: ""
 ---
 
-Julian Pawlowski is a visionary innovation and technology evangelist.
+# About me
 
-As part of the [digatus](https://digatus.de/) team, he is offering sustainable support in IT governance, IT strategy, and the future corporate vision on CIO-like level. This is very much appreciated by customers who want to expand their business and improve their attractiveness for employees of the generations [Y](https://en.wikipedia.org/wiki/Millennials) and [Z](https://en.wikipedia.org/wiki/Generation_Z).
+I am a visionary innovation and technology evangelist.
 
-He is a strategic business consultant for a modern workplace and for secure, cloud-driven identity management and infrastructure. With sleek concepts, he integrates bleeding-edge [Microsoft 365](https://www.microsoft.com/microsoft-365) cloud technologies with on-premises line of business applications of all sizes.
+As part of the [digatus](https://digatus.de/) team, I am offering sustainable support in IT governance, IT strategy, and the future corporate vision on CIO-like level. This is very much appreciated by customers who want to expand their business and improve their attractiveness for employees of the generations [Y](https://en.wikipedia.org/wiki/Millennials) and [Z](https://en.wikipedia.org/wiki/Generation_Z).
 
-As a technical architect, Julian provides consultancy to implement, deploy and maintain [Azure Information Protection](https://docs.microsoft.com/azure/information-protection/) since the early days of its evolution. In the meantime, he played a key role to successfully bring such services into active use by more than 150,000 employees.
+I am a strategic business consultant for a modern workplace and for secure, cloud-driven identity management and infrastructure. With sleek concepts, I integrate bleeding-edge [Microsoft 365](https://www.microsoft.com/microsoft-365) cloud technologies with on-premises line of business applications of all sizes.
 
-Since 2013, Julian is an active part of the development community of the popular Home Automation system [FHEM](https://fhem.de/).
+As a technical architect, I provide consultancy to implement, deploy and maintain [Azure Information Protection](https://docs.microsoft.com/azure/information-protection/) since the early days of its evolution. In the meantime, I played a key role to successfully bring such services into active use by more than 150,000 employees.
+
+Since 2013, I am an active part of the development community of the popular Home Automation system [FHEM](https://fhem.de/).

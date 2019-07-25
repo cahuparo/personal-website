@@ -11,3 +11,9 @@
 [de]
  languageCode = "de-de"
  contentDir = "content/de"
+
+  [de.permalinks]
+    post = "/:slug/"
+    project = "/projekt/:slug/"
+    publication = "/publikationen/:slug/"
+    authors = "/ueber-mich/"

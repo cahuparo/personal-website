@@ -39,7 +39,7 @@ image:
 projects: []
 ---
 
-Als Ergänzung zu meinem [letzten Blog Beitrag]({{< ref "/blog/gedanken-zur-hausautomatisierung/index.md" >}}) möchte ich in dieser Artikelreihe mein aktuelles Licht Setup dokumentieren und meine Gedanken dazu mit anderen teilen. Ich habe selbst nicht sonderlich viel im Netz dazu gefunden, welche Lichtszenen sich jemand so konfiguriert und wie diese aus welchen Gründen strukturiert sind. Deshalb hoffe ich, dass diese Momentaufnahme hier für andere hilfreich sein wird.
+Als Ergänzung zu meinem [letzten Blog Beitrag]({{< ref "/post/gedanken-zur-hausautomatisierung.md" >}}) möchte ich in dieser Artikelreihe mein aktuelles Licht Setup dokumentieren und meine Gedanken dazu mit anderen teilen. Ich habe selbst nicht sonderlich viel im Netz dazu gefunden, welche Lichtszenen sich jemand so konfiguriert und wie diese aus welchen Gründen strukturiert sind. Deshalb hoffe ich, dass diese Momentaufnahme hier für andere hilfreich sein wird.
 
 Im ersten Teil der Reihe soll es auch zunächst noch um einige allgemein gültige Themen gehen, ohne die ich jedoch nicht über die konkrete Einrichtung der dynamischen Lichtsteuerung sprechen kann.
 

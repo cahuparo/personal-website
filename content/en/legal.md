@@ -4,25 +4,36 @@ title: Legal Notice
 
 ### Information in accordance with Section 5 TMG
 
-Julian Pawlowski<br/>
-Pählstraße 6 B<br/>
-81377 Munich<br/>
-Germany
-
+<div itemscope itemtype="http://schema.org/Person">
+  <span itemprop="name">Julian Pawlowski</span><br />
+  <div itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
+    <span itemprop="streetAddress">Paehlstr. 6 B</span><br />
+    <span itemprop="addressLocality">Munich</span>,
+    <span itemprop="addressRegion">Bavaria</span><br />
+    <span itemprop="postalCode">81377</span><br />
+    <span itemprop="addressCountry">Germany</span><br />
+  </div>
 
 ### Contact
 
-Phone: +&#052;&#057;&#032;&#056;&#057;&#032;&#050;&#054;&#050;&#048;&#055;&#053;&#054;&#049;&#049;<br />
-Fax: +&#052;&#057;&#032;&#051;&#050;&#032;&#050;&#050;&#057;&#057;&#056;&#054;&#054;&#050;&#051;&#049;&#050;<br />
-Email: &#106;&#117;&#108;&#105;&#097;&#110;&#064;&#112;&#097;&#119;&#108;&#111;&#119;&#115;&#107;&#105;&#046;&#109;&#101;
+  Phone: <span itemprop="telephone">+&#052;&#057;&#032;&#056;&#057;&#032;&#052;&#050;&#048;&#057;&#053;&#053;&#051;&#055;&#051;</span><br />
+  Fax: <span itemprop="telephone">+&#052;&#057;&#032;&#051;&#050;&#032;&#050;&#050;&#057;&#057;&#056;&#054;&#054;&#050;&#051;&#049;&#050;</span><br />
+  Email: <span itemprop="email">&#106;&#117;&#108;&#105;&#097;&#110;&#064;&#112;&#097;&#119;&#108;&#111;&#119;&#115;&#107;&#105;&#046;&#109;&#101;</span>
+</div>
 
 
 ### Responsible for the content according to Section 55 (2) RStV
 
-Julian Pawlowski<br/>
-Pählstraße 6 B<br/>
-81377 Munich<br/>
-Germany
+<div itemscope itemtype="http://schema.org/Person">
+  <span itemprop="name">Julian Pawlowski</span><br />
+  <div itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
+    <span itemprop="streetAddress">Paehlstr. 6 B</span><br />
+    <span itemprop="addressLocality">Munich</span>,
+    <span itemprop="addressRegion">Bavaria</span><br />
+    <span itemprop="postalCode">81377</span><br />
+    <span itemprop="addressCountry">Germany</span><br />
+  </div>
+</div>
 
 
 ### Used Software and Tools

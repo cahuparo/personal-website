@@ -27,6 +27,7 @@ disqusShortname = ""
 
 # Name of Academic theme folder in `themes/`.
 theme = "academic"
+Author = "Julian Pawlowski"
 
 # Get last modified date for content from Git?
 enableGitInfo = false
@@ -43,9 +44,9 @@ footnotereturnlinkcontents = "<sup>^</sup>"
 ignoreFiles = ["\\.ipynb$", ".ipynb_checkpoints$", "\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$"]
 
 [outputs]
-  home = [ "HTML", "JSON", "ATOM" ]
-  section = [ "HTML", "ATOM" ]
-  taxonomy = [ "HTML", "ATOM" ]
+  home = [ "HTML", "JSON", "RSS", "ATOM" ]
+  section = [ "HTML", "RSS", "ATOM" ]
+  taxonomy = [ "HTML", "RSS", "ATOM" ]
 
 # Configure BlackFriday Markdown rendering.
 #   See: https://gohugo.io/getting-started/configuration/#configure-blackfriday
@@ -66,6 +67,13 @@ ignoreFiles = ["\\.ipynb$", ".ipynb_checkpoints$", "\\.Rmd$", "\\.Rmarkdown$", "
   category = "categories"
   publication_type = "publication_types"
   author = "authors"
+  language = "languages"
+
+[permalinks]
+  post = "/:slug/"
+  project = "/project/:slug/"
+  publication = "/publication/:slug/"
+  authors = "/about/"
 
 [mediaTypes]
   [mediaTypes."application/atom+xml"]
@@ -73,7 +81,7 @@ ignoreFiles = ["\\.ipynb$", ".ipynb_checkpoints$", "\\.Rmd$", "\\.Rmarkdown$", "
 
 [outputFormats.Atom]
   mediaType = "application/atom+xml"
-  baseName = "atom"
+  baseName = "index"
   isPlainText = false
 
 [outputFormats.RSS]

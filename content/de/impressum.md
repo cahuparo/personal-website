@@ -5,25 +5,32 @@ translationKey: "legal"
 
 ### Angaben gemäß § 5 TMG
 
-Julian Pawlowski<br/>
-Pählstraße 6 B<br/>
-81377 München<br/>
-Deutschland
-
+<div itemscope itemtype="http://schema.org/Person">
+  <span itemprop="name">Julian Pawlowski</span><br />
+  <div itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
+    <span itemprop="streetAddress">Pählstraße 6 B</span><br />
+    <span itemprop="postalCode">81377</span>
+    <span itemprop="addressLocality">München</span><br />
+  </div>
 
 ### Kontakt
 
-Telefon: &#048;&#056;&#057;&#032;&#050;&#054;&#050;&#048;&#055;&#053;&#054;&#049;&#049;<br />
-Telefax: &#048;&#051;&#050;&#032;&#050;&#050;&#057;&#057;&#056;&#054;&#054;&#050;&#051;&#049;&#050;<br />
-E-Mail: &#106;&#117;&#108;&#105;&#097;&#110;&#064;&#112;&#097;&#119;&#108;&#111;&#119;&#115;&#107;&#105;&#046;&#109;&#101;
+  Telefon: <span itemprop="telephone">&#048;&#056;&#057;&#032;&#052;&#050;&#048;&#057;&#053;&#053;&#051;&#055;&#051;</span><br />
+  Telefax: <span itemprop="telephone">&#048;&#051;&#050;&#032;&#050;&#050;&#057;&#057;&#056;&#054;&#054;&#050;&#051;&#049;&#050;</span><br />
+  E-Mail: <span itemprop="email">&#106;&#117;&#108;&#105;&#097;&#110;&#064;&#112;&#097;&#119;&#108;&#111;&#119;&#115;&#107;&#105;&#046;&#109;&#101;</span>
+</div>
 
 
 ### Verantwortlich für den Inhalt nach § 55 Abs. 2 RStV
 
-Julian Pawlowski<br/>
-Pählstraße 6 B<br/>
-81377 München<br/>
-Deutschland
+<div itemscope itemtype="http://schema.org/Person">
+  <span itemprop="name">Julian Pawlowski</span><br />
+  <div itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
+    <span itemprop="streetAddress">Pählstraße 6 B</span><br />
+    <span itemprop="postalCode">81377</span>
+    <span itemprop="addressLocality">München</span><br />
+  </div>
+</div>
 
 
 ### Verwendete Software und Werkzeuge
