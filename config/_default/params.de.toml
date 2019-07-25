@@ -3,3 +3,6 @@ contact_links = [
   {icon = "twitter", icon_pack = "fab", name = "Direktnachricht an @Loredo", link = "https://twitter.com/loredo"},
   {icon = "telegram", icon_pack = "fab", name = "Textnachricht an @Loredo", link = "https://telegram.me/Loredo"},
 ]
+date_format = "02.01.2006"
+time_format = "15:04"
+zoom = 6

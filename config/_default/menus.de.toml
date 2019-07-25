@@ -18,10 +18,10 @@
   url = "#projekte"
   weight = 30
 
-[[main]]
-  name = "Publikationen"
-  url = "#hervorgehoben"
-  weight = 40
+# [[main]]
+#   name = "Publikationen"
+#   url = "#hervorgehoben"
+#   weight = 40
 
 [[main]]
   name = "Kontakt"
