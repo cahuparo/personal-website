@@ -43,8 +43,9 @@ footnotereturnlinkcontents = "<sup>^</sup>"
 ignoreFiles = ["\\.ipynb$", ".ipynb_checkpoints$", "\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$"]
 
 [outputs]
-  home = [ "HTML", "JSON" ]
-  section = [ "HTML", "RSS" ]
+  home = [ "HTML", "JSON", "ATOM" ]
+  section = [ "HTML", "ATOM" ]
+  taxonomy = [ "HTML", "ATOM" ]
 
 # Configure BlackFriday Markdown rendering.
 #   See: https://gohugo.io/getting-started/configuration/#configure-blackfriday
@@ -65,3 +66,17 @@ ignoreFiles = ["\\.ipynb$", ".ipynb_checkpoints$", "\\.Rmd$", "\\.Rmarkdown$", "
   category = "categories"
   publication_type = "publication_types"
   author = "authors"
+
+[mediaTypes]
+  [mediaTypes."application/atom+xml"]
+  suffixes = ["xml"]
+
+[outputFormats.Atom]
+  mediaType = "application/atom+xml"
+  baseName = "atom"
+  isPlainText = false
+
+[outputFormats.RSS]
+  mediaType = "application/rss+xml"
+  baseName = "rss"
+  isPlainText = false

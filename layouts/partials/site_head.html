@@ -137,6 +137,9 @@
   {{ with .OutputFormats.Get "RSS" }}
   <link rel="alternate" href="{{.RelPermalink}}" type="application/rss+xml" title="{{site.Title}}">
   {{ end }}
+  {{ with .OutputFormats.Get "ATOM" }}
+  <link rel="alternate" href="{{.RelPermalink}}" type="application/atom+xml" title="{{site.Title}}">
+  {{ end }}
 
 {{/* <link rel="manifest" href="{{ "site.webmanifest" | relURL }}"> */}}
 {{/* <link rel="icon" type="image/png" href="{{ "/img/icon.png" | relURL }}"> */}}
