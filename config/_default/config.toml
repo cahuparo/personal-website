@@ -73,7 +73,6 @@ ignoreFiles = ["\\.ipynb$", ".ipynb_checkpoints$", "\\.Rmd$", "\\.Rmarkdown$", "
   project = "/project/:slug/"
   publication = "/:slug/"
   talk = "/:slug/"
-  authors = "/about/"
   categories = "/:slug/"
   publication_types = "/:slug/"
 

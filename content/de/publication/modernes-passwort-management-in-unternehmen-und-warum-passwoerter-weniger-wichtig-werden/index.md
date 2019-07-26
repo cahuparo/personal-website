@@ -87,4 +87,4 @@ projects: []
 slides: ""
 ---
 
-[Im ersten Teil]({{< relref path="publication/weshalb-passwoerter-ein-auslaufmodel-sind-und-warum-sie-uns-trotzdem-noch-lange-begleiten-werden/index.md" >}}) erkläre ich, wie man heutzutage mit Passwörtern im privaten und beruflichen Umfeld umgehen sollte.
+[Im ersten Teil]({{< relref path="/publication/weshalb-passwoerter-ein-auslaufmodel-sind-und-warum-sie-uns-trotzdem-noch-lange-begleiten-werden/index.md" >}}) erkläre ich, wie man heutzutage mit Passwörtern im privaten und beruflichen Umfeld umgehen sollte.

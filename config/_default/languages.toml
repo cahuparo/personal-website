@@ -17,6 +17,5 @@
     project = "/projekt/:slug/"
     publication = "/:slug/"
     talk = "/:slug/"
-    authors = "/ueber-mich/"
     categories = "/:slug/"
     publication_types = "/:slug/"

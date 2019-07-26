@@ -80,4 +80,4 @@ projects: []
 slides: ""
 ---
 
-[In einem zweiten Teil]({{< relref path="publication/modernes-passwort-management-in-unternehmen-und-warum-passwoerter-weniger-wichtig-werden/index.md" >}}) erläutere ich, weshalb Passwörter durch modernes Passwort Management im Unternehmensumfeld zunehmend an Bedeutung verlieren.
+[In einem zweiten Teil]({{< relref path="/publication/modernes-passwort-management-in-unternehmen-und-warum-passwoerter-weniger-wichtig-werden/index.md" >}}) erläutere ich, weshalb Passwörter durch modernes Passwort Management im Unternehmensumfeld zunehmend an Bedeutung verlieren.

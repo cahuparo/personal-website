@@ -25,7 +25,7 @@
 
 [[main]]
   name = "Über mich"
-  url = "ueber/#ueber"
+  url = "ueber-mich/#ueber"
   weight = 70
 
 # [[main]]

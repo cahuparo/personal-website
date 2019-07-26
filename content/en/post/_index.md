@@ -14,5 +14,5 @@ header:
 ---
 
 {{% alert note %}}
-Not every post is multilingual. [More posts in German language]({{< relref path="post/_index.md" lang="de" >}}).
+Not every post is multilingual. [More posts in German language]({{< relref path="/post/_index.md" lang="de" >}}).
 {{% /alert %}}
