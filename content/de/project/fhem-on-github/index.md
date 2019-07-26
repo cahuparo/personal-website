@@ -2,7 +2,7 @@
 title: FHEM Community Management
 summary: Organisation von Core und 3rd-party Entwicklern für FHEM auf Github
 tags:
-- Home Automation
+- Hausautomation
 - FHEM
 - Git
 - Aktuelle Projekte

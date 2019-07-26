@@ -5,7 +5,7 @@ title: FHEM Modul Entwicklung
 subtitle: ""
 summary: Entwicklung und Betreuung von beliebten Modulen zur Hausautomatisierung
 tags:
-  - Home Automation
+  - Hausautomation
   - FHEM
   - Perl
   - Aktuelle Projekte

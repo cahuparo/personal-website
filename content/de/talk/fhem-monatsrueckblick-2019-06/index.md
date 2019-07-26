@@ -1,5 +1,5 @@
 ---
-title: "Erklärung der FHEM Modules Astro & DaySchedule beim FHEM Monatsrückblick, Juni 2019"
+title: "Erklärung der FHEM Module Astro & DaySchedule beim FHEM Monatsrückblick, Juni 2019"
 event: FHEM Monatsrückblick, Juni 2019
 location: Webinar
 event_url: https://www.youtube.com/watch?v=5q48t1ubc1s&t=2m56s
