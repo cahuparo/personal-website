@@ -34,5 +34,5 @@ Die Begeisterung für digitale Kommunikation habe ich seit meiner Jugendzeit End
 Seinerzeit habe ich die CAPI4Linux Treiber von AVM neu paketiert (siehe [CAPI4Linux ThePenguin.de Edition](https://web.archive.org/web/20020924110704/http://capi4linux.thepenguin.de/)). Damals musste man die Linux Kernelerweiterung selbst kompilieren und es gab ein paar Fallstricke, die so eine einfachere Installation ermöglichten. Ich erinnere mich gut, dass mir AVM sogar allerhand Testhardware bereitgestellt hat und meine Homepage sogar auf Messen ein Gesprächsthema war, während ich (unbekannterweise) direkt daneben stand.
 
 {{% alert note %}}
-Natürlich wurde über die Zeit die Bereitstellung eines separaten Installationspakets überflüssig, so dass dieses Projekt schließlich überflüssig wurde.
+Natürlich wurde über die Zeit die Bereitstellung eines separaten Installationspakets überflüssig, so dass ich dieses Projekt schließlich eingestellt habe.
 {{% /alert %}}

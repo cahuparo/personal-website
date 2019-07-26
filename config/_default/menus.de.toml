@@ -4,11 +4,6 @@
 #   The weight parameter defines the order that the links will appear in.
 
 [[main]]
-  name = "Über mich"
-  url = "#ueber"
-  weight = 10
-
-[[main]]
   name = "Blog"
   url = "#lesenswert"
   weight = 20
@@ -29,9 +24,9 @@
   weight = 40
 
 [[main]]
-  name = "Kontakt"
-  url = "#kontakt"
-  weight = 60
+  name = "Über mich"
+  url = "ueber/#ueber"
+  weight = 70
 
 # [[main]]
 #   name = "<i class='fas fa-rss'></i>"

@@ -30,6 +30,8 @@ interests:
 - B2B collaboration
 - Office 365 continuous change management
 - Transition from private to public enterprise network and its security
+
+hobbies:
 - Home automation
 - Eddie the [:dog2:](https://twitter.com/DogEddie17)
 

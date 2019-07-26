@@ -66,4 +66,4 @@ subtitle = ""
  css_class = ""
 +++
 
-[Alle deutschen Beiträge]({{< relref path="../post/_index.md" >}})&nbsp;&nbsp;|&nbsp;&nbsp;[More posts in English]({{< relref path="../post/_index.md" lang="en" >}})
+[Alle deutschen Beiträge]({{< relref path="../post/_index.md" >}})&nbsp;&nbsp;|&nbsp;&nbsp;[More posts in English]({{< ref path="../home/#posts" lang="en" >}})

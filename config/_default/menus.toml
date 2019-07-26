@@ -24,9 +24,9 @@
 #   weight = 40
 
 [[main]]
-  name = "Contact"
-  url = "#contact"
-  weight = 60
+  name = "About me"
+  url = "about/#about"
+  weight = 70
 
 # [[main]]
 #   name = "<i class='fas fa-rss'></i>"
