@@ -13,6 +13,7 @@ tags:
 - Shell Script
 - Raspberry Pi
 - Multi-Platform
+- Current Projects
 date: "2018-07-28T00:00:00Z"
 
 # Optional external URL for project (replaces project detail page).

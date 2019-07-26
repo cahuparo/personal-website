@@ -68,7 +68,7 @@ email: ""
 
 # Über mich
 
-Ich bin ein visionärer Innovations- und Technologieevangelist.
+Ich bezeichne mich selbst als einen visionären Innovations- und Technologieevangelisten.
 
 Als Teil des [digatus](https://digatus.de/) Teams biete ich nachhaltige Unterstützung in den Bereichen IT-Governance, IT-Strategie und der zukünftigen Unternehmensvision auf CIO-gleicher Ebene. Kunden, die ihr Unternehmen ausbauen und ihre Attraktivität für Mitarbeiter der Generationen [Y](https://de.wikipedia.org/wiki/Generation_Y) und [Z](https://de.wikipedia.org/wiki/Generation_Z) verbessern möchten, schätzen dies sehr.
 

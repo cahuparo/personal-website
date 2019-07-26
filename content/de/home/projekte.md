@@ -19,19 +19,19 @@ subtitle = ""
   # To remove toolbar, delete/comment all instances of `[[content.filter_button]]` below.
   
   # Default filter index (e.g. 0 corresponds to the first `[[filter_button]]` instance below).
-  filter_default = 0
+  filter_default = 1
   
-  # [[content.filter_button]]
-  #   name = "All"
-  #   tag = "*"
+  [[content.filter_button]]
+    name = "Alle"
+    tag = "*"
   
-  # [[content.filter_button]]
-  #   name = "Home Automation"
-  #   tag = "Home Automation"
+  [[content.filter_button]]
+    name = "Aktuell"
+    tag = "Aktuelle Projekte"
   
-  # [[content.filter_button]]
-  #   name = "Other"
-  #   tag = "sonstiges"
+  [[content.filter_button]]
+    name = "Archiv"
+    tag = "Frühere Projekte"
 
 [design]
   # Choose how many columns the section has. Valid values: 1 or 2.
@@ -73,4 +73,3 @@ subtitle = ""
  # CSS class.
  css_class = ""
 +++
-

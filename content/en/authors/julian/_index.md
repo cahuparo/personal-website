@@ -68,7 +68,7 @@ email: ""
 
 # About me
 
-I am a visionary innovation and technology evangelist.
+I define myself as a visionary innovation and technology evangelist.
 
 As part of the [digatus](https://digatus.de/) team, I am offering sustainable support in IT governance, IT strategy, and the future corporate vision on CIO-like level. This is very much appreciated by customers who want to expand their business and improve their attractiveness for employees of the generations [Y](https://en.wikipedia.org/wiki/Millennials) and [Z](https://en.wikipedia.org/wiki/Generation_Z).
 

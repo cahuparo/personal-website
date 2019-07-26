@@ -15,5 +15,8 @@
   [de.permalinks]
     post = "/:slug/"
     project = "/projekt/:slug/"
-    publication = "/publikationen/:slug/"
+    publication = "/:slug/"
+    talk = "/:slug/"
     authors = "/ueber-mich/"
+    categories = "/:slug/"
+    publication_types = "/:slug/"

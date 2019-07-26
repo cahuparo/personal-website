@@ -67,13 +67,15 @@ ignoreFiles = ["\\.ipynb$", ".ipynb_checkpoints$", "\\.Rmd$", "\\.Rmarkdown$", "
   category = "categories"
   publication_type = "publication_types"
   author = "authors"
-  language = "languages"
 
 [permalinks]
   post = "/:slug/"
   project = "/project/:slug/"
-  publication = "/publication/:slug/"
+  publication = "/:slug/"
+  talk = "/:slug/"
   authors = "/about/"
+  categories = "/:slug/"
+  publication_types = "/:slug/"
 
 [mediaTypes]
   [mediaTypes."application/atom+xml"]

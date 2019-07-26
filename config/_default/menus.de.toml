@@ -10,7 +10,7 @@
 
 [[main]]
   name = "Blog"
-  url = "#beitraege"
+  url = "#lesenswert"
   weight = 20
 
 [[main]]
@@ -18,20 +18,25 @@
   url = "#projekte"
   weight = 30
 
-# [[main]]
-#   name = "Publikationen"
-#   url = "#hervorgehoben"
-#   weight = 40
+[[main]]
+  name = "Vorträge"
+  url = "#vortraege"
+  weight = 35
+
+[[main]]
+  name = "Publikationen"
+  url = "#hervorgehoben"
+  weight = 40
 
 [[main]]
   name = "Kontakt"
   url = "#kontakt"
   weight = 60
 
-[[main]]
-  name = "<i class='fas fa-rss'></i>"
-  url = "#abonnieren"
-  weight = 100
+# [[main]]
+#   name = "<i class='fas fa-rss'></i>"
+#   url = "#abonnieren"
+#   weight = 100
 
 # Link to a PDF of your resume/CV from the menu.
 # To enable, copy your resume/CV to `static/files/cv.pdf` and uncomment the lines below.

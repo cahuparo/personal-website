@@ -8,6 +8,7 @@ tags:
   - Home Automation
   - FHEM
   - Perl
+  - Aktuelle Projekte
 categories:
   - Hausautomation
 date: 2013-09-23T00:00:00+02:00

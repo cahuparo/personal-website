@@ -2,12 +2,13 @@
 # Documentation: https://sourcethemes.com/academic/docs/managing-content/
 
 title: "Dynamische Lichtsteuerung mit Philips Hue - #1"
-slug: "dynamische-lichtsteuerung-mit-philips-hue-1"
+slug: "dynamische-lichtsteuerung-mit-philips-hue/teil-1"
 subtitle: ""
 summary: "Theoretische Überlegungen zur Einrichtung von Lichtszenen und Automationen"
-translationKey: "dynamic-lighting-with-philips-hue-1"
+translationKey: "dynamic-lighting-with-philips-hue/part-1"
 aliases:
   - /post/181706455830/dynamische-lichtsteuerung-mit-philips-hue-1
+section: post
 tags:
   - Philips HUE
   - Lichtsteuerung
@@ -39,9 +40,12 @@ image:
 projects: []
 ---
 
-Als Ergänzung zu meinem [letzten Blog Beitrag]({{< ref "/post/gedanken-zur-hausautomatisierung.md" >}}) möchte ich in dieser Artikelreihe mein aktuelles Licht Setup dokumentieren und meine Gedanken dazu mit anderen teilen. Ich habe selbst nicht sonderlich viel im Netz dazu gefunden, welche Lichtszenen sich jemand so konfiguriert und wie diese aus welchen Gründen strukturiert sind. Deshalb hoffe ich, dass diese Momentaufnahme hier für andere hilfreich sein wird.
+{{% toc %}}
+
+Als Ergänzung zu meinem [letzten Blog Beitrag]({{< ref "/post/gedanken-zur-hausautomatisierung/index.md" >}}) möchte ich in dieser Artikelreihe mein aktuelles Licht Setup dokumentieren und meine Gedanken dazu mit anderen teilen. Ich habe selbst nicht sonderlich viel im Netz dazu gefunden, welche Lichtszenen sich jemand so konfiguriert und wie diese aus welchen Gründen strukturiert sind. Deshalb hoffe ich, dass diese Momentaufnahme hier für andere hilfreich sein wird.
 
 Im ersten Teil der Reihe soll es auch zunächst noch um einige allgemein gültige Themen gehen, ohne die ich jedoch nicht über die konkrete Einrichtung der dynamischen Lichtsteuerung sprechen kann.
+
 
 ## Die frühen Jahre
 
@@ -56,7 +60,6 @@ Beide Hue Accessories fristeten deshalb lange ein unbeachtetes Dasein bei mir - 
 
 War es damals nur schwer möglich auf den normalen Lichtschalter zu verzichten - sei es technisch oder mental bedingt - so gibt es heute zumindest einige gangbare Methoden. Obgleich wir - insbesondere in Europa - noch immer auf die eierlegende Wollmilchsau in Schalterform hoffen: Feste Stromversorgung, aber ZigBee Funkanbindung und gleichzeitige direkte Steuerung von Leuchten und trotzdem am Gateway angemeldet, verdeckte Notschaltung zur Unterbrechung der Dauerstromversorgung der Leuchten, um diese komplett manuell zu schalten ... Kickstarter, anyone?!? Mein aktuelles Resumé ist jedenfalls, dass fremde ZigBee Schalter jedweder Couleur letztendlich nicht den Anforderungen entsprechen, die man so hat. Auch der Hue Dimmschalter ist insbesondere beim Formfaktor alles andere als perfekt. Da er sich aber so perfekt programmieren lässt (bzw. die Funktionen der Tasten in der Hue Bridge), ist der das Mittel der Wahl. Und Heureka - bezahlbar ist er auch.
 
-* * *
 
 ## Beschränkungen der offiziellen Hue App
 
@@ -64,7 +67,6 @@ Das Konzept von Philips Hue ist in erster Linie ein möglichst einfach zu bedien
 
 Fortgeschrittene Benutzer und technikaffine Nerds hingegen stoßen schnell an ihre Grenzen. Sie wünschen sich eine möglichst flexible Integration in andere Systeme und nutzen nicht selten auch noch mehrere davon parallel (Alexa vs. Homekit+Siri, anyone?). Natürlich haben solche Benutzer nicht nur smartes Licht zuhause, sondern auch smarte Lautsprecher, eine smarte Heizungssteuerung, smarte Fenster, smarte Türen und was weiß ich, wo man noch überall dieses Modewort voranstellen kann...
 
-* * *
 
 ## Die richtige Balance
 
@@ -90,7 +92,6 @@ Für viele klingt das zunächst wie ein Befreiungsschlag aus dem “Walled Garde
 
 Das sind nur einige der Punkte, die mir gerade einfallen. Sie alle führen aber dazu, dass ich mir gewünscht habe mehr aus dem bestehenden Philips Hue System direkt herauszuholen und nur dort, wo es notwendig/sinnvoll ist, durch externe Systeme wie [FHEM](https://fhem.de/), [Home Assistant](https://home-assistant.io/), [OpenHAB](https://openhab.org/), Homekit oder Alexa zu ergänzen. Aufgrund der oben angeführten vornehmlichen Strategie von Hue wird das aber nicht zufriedenstellend funktionieren können - oder doch?
 
-* * *
 
 ## Drittanbieter Apps zur Philips Hue Programmierung
 
@@ -103,7 +104,6 @@ Das änderte sich zu Weihnachten 2018.
 _An dieser Stelle noch der Hinweis: Ja, die App [kostet Geld](https://iconnecthue.com/app-costs/). Ja, es gibt In-App Käufe. Ja, die sind teilweise hoch für das, was man kriegt. Nein, die muss man nicht für iPhone und iPad erneut erwerben ([iCloud Sync!](https://iconnecthue.com/f-a-q/#purchases)). Aber ja, jeder kann selbst entscheiden, was er davon kauft. Zu bedenken ist, dass die App schon lange auf dem Markt ist und man sich nicht nur von Neukäufen finanzieren kann. Ich habe deshalb die In-App Käufe genutzt dem Entwickler ein paar wenige Euros zukommen zu lassen und damit die Weiterentwicklung honoriert und gefördert.
 ... und nein, ich mache hier keine Werbung für diese App oder kriege etwas dafür diese hier zu beschreiben._
 
-* * *
 
 ## Zeit für ein Hardware Upgrade
 
@@ -278,7 +278,6 @@ _Flur_
 
 - Leuchten nicht über ZigBee gesteuert, daher hier einmal außen vor gelassen.
 
-* * *
 
 ## Unterschiedliche Sprachen
 

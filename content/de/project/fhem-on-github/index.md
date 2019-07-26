@@ -5,6 +5,9 @@ tags:
 - Home Automation
 - FHEM
 - Git
+- Aktuelle Projekte
+categories:
+- Hausautomation
 date: "2019-05-01T00:00:00Z"
 
 # Optional external URL for project (replaces project detail page).

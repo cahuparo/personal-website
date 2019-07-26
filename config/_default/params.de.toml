@@ -6,3 +6,6 @@ contact_links = [
 date_format = "02.01.2006"
 time_format = "15:04"
 zoom = 6
+
+[publications]
+  date_format = "02.01.2006"

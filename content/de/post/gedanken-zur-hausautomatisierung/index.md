@@ -7,6 +7,7 @@ summary: "Über meine Anfänge bei der Hausautomation und welche Rolle Philips H
 translationKey: "thoughts-on-home-automation"
 aliases:
   - /post/181548978860/gedanken-zur-hausautomatisierung
+section: post
 tags:
   - FHEM
   - Home Assistant
@@ -26,7 +27,7 @@ categories:
   - Hausautomation
 date: 2018-12-30T14:20:49+01:00
 lastmod: 2018-12-30T14:20:49+01:00
-featured: false
+featured: true
 draft: false
 
 # Featured image

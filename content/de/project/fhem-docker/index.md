@@ -16,6 +16,7 @@ tags:
   - Shell Script
   - Raspberry Pi
   - Multi-Plattform
+  - Aktuelle Projekte
 categories:
   - Hausautomation
 date: 2018-07-28T00:00:00+02:00
