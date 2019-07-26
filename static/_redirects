@@ -1,5 +1,5 @@
 # language redirect
-/index.html  /de/  302  Language=de
+.  /de/  302  Language=de
 
 https://loredo.me/rss https://julian.pawlowski.me/rss.xml 301!
 https://loredo.me/* https://julian.pawlowski.me/:splat 301!
