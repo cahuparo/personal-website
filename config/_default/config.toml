@@ -18,9 +18,6 @@ copyright = "Julian Pawlowski"
 # Enable analytics by entering your Google Analytics tracking ID
 googleAnalytics = "UA-144239485-1"
 
-# Enable comments by entering your Disqus shortname
-disqusShortname = ""
-
 ############################
 ## Advanced options below ##
 ############################
