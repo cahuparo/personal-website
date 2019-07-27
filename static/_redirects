@@ -18,4 +18,5 @@ https://www.julian.pawlowski.me/* https://julian.pawlowski.me/:splat 301!
 # Optional: Redirect default Netlify subdomain to primary domain
 https://jpawlowski.netlify.com/* https://julian.pawlowski.me/:splat 301!
 
-/de/* /de/404 404
+/de/* /de/404.html 404
+/* /404.html 404
