@@ -5,14 +5,42 @@ admin_path:
 webhook_url: 
 sections:
 - type: directory
-  path: content/en
-  label: En
+  path: content/post
+  label: EN/Blog Posts
   create: all
   match: "**/*"
 - type: directory
-  path: content/de
-  label: De
+  path: content/publication
+  label: EN/Publications
   create: all
+  match: "**/*"
+- type: directory
+  path: content/project
+  label: EN/Projects
+  create: all
+  match: "**/*"
+- type: directory
+  path: content/authors
+  label: EN/Authors
+  create: all
+  match: "**/*"
+- type: directory
+  path: content/about
+  label: EN/About
+  create: all
+  match: "**/*"
+- type: directory
+  path: content/home
+  label: EN/Homepage
+  create: all
+  match: "**/*"
+- type: document
+  path: content/en/privacy.md
+  label: EN/Privacy
+  match: "**/*"
+- type: document
+  path: content/en/legal.md
+  label: EN/Legal
   match: "**/*"
 upload_dir: static/uploads
 public_path: "/uploads"
