@@ -49,3 +49,5 @@ fields:
 - type: list
   name: projects
   label: projects
+pages:
+- content/en/post/test/test.md
