@@ -1,5 +1,7 @@
 ---
 title: Legal Notice
+commentable: false
+editable: false
 ---
 
 ### Information in accordance with Section 5 TMG

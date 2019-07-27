@@ -127,7 +127,7 @@
       ga('require', 'urlChangeTracker');
       ga('send', 'pageview');
     </script>
-    <script async src="//www.google-analytics.com/analytics.js"></script>
+    <script async src="https://www.google-analytics.com/analytics.js"></script>
     {{ if ($scr.Get "use_cdn") }}
     {{ printf "<script async src=\"%s\" integrity=\"%s\" crossorigin=\"anonymous\"></script>" (printf $js.autotrack.url $js.autotrack.version) $js.autotrack.sri | safeHTML }}
     {{ end }}
@@ -137,10 +137,6 @@
   {{ with .OutputFormats.Get "RSS" }}
   <link rel="alternate" href="{{.RelPermalink}}" type="application/rss+xml" title="{{site.Title}}">
   {{ end }}
-
-{{/* <link rel="manifest" href="{{ "site.webmanifest" | relURL }}"> */}}
-{{/* <link rel="icon" type="image/png" href="{{ "/img/icon.png" | relURL }}"> */}}
-{{/* <link rel="apple-touch-icon" type="image/png" href="{{ "/img/icon-192.png" | relURL }}"> */}}
 
   <link rel="canonical" href="{{ .Permalink }}">
 

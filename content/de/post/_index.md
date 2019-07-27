@@ -1,5 +1,5 @@
 ---
-title: Blog Beiträge
+title: Blogbeiträge
 
 # View.
 #   1 = List
@@ -14,5 +14,5 @@ header:
 ---
 
 {{% alert note %}}
-Nicht jeder Beitrag ist mehrsprachig. [Mehr Beiträge in englischer Sprache]({{< relref path="/post/_index.md" lang="en" >}}).
+Nicht jeder Beitrag ist mehrsprachig. [Mehr Blogbeiträge in englischer Sprache]({{< relref path="/post/_index.md" lang="en" >}}).
 {{% /alert %}}

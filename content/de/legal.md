@@ -1,6 +1,8 @@
 ---
 title: Impressum
-translationKey: "legal"
+slug: impressum
+commentable: false
+editable: false
 ---
 
 ### Angaben gemäß § 5 TMG
