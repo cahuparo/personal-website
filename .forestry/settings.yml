@@ -14,6 +14,16 @@ sections:
   templates:
   - blog-post
 - type: directory
+  path: content/en/publications
+  label: Publications
+  create: all
+  match: "**/*"
+- type: directory
+  path: content/en/project
+  label: Projects
+  create: all
+  match: "**/*"
+- type: directory
   path: content/en
   label: Pages
   create: documents
@@ -29,6 +39,16 @@ sections:
 - type: directory
   path: content/de/post
   label: Blogbeiträge
+  create: all
+  match: "**/*"
+- type: directory
+  path: content/de/publications
+  label: Veröffentlichungen
+  create: all
+  match: "**/*"
+- type: directory
+  path: content/de/project
+  label: Projekte
   create: all
   match: "**/*"
 - type: directory
