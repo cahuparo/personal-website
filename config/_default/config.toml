@@ -11,9 +11,9 @@ title = "Julian Pawlowski"
 # End your URL with a `/` trailing slash, e.g. `https://example.com/`.
 baseurl = "https://julian.pawlowski.me/"
 
-# Enter a copyright notice to display in feeds.
-# For site footer, see params `copyrighthtml`.
-copyright = "Julian Pawlowski"
+# Enter a copyright notice to display in the site footer.
+# To display a copyright symbol, type `&copy;`. For current year, type `{year}`.
+copyright = "© {year} Julian Pawlowski"
 
 # Enable analytics by entering your Google Analytics tracking ID
 googleAnalytics = "UA-144239485-1"
@@ -24,7 +24,6 @@ googleAnalytics = "UA-144239485-1"
 
 # Name of Academic theme folder in `themes/`.
 theme = "academic"
-Author = "Julian Pawlowski"
 
 # Get last modified date for content from Git?
 enableGitInfo = false
@@ -46,6 +45,26 @@ enableRobotsTXT = true
   home = [ "HTML", "JSON", "RSS", "ATOM" ]
   section = [ "HTML", "RSS", "ATOM" ]
   taxonomy = [ "HTML", "RSS", "ATOM" ]
+
+[mediaTypes."application/manifest+json"]
+  suffixes = ["webmanifest"]
+
+[outputFormats.WebAppManifest]
+  mediaType = "application/manifest+json"
+  rel = "manifest"
+
+[mediaTypes."application/atom+xml"]
+  suffixes = ["xml"]
+
+[outputFormats.Atom]
+  mediaType = "application/atom+xml"
+  baseName = "atom"
+  isPlainText = false
+
+[outputFormats.RSS]
+  mediaType = "application/rss+xml"
+  baseName = "rss"
+  isPlainText = false
 
 # Configure BlackFriday Markdown rendering.
 #   See: https://gohugo.io/getting-started/configuration/#configure-blackfriday
@@ -74,17 +93,3 @@ enableRobotsTXT = true
   talk = "/:slug/"
   categories = "/:slug/"
   publication_types = "/:slug/"
-
-[mediaTypes]
-  [mediaTypes."application/atom+xml"]
-  suffixes = ["xml"]
-
-[outputFormats.Atom]
-  mediaType = "application/atom+xml"
-  baseName = "index"
-  isPlainText = false
-
-[outputFormats.RSS]
-  mediaType = "application/rss+xml"
-  baseName = "rss"
-  isPlainText = false
