@@ -7,6 +7,13 @@ sections:
 - type: heading
   label: English
 - type: directory
+  path: content/en/post
+  label: Blog posts
+  create: all
+  match: "**/*"
+  templates:
+  - blog-post
+- type: directory
   path: content/en
   label: Pages
   create: documents
@@ -19,6 +26,16 @@ sections:
   exclude: _index.md
 - type: heading
   label: Deutsch
+- type: directory
+  path: content/de/post
+  label: Blogbeiträge
+  create: all
+  match: "**/*"
+- type: directory
+  path: content/de
+  label: Seiten
+  create: documents
+  match: "*"
 - type: directory
   path: content/de
   label: De
