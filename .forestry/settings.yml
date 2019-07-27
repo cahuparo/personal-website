@@ -37,13 +37,11 @@ sections:
 - type: document
   path: content/en/privacy.md
   label: EN/Privacy
-  match: "**/*"
 - type: document
   path: content/en/legal.md
   label: EN/Legal
-  match: "**/*"
-upload_dir: static/uploads
-public_path: "/uploads"
+upload_dir: static/img
+public_path: "/img"
 front_matter_path: ''
 use_front_matter_path: false
 file_template: ":filename:"
