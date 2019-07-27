@@ -23,12 +23,6 @@ sections:
   label: Projects
   create: all
   match: "**/*"
-- type: directory
-  path: content/en
-  label: Pages
-  create: documents
-  match: "*"
-  exclude: _index.* index.*
 - type: heading
   label: Deutsch
 - type: directory
@@ -48,12 +42,6 @@ sections:
   label: Projekte
   create: all
   match: "**/*"
-- type: directory
-  path: content/de
-  label: Seiten
-  create: documents
-  match: "*"
-  exclude: _index.* index.*
 upload_dir: static/img
 public_path: "/img"
 front_matter_path: ''
