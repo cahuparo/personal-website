@@ -1,5 +1,6 @@
 ---
 title: Data Privacy Policy
+share: false
 commentable: false
 editable: false
 ---

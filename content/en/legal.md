@@ -1,5 +1,6 @@
 ---
 title: Legal Notice
+share: false
 commentable: false
 editable: false
 ---

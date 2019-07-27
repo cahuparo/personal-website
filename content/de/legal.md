@@ -1,6 +1,7 @@
 ---
 title: Impressum
 slug: impressum
+share: false
 commentable: false
 editable: false
 ---

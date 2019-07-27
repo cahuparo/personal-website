@@ -1,6 +1,7 @@
 ---
 title: Datenschutzerklärung
 slug: datenschutz
+share: false
 commentable: false
 editable: false
 ---
