@@ -28,12 +28,6 @@ sections:
   label: Pages
   create: documents
   match: "*"
-- type: directory
-  path: content/en
-  label: En
-  create: all
-  match: "**/*"
-  exclude: _index.md
 - type: heading
   label: Deutsch
 - type: directory
@@ -56,12 +50,6 @@ sections:
   label: Seiten
   create: documents
   match: "*"
-- type: directory
-  path: content/de
-  label: De
-  create: all
-  match: "**/*"
-  exclude: _index.md
 upload_dir: static/img
 public_path: "/img"
 front_matter_path: ''
