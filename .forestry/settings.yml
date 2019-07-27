@@ -14,11 +14,13 @@ sections:
   label: En
   create: all
   match: "**/*"
+  exclude: _index.md
 - type: directory
   path: content/de
   label: De
   create: all
   match: "**/*"
+  exclude: _index.md
 upload_dir: static/img
 public_path: "/img"
 front_matter_path: ''
