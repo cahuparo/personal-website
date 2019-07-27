@@ -7,5 +7,9 @@ date_format = "02.01.2006"
 time_format = "15:04"
 zoom = 6
 
+# currently no translated pages can be edited due to broken link
+#   see https://github.com/gcushen/hugo-academic/issues/1232
+edit_page = {repo_url = "https://github.com/jpawlowski/personal-website", repo_branch = "master", editable = {docs = false, page = false, post = false}}
+
 [publications]
   date_format = "02.01.2006"
