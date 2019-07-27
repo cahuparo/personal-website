@@ -36,6 +36,8 @@ sections:
   label: Blogbeiträge
   create: all
   match: "**/*"
+  templates:
+  - blogbeitrag
 - type: directory
   path: content/de/publication
   label: Veröffentlichungen
