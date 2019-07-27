@@ -1,3 +1,5 @@
+PaginatePath = "seite"
+
 [permalinks]
   post = "/:slug/"
   project = "/projekt/:slug/"
