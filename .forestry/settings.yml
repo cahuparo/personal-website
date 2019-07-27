@@ -14,7 +14,7 @@ sections:
   templates:
   - blog-post
 - type: directory
-  path: content/en/publications
+  path: content/en/publication
   label: Publications
   create: all
   match: "**/*"
@@ -37,7 +37,7 @@ sections:
   create: all
   match: "**/*"
 - type: directory
-  path: content/de/publications
+  path: content/de/publication
   label: Veröffentlichungen
   create: all
   match: "**/*"
