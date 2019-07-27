@@ -4,10 +4,12 @@ auto_deploy: false
 admin_path: "/static/admin"
 webhook_url: 
 sections:
+- type: heading
+  label: EN
 - type: directory
-  path: content
+  path: content/en
   label: Pages
-  create: all
+  create: documents
   match: "*"
 - type: directory
   path: content/en
@@ -15,6 +17,8 @@ sections:
   create: all
   match: "**/*"
   exclude: _index.md
+- type: heading
+  label: DE
 - type: directory
   path: content/de
   label: De
