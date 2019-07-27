@@ -10,7 +10,7 @@ abstract: "Das Astro Modul hat einige Überarbeitungen von mir erfahren. Ich erl
 #   End time can optionally be hidden by prefixing the line with `#`.
 date: "2019-06-05T20:30:00+02:00"
 time: "01:53:46"
-all_day: false
+all_day: true
 
 # Schedule page publish date (NOT talk date).
 publishDate: "2019-06-05T20:30:00+02:00"

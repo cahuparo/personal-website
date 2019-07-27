@@ -11,7 +11,7 @@ abstract: "Zusammen mit Christian Zengel erkläre ich bei sysops.tv, wie die Ope
 date: "2012-11-14T20:00:00Z"
 lastmod: "2012-11-14T20:00:00Z"
 time: "00:28:00"
-all_day: false
+all_day: true
 
 # Schedule page publish date (NOT talk date).
 publishDate: "2012-11-14T00:00:00Z"

@@ -59,7 +59,7 @@ social:
   link: https://www.xing.com/profile/Julian_Pawlowski
 - icon: envelope
   icon_pack: fas
-  link: '#kontakt'  # For a direct email link, use "mailto:test@example.org".
+  link: '/ueber-mich/#kontakt'  # For a direct email link, use "mailto:test@example.org".
 # Link to a PDF of your resume/CV from the About widget.
 # To enable, copy your resume/CV to `static/files/cv.pdf` and uncomment the lines below.  
 # - icon: cv

@@ -11,11 +11,3 @@
 [de]
  languageCode = "de-de"
  contentDir = "content/de"
-
-  [de.permalinks]
-    post = "/:slug/"
-    project = "/projekt/:slug/"
-    publication = "/:slug/"
-    talk = "/:slug/"
-    categories = "/:slug/"
-    publication_types = "/:slug/"

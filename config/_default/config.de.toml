@@ -1,0 +1,7 @@
+[permalinks]
+  post = "/:slug/"
+  project = "/projekt/:slug/"
+  publication = "/:slug/"
+  talk = "/:slug/"
+  categories = "/:slug/"
+  publication_types = "/:slug/"
