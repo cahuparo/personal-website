@@ -7,4 +7,8 @@ weight = 120  # Order that this section will appear.
 
 title = "Schlagwörter"
 subtitle = ""
+
+[design.spacing]
+  # Customize the section spacing. Order is top, right, bottom, left.
+  padding = ["3em", "0", "3em", "0"]
 +++
