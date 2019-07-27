@@ -49,19 +49,14 @@ featured: false
 # Custom links (optional).
 #   Uncomment and edit lines below to show custom links.
 links:
+- name: PDF
+  url: /de/download/publikation/Modernes Passwort Management in Unternehmen - digatus.pdf
+  icon_pack: fas
+  icon: file-pdf
 - name: digatus.de
   url: https://www.digatus.de/modernes-passwort-management-in-unternehmen-und-warum-passwoerter-weniger-wichtig-werden/
   icon_pack: fas
   icon: globe
-
-url_pdf: /download/publikation/Modernes Passwort Management in Unternehmen - digatus.pdf
-url_code:
-url_dataset:
-url_poster:
-url_project:
-url_slides:
-url_source:
-url_video:
 
 # Featured image
 # To use, add an image named `featured.jpg/png` to your page's folder. 

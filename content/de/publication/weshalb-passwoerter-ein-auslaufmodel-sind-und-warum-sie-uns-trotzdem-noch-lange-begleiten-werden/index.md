@@ -42,19 +42,14 @@ featured: true
 # Custom links (optional).
 #   Uncomment and edit lines below to show custom links.
 links:
+- name: PDF
+  url: /de/download/publikation/Weshalb Passwoerter ein Auslaufmodel sind - digatus.pdf
+  icon_pack: fas
+  icon: file-pdf
 - name: digatus.de
   url: https://www.digatus.de/weshalb-passwoerter-ein-auslaufmodel-sind-und-warum-sie-uns-trotzdem-noch-lange-begleiten-werden/
   icon_pack: fas
   icon: globe
-
-url_pdf: /download/publikation/Weshalb Passwoerter ein Auslaufmodel sind - digatus.pdf
-url_code:
-url_dataset:
-url_poster:
-url_project:
-url_slides:
-url_source:
-url_video:
 
 # Featured image
 # To use, add an image named `featured.jpg/png` to your page's folder. 

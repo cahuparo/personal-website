@@ -3,7 +3,6 @@ title: "Vorstellung der Proxmox 3.x Virtualisierung bei sysops.tv"
 event: "sysops.tv #091"
 event_url: https://www.youtube.com/watch?v=MBjjxVAmpqI&t=3s
 location: Webcast
-summary: Webcast über die Open Source Virtualisierungs-Umgebung Proxmox VE 3.x als Alternative zu anderen kostenfreien Lösungen.
 abstract: "Zusammen mit Christian Zengel erkläre ich bei sysops.tv, wie die Open Source Virtualisierungs-Umgebung Proxmox VE 3.x eine Alternative zu den kostenfreien Varianten kommerzieller Anbieter sein kann."
 
 # Talk start and end times.
@@ -42,15 +41,14 @@ image:
 # Custom links (optional).
 #   Uncomment and edit lines below to show custom links.
 links:
+- name: Video
+  url: https://www.youtube.com/watch?v=MBjjxVAmpqI&t=3s
+  icon_pack: fas
+  icon: video
 - name: Proxmox VE
   url: https://www.proxmox.com/proxmox-ve
   icon_pack: fas
   icon: globe
-
-url_code: ""
-url_pdf: ""
-url_slides: ""
-url_video: https://www.youtube.com/watch?v=MBjjxVAmpqI&t=3s
 
 # Markdown Slides (optional).
 #   Associate this talk with Markdown slides.

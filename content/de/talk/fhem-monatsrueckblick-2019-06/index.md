@@ -3,7 +3,6 @@ title: "Erklärung der FHEM Module Astro & DaySchedule beim FHEM Monatsrückblic
 event: FHEM Monatsrückblick, Juni 2019
 location: Webinar
 event_url: https://www.youtube.com/watch?v=5q48t1ubc1s&t=2m56s
-summary: Vorstellung der Neuerungen am Astro Modul für FHEM und Ausblick auf das neue Modul DaySchedule.
 abstract: "Das Astro Modul hat einige Überarbeitungen von mir erfahren. Ich erläutere hier kurz einige der Beweggründe und gebe einen Ausblick auf ein neues Modul namens DaySchedule, welches auf Astro als Datenlieferant aufbaut."
 
 # Talk start and end times.
@@ -33,6 +32,14 @@ image:
 # Custom links (optional).
 #   Uncomment and edit lines below to show custom links.
 links:
+- name: Projekt
+  url: /de/projekt/fhem-modul-entwicklung/
+  icon_pack: fas
+  icon: list
+- name: Video
+  url: https://www.youtube.com/watch?v=5q48t1ubc1s&t=2m56s
+  icon_pack: fas
+  icon: video
 - name: FHEM::Astro
   url: https://forum.fhem.de/index.php/topic,73951.msg950266.html#msg950266
   icon_pack: fas
@@ -41,11 +48,6 @@ links:
   url: https://forum.fhem.de/index.php/topic,101942.0.html
   icon_pack: fas
   icon: comments
-
-url_code: ""
-url_pdf: ""
-url_slides: ""
-url_video: "https://www.youtube.com/watch?v=5q48t1ubc1s&t=2m56s"
 
 # Markdown Slides (optional).
 #   Associate this talk with Markdown slides.
@@ -59,11 +61,12 @@ slides: ""
 #   Simply enter your project's folder or file name without extension.
 #   E.g. `projects = ["internal-project"]` references `content/project/deep-learning/index.md`.
 #   Otherwise, set `projects = []`.
-projects:
-- fhem-mod-development
+projects: []
 
 # Enable math on this page?
 math: false
 ---
 
 {{< youtube 5q48t1ubc1s >}}
+Hells
+
