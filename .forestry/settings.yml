@@ -5,7 +5,7 @@ admin_path: "/static/admin"
 webhook_url: 
 sections:
 - type: heading
-  label: EN
+  label: English
 - type: directory
   path: content/en
   label: Pages
@@ -18,7 +18,7 @@ sections:
   match: "**/*"
   exclude: _index.md
 - type: heading
-  label: DE
+  label: Deutsch
 - type: directory
   path: content/de
   label: De
