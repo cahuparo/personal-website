@@ -32,7 +32,7 @@ sections:
 - type: directory
   path: content/home
   label: EN/Homepage
-  create: all
+  create: documents
   match: "**/*"
 - type: document
   path: content/en/privacy.md
