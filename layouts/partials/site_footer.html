@@ -1,18 +1,22 @@
 <footer class="site-footer">
-  {{ if (or (site.GetPage "legal.md") (site.GetPage "privacy.md")) }}
+  {{ if or (site.GetPage "terms.md") (site.GetPage "privacy.md") }}
   <p class="powered-by">
-    {{ with site.GetPage "legal.md" }}
-      {{ printf "<a href=\"%s\">%s</a>" .RelPermalink .Title | safeHTML }}
-    {{ end }}
     {{ with site.GetPage "privacy.md" }}
-      {{ if site.GetPage "legal.md" }} &middot; {{ end }}
       {{ printf "<a href=\"%s\">%s</a>" .RelPermalink .Title | safeHTML }}
     {{ end }}
+    {{ with site.GetPage "terms.md" }}
+      {{ if site.GetPage "privacy.md" }} &middot; {{ end }}
+      {{ printf "<a href=\"%s\">%s</a>" .RelPermalink .Title | safeHTML }}
+    {{ end }}    
   </p>
   {{ end }}
 
   <p class="powered-by">
-    {{ with .Site.Params.copyrighthtml }}{{ replace . "{year}" now.Year | markdownify}} {{ end }}
+    {{ if .Site.Params.CopyrightHTML }}
+      {{ with .Site.Params.CopyrightHTML }}{{ replace . "{year}" now.Year | markdownify}} {{ end }}
+    {{ else }}
+      {{ with site.Copyright }}{{ replace . "{year}" now.Year | markdownify}} {{ end }}
+    {{ end }}
 
     {{ if ne .Type "docs" }}
     <span class="float-right" aria-hidden="true">

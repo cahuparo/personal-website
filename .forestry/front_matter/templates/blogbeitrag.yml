@@ -1,16 +1,11 @@
 ---
-label: Blog post
+label: Blogbeitrag
 hide_body: false
 display_field: title
 fields:
 - type: text
   name: title
   label: title
-- name: slug
-  type: text
-  config:
-    required: false
-  label: slug
 - type: text
   name: subtitle
   label: subtitle
@@ -21,20 +16,23 @@ fields:
   name: translationKey
   label: translationKey
 - type: list
+  name: authors
+  label: authors
+- type: list
   name: tags
   label: tags
+- type: text
+  name: section
+  label: section
 - type: list
   name: categories
   label: categories
 - type: datetime
   name: date
   label: date
-  default: now
 - type: datetime
   name: lastmod
   label: lastmod
-  hidden: false
-  default: now
 - type: boolean
   name: featured
   label: featured
