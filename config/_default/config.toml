@@ -42,9 +42,10 @@ ignoreFiles = ["\\.ipynb$", ".ipynb_checkpoints$", "\\.Rmd$", "\\.Rmarkdown$", "
 enableRobotsTXT = true
 
 [outputs]
-  home = [ "HTML", "JSON", "Sitemap", "RSS", "ATOM" ]
+  home = [ "HTML", "JSON", "RSS", "ATOM" ]
   section = [ "HTML", "RSS", "ATOM" ]
   taxonomy = [ "HTML", "RSS", "ATOM" ]
+  taxonomyTerm = [ "HTML", "RSS", "ATOM" ]
 
 [mediaTypes."application/manifest+json"]
   suffixes = ["webmanifest"]
