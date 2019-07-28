@@ -70,4 +70,9 @@ subtitle = ""
  css_class = ""
 +++
 
-[All english blog posts]({{< relref path="../post/_index.md" >}})&nbsp;&nbsp;|&nbsp;&nbsp;[Mehr Blogbeiträge auf Deutsch](/de/#beitraege)
+<a href="{{< relref path="../post/_index.md" >}}" class="btn btn-primary btn-lg">
+	All english blog posts
+</a>
+<a href="/de/#beitraege" class="btn btn-primary btn-lg">
+	Mehr Beiträge auf Deutsch
+</a>

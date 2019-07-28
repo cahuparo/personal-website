@@ -12,7 +12,11 @@ header:
   caption: ""
   image: ""
 ---
+<br />
+Einige Beiträge sind eventuell nur auf Englisch verfügbar.
 
-{{% alert note %}}
-Nicht jeder Beitrag ist mehrsprachig. [Mehr Blogbeiträge in englischer Sprache]({{< relref path="/post/_index.md" lang="en" >}}).
-{{% /alert %}}
+<a href="{{< relref path="/post/_index.md" lang="en" >}}" class="btn btn-primary btn-lg">
+	Mehr Blogbeiträge in englischer Sprache
+</a>
+<br />
+<br />

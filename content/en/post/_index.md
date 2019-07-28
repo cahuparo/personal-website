@@ -12,7 +12,11 @@ header:
   caption: ""
   image: ""
 ---
+<br />
+Some posts may only be available in German.
 
-{{% alert note %}}
-Not every post is multilingual. [More posts in German language]({{< relref path="/post/_index.md" lang="de" >}}).
-{{% /alert %}}
+<a href="{{< relref path="/post/_index.md" lang="de" >}}" class="btn btn-primary btn-lg">
+	More blog posts in German language
+</a>
+<br />
+<br />
