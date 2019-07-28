@@ -60,7 +60,7 @@ subtitle = ""
 
 [design.spacing]
   # Customize the section spacing. Order is top, right, bottom, left.
-  padding = ["3em", "0", "0", "0"]
+  padding = ["3rem", "0", "0", "0"]
   
 [advanced]
  # Custom CSS. 
@@ -70,4 +70,11 @@ subtitle = ""
  css_class = ""
 +++
 
-[Alle deutschen Blogbeiträge]({{< relref path="../post/_index.md" >}})&nbsp;&nbsp;|&nbsp;&nbsp;[More blog posts in English](/#posts)
+<div class="project-toolbar mt-2">
+	<a href="{{< relref path="../post/_index.md" >}}" class="btn btn-primary btn-lg">
+		Alle deutschen Blogbeiträge
+	</a>
+	<a href="/#posts" class="btn btn-primary btn-lg">
+		More posts in English
+	</a>
+</div>

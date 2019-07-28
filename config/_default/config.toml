@@ -13,7 +13,7 @@ baseurl = "https://julian.pawlowski.me/"
 
 # Enter a copyright notice to display in the site footer.
 # To display a copyright symbol, type `&copy;`. For current year, type `{year}`.
-copyright = "© {year} Julian Pawlowski"
+copyright = "&copy; {year} Julian Pawlowski"
 
 # Enable analytics by entering your Google Analytics tracking ID
 googleAnalytics = "UA-144239485-1"
@@ -42,9 +42,10 @@ ignoreFiles = ["\\.ipynb$", ".ipynb_checkpoints$", "\\.Rmd$", "\\.Rmarkdown$", "
 enableRobotsTXT = true
 
 [outputs]
-  home = [ "HTML", "JSON", "RSS", "ATOM" ]
+  home = [ "HTML", "JSON", "RSS", "WebAppManifest", "ATOM" ]
   section = [ "HTML", "RSS", "ATOM" ]
   taxonomy = [ "HTML", "RSS", "ATOM" ]
+  taxonomyTerm = [ "HTML", "RSS", "ATOM" ]
 
 [mediaTypes."application/manifest+json"]
   suffixes = ["webmanifest"]

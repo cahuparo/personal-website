@@ -60,7 +60,7 @@ subtitle = ""
   
 [design.spacing]
   # Customize the section spacing. Order is top, right, bottom, left.
-  padding = ["3em", "0", "0", "0"]
+  padding = ["3rem", "0", "0", "0"]
 
 [advanced]
  # Custom CSS. 
@@ -70,4 +70,11 @@ subtitle = ""
  css_class = ""
 +++
 
-[Alle Publikationen auf Deutsch]({{< relref path="../publication/_index.md" >}})&nbsp;&nbsp;|&nbsp;&nbsp;[More publications in English]({{< relref path="../publication/_index.md" lang="en" >}})
+<div class="project-toolbar mt-2">
+	<a href="{{< relref path="../publication/_index.md" >}}" class="btn btn-primary btn-lg">
+		Alle deutschen Publikationen
+	</a>
+	<!-- <a href="/#featured" class="btn btn-primary btn-lg">
+		More publications in English
+	</a> -->
+</div>
