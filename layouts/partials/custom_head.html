@@ -1,3 +1,7 @@
+{{ with .OutputFormats.Get "ATOM" }}
+<link rel="alternate" href="{{.RelPermalink}}" type="application/atom+xml" title="{{site.Title}}">
+{{ end }}
+
 <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png?v=gAdNNvE9vr">
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png?v=gAdNNvE9vr">
 <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png?v=gAdNNvE9vr">
@@ -9,7 +13,3 @@
 <meta name="msapplication-TileColor" content="#59bb2f">
 <meta name="msapplication-TileImage" content="/mstile-144x144.png?v=gAdNNvE9vr">
 {{/* <meta name="theme-color" content="#1b5e20"> */}}
-
-{{ with .OutputFormats.Get "ATOM" }}
-<link rel="alternate" href="{{.RelPermalink}}" type="application/atom+xml" title="{{site.Title}}">
-{{ end }}
