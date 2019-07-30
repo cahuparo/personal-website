@@ -4,7 +4,9 @@
 title: "GEh' MA demonstrieren!"
 subtitle: ""
 summary: ""
-aliases: ["/post/8294090897/geh-ma-demonstrieren"]
+aliases:
+- "/post/8294090897"
+- "/post/8294090897/geh-ma-demonstrieren"
 #translationKey: ""
 authors: []
 tags:

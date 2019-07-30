@@ -1,7 +1,7 @@
 ---
 # Documentation: https://sourcethemes.com/academic/docs/managing-content/
 
-title: "Gedanken Zur Hausautomatisierung"
+title: "Gedanken zur Hausautomatisierung"
 subtitle: ""
 summary: "Über meine Anfänge bei der Hausautomation und welche Rolle Philips HUE und Homematic dabei spielten."
 translationKey: "thoughts-on-home-automation"

@@ -4,7 +4,9 @@
 title: "Der Strommarkt wird liberaler"
 subtitle: "... und komplizierter."
 summary: ""
-aliases: ["/post/500897824/der-strommarkt-wird-liberaler-und-komplizierter"]
+aliases:
+- "/post/500897824"
+- "/post/500897824/der-strommarkt-wird-liberaler-und-komplizierter"
 #translationKey: ""
 authors: []
 tags:

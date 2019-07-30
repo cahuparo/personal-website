@@ -4,7 +4,9 @@
 title: "Meine Handy- und Smartphone Historie"
 subtitle: "Eine Chronologie."
 summary: ""
-aliases: ["/post/7453715087/handy-historie"]
+aliases:
+- "/post/7453715087"
+- "/post/7453715087/handy-historie"
 #translationKey: ""
 authors: []
 tags:
