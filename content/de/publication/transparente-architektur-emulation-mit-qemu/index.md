@@ -56,7 +56,7 @@ links:
 # Focal points: Smart, Center, TopLeft, Top, TopRight, Left, Right, BottomLeft, Bottom, BottomRight.
 image:
   placement: 3
-  caption: ""
+  caption: "© Joseasreyes, 123RF.com"
   focal_point: "Center"
   preview_only: false
 
