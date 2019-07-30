@@ -20,10 +20,10 @@ publication_types: ["2"]
 publication: "Linux-Magazin"
 publication_short: ""
 
-abstract: "Für die Print-Ausgabe Juni 2013 des deutschen \"Linux Magazin\" schrieb ich einen Artikel darüber, wie man automatisiert ein Image für Embedded Systeme wie dem Raspberry Pi bereitstellt."
+abstract: "Kompakte Systeme wie der Raspberry Pi bieten preisgünstige Hardware für unzählige Verwendungszwecke. Doch wie entwickelt und portiert man Software auf diese Plattformen?"
 
 # Summary. An optional shortened abstract.
-summary: "Kompakte Systeme wie der Raspberry Pi bieten preisgünstige Hardware für unzählige Verwendungszwecke. Doch wie entwickelt und portiert man Software auf diese Plattformen?"
+summary: "Wie entwickelt und portiert man Software für den Raspberry Pi?"
 
 tags:
  - Virtualisierung
@@ -75,3 +75,4 @@ projects: []
 slides: ""
 ---
 
+Für die Print-Ausgabe Juni 2013 des deutschen "Linux Magazin" schrieb ich einen Artikel darüber, wie man automatisiert ein Image für Embedded Systeme wie dem Raspberry Pi bereitstellt.
