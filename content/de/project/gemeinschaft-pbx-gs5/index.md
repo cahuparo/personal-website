@@ -43,6 +43,10 @@ links:
   icon_pack: fab
   name: Source Code
   url: https://github.com/jpawlowski/GBE
+- icon: book-reader
+  icon_pack: fas
+  name: Artikel im Linux Magazin
+  url: /de/transparente-architektur-emulation-mit-qemu/
 ---
 
 Meine [Begeisterung für Festnetz Telefonie]({{< relref "capi4linux-thepenguinde-edition/index.md" >}}) erlebte bei mir mehr als 10 Jahre später nochmals ein Revival, als ich auf die freie Telefonanlage [Gemeinschaft PBX](https://web.archive.org/web/20121101201537/http://www.amooma.de/gemeinschaft/) von [Stefan Wintermeyer](https://www.wintermeyer.de/) aufmerksam wurde. Die Version 5 war damals gerade kurz vor der Fertigstellung und war eine komplette Neuentwicklung. Diese brachte auch einen Wechsel vom inzwischen etwas schwerfällig gewordenen Asterisk hin zur modernen [FreeSWITCH](https://freeswitch.com/) Basis.
