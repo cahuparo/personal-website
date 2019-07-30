@@ -3,7 +3,6 @@
 
 title: "Transparente Architektur-Emulation mit Qemu"
 subtitle: ""
-slug: "weshalb-passwoerter-ein-auslaufmodel-sind-und-warum-sie-uns-trotzdem-noch-lange-begleiten-werden"
 authors: []
 date: 2013-06-01T08:00:00+01:00
 doi: ""
