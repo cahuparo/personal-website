@@ -4,6 +4,9 @@ slug: legal
 share: false
 commentable: false
 editable: false
+aliases:
+- /impress/
+- /terms/
 ---
 
 ### Information in accordance with Section 5 TMG

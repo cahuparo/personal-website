@@ -38,10 +38,10 @@ featured: false
 # Custom links (optional).
 #   Uncomment and edit lines below to show custom links.
 links:
-- name: Projekt
-  url: /de/projekt/continuous-integration-fur-gemeinschaft/
-  icon_pack: fas
-  icon: list
+#- name: Projekt
+#  url: /de/projekt/continuous-integration-fur-gemeinschaft/
+#  icon_pack: fas
+#  icon: list
 - name: PDF
   url: /de/download/publikation/Linux-Magazin-2013-06_Transparente-Architektur-Emulation-mit-Qemu.pdf
   icon_pack: fas
@@ -65,7 +65,7 @@ image:
 #   Simply enter your project's folder or file name without extension.
 #   E.g. `internal-project` references `content/project/internal-project/index.md`.
 #   Otherwise, set `projects: []`.
-projects: []
+projects: [ "gemeinschaft-pbx-gs5" ]
 
 # Slides (optional).
 #   Associate this publication with Markdown slides.

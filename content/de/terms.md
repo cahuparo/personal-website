@@ -4,6 +4,11 @@ slug: impressum
 share: false
 commentable: false
 editable: false
+aliases:
+- /impressum/
+- /de/legal/
+- /de/impress/
+- /de/terms/
 ---
 
 ### Angaben gemäß § 5 TMG
