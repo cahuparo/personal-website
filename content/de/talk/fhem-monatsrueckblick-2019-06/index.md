@@ -26,8 +26,9 @@ categories:
 featured: false
 
 image:
-  caption: ""
-  focal_point: Right
+  placement: 3
+  caption: "Foto von Taylor Vick auf Unsplash"
+  focal_point: Smart
 
 # Custom links (optional).
 #   Uncomment and edit lines below to show custom links.
