@@ -42,10 +42,10 @@ ignoreFiles = ["\\.ipynb$", ".ipynb_checkpoints$", "\\.Rmd$", "\\.Rmarkdown$", "
 enableRobotsTXT = true
 
 [outputs]
-  home = [ "HTML", "JSON", "RSS", "WebAppManifest", "ATOM" ]
-  section = [ "HTML", "RSS", "ATOM" ]
-  taxonomy = [ "HTML", "RSS", "ATOM" ]
-  taxonomyTerm = [ "HTML", "RSS", "ATOM" ]
+  home = [ "HTML", "JSON", "RSS", "WebAppManifest" ]
+  section = [ "HTML", "RSS" ]
+  taxonomy = [ "HTML", "RSS" ]
+  taxonomyTerm = [ "HTML", "RSS" ]
 
 [mediaTypes."application/manifest+json"]
   suffixes = ["webmanifest"]
@@ -53,19 +53,6 @@ enableRobotsTXT = true
 [outputFormats.WebAppManifest]
   mediaType = "application/manifest+json"
   rel = "manifest"
-
-[mediaTypes."application/atom+xml"]
-  suffixes = ["xml"]
-
-[outputFormats.Atom]
-  mediaType = "application/atom+xml"
-  baseName = "atom"
-  isPlainText = false
-
-[outputFormats.RSS]
-  mediaType = "application/rss+xml"
-  baseName = "rss"
-  isPlainText = false
 
 # Configure BlackFriday Markdown rendering.
 #   See: https://gohugo.io/getting-started/configuration/#configure-blackfriday

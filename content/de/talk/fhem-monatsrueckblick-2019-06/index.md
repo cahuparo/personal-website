@@ -32,10 +32,10 @@ image:
 # Custom links (optional).
 #   Uncomment and edit lines below to show custom links.
 links:
-- name: Projekt
-  url: /de/projekt/fhem-modul-entwicklung/
-  icon_pack: fas
-  icon: list
+#- name: Projekt
+#  url: /de/projekt/fhem-modul-entwicklung/
+#  icon_pack: fas
+#  icon: list
 - name: Video
   url: https://www.youtube.com/watch?v=5q48t1ubc1s&t=2m56s
   icon_pack: fas
@@ -61,7 +61,7 @@ slides: ""
 #   Simply enter your project's folder or file name without extension.
 #   E.g. `projects = ["internal-project"]` references `content/project/deep-learning/index.md`.
 #   Otherwise, set `projects = []`.
-projects: []
+projects: [ "fhem-mod-development" ]
 
 # Enable math on this page?
 math: false

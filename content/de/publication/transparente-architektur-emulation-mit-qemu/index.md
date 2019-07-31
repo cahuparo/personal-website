@@ -38,10 +38,10 @@ featured: false
 # Custom links (optional).
 #   Uncomment and edit lines below to show custom links.
 links:
-- name: Projekt
-  url: /de/projekt/continuous-integration-fur-gemeinschaft/
-  icon_pack: fas
-  icon: list
+#- name: Projekt
+#  url: /de/projekt/continuous-integration-fur-gemeinschaft/
+#  icon_pack: fas
+#  icon: list
 - name: PDF
   url: /de/download/publikation/Linux-Magazin-2013-06_Transparente-Architektur-Emulation-mit-Qemu.pdf
   icon_pack: fas
@@ -76,5 +76,3 @@ slides: ""
 ---
 
 Für die Print-Ausgabe Juni 2013 des deutschen "Linux Magazin" schrieb ich einen Artikel darüber, wie man automatisiert ein Image für Embedded Systeme wie dem Raspberry Pi bereitstellt.
-
-Damit habe ich also meine Erfahrungen aus dem [Gemeinschaft 5 PBX Projekt](/de/projekt/continuous-integration-fur-gemeinschaft/) explizit publiziert.
