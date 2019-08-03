@@ -1,5 +1,5 @@
 /*
-  Content-Security-Policy-Report-Only: default-src 'none'; frame-ancestors 'none'; report-uri https://jpawlowski.report-uri.com/r/d/csp/wizard;
+  Content-Security-Policy-Report-Only: default-src 'none'; frame-ancestors 'none'; report-uri https://jpawlowski.report-uri.com/r/d/csp/wizard; style-src-elem use.fontawesome.com fonts.googleapis.com 'self' c.disquscdn.com cdnjs.cloudflare.com; connect-src 'self'; font-src cdnjs.cloudflare.com fonts.gstatic.com use.fontawesome.com; frame-src disqus.com www.youtube.com; img-src 'self' a.tile.openstreetmap.org b.tile.openstreetmap.org c.tile.openstreetmap.org cdnjs.cloudflare.com www.google-analytics.com; prefetch-src disqus.com; manifest-src 'self'; script-src-elem 'self' cdnjs.cloudflare.com loredo.disqus.com www.google-analytics.com
   Report-To: {"group":"default","max_age":31536000,"endpoints":[{"url":"https://jpawlowski.s-uri.com/a/d/g"}],"include_subdomains":true}
   NEL: {"report_to":"default","max_age":31536000,"include_subdomains":true}
   Referrer-Policy: no-referrer-when-downgrade

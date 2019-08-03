@@ -27,16 +27,17 @@ categories:
   - Hausautomation
 date: 2018-12-30T14:20:49+01:00
 lastmod: 2018-12-30T14:20:49+01:00
-featured: true
+featured: false
 draft: false
 
 # Featured image
 # To use, add an image named `featured.jpg/png` to your page's folder.
 # Focal points: Smart, Center, TopLeft, Top, TopRight, Left, Right, BottomLeft, Bottom, BottomRight.
 image:
-  caption: ""
-  focal_point: ""
+  caption: "Foto von Stephan Bechert auf Unsplash"
+  focal_point: "Smart"
   preview_only: false
+  placement: 3
 
 # Projects (optional).
 #   Associate this post with one or more of your projects.
