@@ -52,4 +52,4 @@ One important thing I want to point out here is that I will continue to write po
 
 I will certainly document a few more aspects I considered to renew and setup this website and blog. If you notice anything special already now and you want me to explain more about it here, leave a comment below and it might become a part of one of the next stories.
 
-So, what do you think - any thoughts about the status quo?
+So, what do you think – any thoughts about the status quo?
