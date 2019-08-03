@@ -32,9 +32,9 @@ image:
 projects: []
 ---
 
-Auf die ein oder andere Weise haben es einige vielleicht schon bemerkt: Vor einigen Tagen habe ich meine neue persönliche Website an den Start gebracht.
+Auf die ein oder andere Weise haben es einige vielleicht schon bemerkt: Vor ein paar Tagen habe ich meine neue persönliche Website an den Start gebracht.
 
-Obwohl ich Inhalte aus meinem alten Tumblr Blog übernommen habe ist dieser Neuanfang gewiss nicht nur dazu da, um das Aussehen zu modernisieren.
+Obwohl ich Inhalte aus meinem alten Tumblr Blog übernommen habe, ist dieser Neuanfang gewiss nicht nur dazu da, um das Aussehen zu modernisieren.
 
 Zu Beginn dieses Jahres kam in mir schon der Wunsch auf, dass ich wieder mehr Inhalte für die Community produzieren möchte, um Bereiche aus meinen beruflichen und persönlichen Tech Aktivitäten und meiner Arbeit als technischer Unternehmensberater zu dokumentieren. Kürzlich bekam ich wieder neue Motivation auf dieses "Gefühl" zurückzukommen und etwas echtes daraus zu machen.
 
