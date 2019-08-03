@@ -8,7 +8,7 @@ active = true  # Activate this widget? true/false
 weight = 60  # Order that this section will appear.
 
 title = "Recent Posts"
-subtitle = ""
+subtitle = "<a href=\"/de/#beitraege\"><i class=\"fas fa-globe mr-1\"></i>Mehr Beiträge auf Deutsch</a>"
 
 [content]
   # Page type to display. E.g. post, talk, or publication.
@@ -60,7 +60,7 @@ subtitle = ""
 
 [design.spacing]
   # Customize the section spacing. Order is top, right, bottom, left.
-  padding = ["3rem", "0", "0", "0"]
+  padding = ["3rem", "0", "3rem", "0"]
   
 [advanced]
  # Custom CSS. 
@@ -69,12 +69,3 @@ subtitle = ""
  # CSS class.
  css_class = ""
 +++
-
-<div class="project-toolbar mt-2">
-	<a href="{{< relref path="../post/_index.md" >}}" class="btn btn-primary btn-lg">
-		All english blog posts
-	</a>
-	<a href="/de/#beitraege" class="btn btn-primary btn-lg">
-		Mehr Beiträge auf Deutsch
-	</a>
-</div>

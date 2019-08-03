@@ -10,7 +10,7 @@ subtitle = ""
 
 [content]
   # Choose how many tags you would like to display (0 = all tags)
-#  count = 35
+  count = 0
 
 [design.spacing]
   # Customize the section spacing. Order is top, right, bottom, left.

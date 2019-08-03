@@ -69,12 +69,3 @@ subtitle = ""
  # CSS class.
  css_class = ""
 +++
-
-<div class="project-toolbar mt-2">
-	<a href="{{< relref path="../publication/_index.md" >}}" class="btn btn-primary btn-lg">
-		Alle deutschen Publikationen
-	</a>
-	<!-- <a href="/#featured" class="btn btn-primary btn-lg">
-		More publications in English
-	</a> -->
-</div>
