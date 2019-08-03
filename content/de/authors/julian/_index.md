@@ -30,8 +30,6 @@ interests:
 - B2B Collaboration
 - Kontinuierliches Change Management für Office 365
 - Übergang vom privaten zum öffentlichen Firmennetz und dessen sicherheit
-- Hausautomatisierung
-- Eddie der [:dog2:](https://twitter.com/DogEddie17)
 
 hobbies:
 - Hausautomatisierung
