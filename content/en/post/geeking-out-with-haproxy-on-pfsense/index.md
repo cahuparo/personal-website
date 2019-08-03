@@ -7,7 +7,7 @@ aliases:
  - "/post/116633549315/geeking-out-with-haproxy-on-pfsense-the-ultimate"
 slug: geeking-out-with-haproxy-on-pfsense-the-ultimate
 summary: "How to use HAproxy to share TCP port 443 for OpenVPN and SSH tunneling."
-translationKey: "beginning-with-something-new"
+translationKey: ""
 authors: []
 tags:
 - pfSense
