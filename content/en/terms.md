@@ -7,6 +7,7 @@ editable: false
 aliases:
 - /impress/
 - /terms/
+DisableRSS: true
 ---
 
 ### Information in accordance with Section 5 TMG
@@ -47,12 +48,13 @@ aliases:
 
 This website is powered by the
 <a href="https://sourcethemes.com/academic/" target="_blank" rel="noopener">Academic theme</a> for
-<a href="https://gohugo.io" target="_blank" rel="noopener">Hugo</a>.
+<a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> and is hosted on <a href="https://www.netlify.com/" target="_blank" rel="noopener">Netlify</a>.<br />
+Source code is maintained at [Github](https://github.com/jpawlowski/personal-website).
 
 
 ### Graphics and Image Sources
 
-External sources are mentioned as part of the individual pages.
+External sources are mostly mentioned as part of the individual pages. Most images are royalty-free and are from [Unsplash](https://unsplash.com/).
 
 
 ### Disclaimer

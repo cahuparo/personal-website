@@ -60,7 +60,7 @@ time_format = "3:04 pm"
 # Enter contact details (optional). To hide a field, clear it to "".
 email = "julian.pawlowski@digatus.de"
 phone = ""
-address = "Elsenheimerstr. 61, Munich, Bavaria, Germany"
+address = "Office: Elsenheimerstr. 61, Munich, Bavaria, Germany"
 
 # Office hours: use `<br>` to insert a line break, or set to "" to remove office hours
 office_hours = ""

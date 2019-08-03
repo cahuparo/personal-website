@@ -9,6 +9,7 @@ tags:
 categories:
 - Hausautomation
 date: "2019-05-01T00:00:00Z"
+disablerss: true
 
 # Optional external URL for project (replaces project detail page).
 #external_link: "https://github.com/fhem/fhem-docker"

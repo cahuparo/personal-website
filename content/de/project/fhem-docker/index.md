@@ -23,6 +23,7 @@ date: 2018-07-28T00:00:00+02:00
 lastmod: 2019-07-24T15:12:2+02:00
 featured: true
 draft: false
+disablerss: true
 
 # Featured image
 # To use, add an image named `featured.jpg/png` to your page's folder.

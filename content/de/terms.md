@@ -9,6 +9,7 @@ aliases:
 - /de/legal/
 - /de/impress/
 - /de/terms/
+DisableRSS: true
 ---
 
 ### Angaben gemäß § 5 TMG
@@ -45,12 +46,13 @@ aliases:
 
 Diese Website wurde mit dem 
 <a href="https://sourcethemes.com/academic/" target="_blank" rel="noopener">Academic Motiv</a> für
-<a href="https://gohugo.io" target="_blank" rel="noopener">Hugo</a> erstellt.
+<a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> erstellt und wird auf <a href="https://www.netlify.com/" target="_blank" rel="noopener">Netlify</a> gehostet.<br />
+Der Quellcode wird auf [Github](https://github.com/jpawlowski/personal-website) verwaltet.
 
 
 ### Quellenangabe für Grafiken und Bilder
 
-Externe Quellen sind innerhalb der jeweiligen Seiten erwähnt.
+Externe Quellen sind zumeist innerhalb der jeweiligen Seiten erwähnt. Die meisten Bilder sind lizenzfrei und stammen von [Unsplash](https://unsplash.com/).
 
 
 ### Haftungsausschluss

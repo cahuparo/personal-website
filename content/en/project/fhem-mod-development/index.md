@@ -7,6 +7,7 @@ tags:
 - Perl
 - Current Projects
 date: "2013-09-23T00:00:00Z"
+disablerss: true
 
 image:
   caption: Photo by Markus Spiske on Unsplash
