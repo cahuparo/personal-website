@@ -18,7 +18,7 @@ categories:
 - Telekommunikation
 date: "2002-09-24T00:00:00Z"
 date_end: "2004-12-31T00:00:00Z"
-disablerss: true
+disablefeed: true
 
 image:
   caption: Website aus dem Jahr 2002

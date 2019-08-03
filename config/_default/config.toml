@@ -60,7 +60,10 @@ enableRobotsTXT = true
 [outputFormats.Atom]
   mediaType = "application/atom+xml"
   baseName = "atom"
+  isHTML = false
   isPlainText = false
+  noUgly = true
+  Rel = "alternate"
 
 #[outputFormats.RSS]
 #  mediaType = "application/rss+xml"

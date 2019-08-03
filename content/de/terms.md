@@ -9,7 +9,7 @@ aliases:
 - /de/legal/
 - /de/impress/
 - /de/terms/
-DisableRSS: true
+DisableFeed: true
 ---
 
 ### Angaben gemäß § 5 TMG

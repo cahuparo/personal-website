@@ -7,7 +7,7 @@ editable: false
 aliases:
 - /impress/
 - /terms/
-DisableRSS: true
+DisableFeed: true
 ---
 
 ### Information in accordance with Section 5 TMG
