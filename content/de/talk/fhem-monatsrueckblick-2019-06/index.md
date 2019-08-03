@@ -3,6 +3,7 @@ title: "Erklärung der FHEM Module Astro & DaySchedule beim FHEM Monatsrückblic
 event: FHEM Monatsrückblick, Juni 2019
 location: Webinar
 event_url: https://www.youtube.com/watch?v=5q48t1ubc1s&t=2m56s
+summary: "Das Astro Modul hat einige Überarbeitungen von mir erfahren. Ich erläutere hier kurz einige der Beweggründe und gebe einen Ausblick auf ein neues Modul namens DaySchedule, welches auf Astro als Datenlieferant aufbaut."
 abstract: "Das Astro Modul hat einige Überarbeitungen von mir erfahren. Ich erläutere hier kurz einige der Beweggründe und gebe einen Ausblick auf ein neues Modul namens DaySchedule, welches auf Astro als Datenlieferant aufbaut."
 
 # Talk start and end times.
