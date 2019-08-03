@@ -10,15 +10,14 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xml:base="{{ site.BaseURL }}"{{- with site.LanguageCode }} xml:lang="{{.}}"{{end -}}>
   <id>{{ .Permalink }}</id>
   <title type="text">{{ if ne .Title site.Title }}{{ with .Title }}{{.}} | {{ end }}{{end}}{{ site.Title }}</title>
-  {{- $sitelang := site.LanguageCode | default "en-us" -}}
   {{- with .OutputFormats.Get "HTML" }}
-    {{ printf "<link href=%q rel=\"alternate\" type=%q hreflang=%q />" .Permalink .MediaType $sitelang | safeHTML }}
+    {{ printf "<link href=%q rel=\"alternate\" type=%q />" .Permalink .MediaType | safeHTML }}
   {{- end -}}
   {{- with .OutputFormats.Get "ATOM" }}
-    {{ printf "<link href=%q rel=\"self\" type=%q hreflang=%q />" .Permalink .MediaType $sitelang | safeHTML }}
+    {{ printf "<link href=%q rel=\"self\" type=%q />" .Permalink .MediaType | safeHTML }}
   {{- end -}}
   {{- with .OutputFormats.Get "RSS" }}
-    {{ printf "<link href=%q rel=\"alternate\" type=%q hreflang=%q />" .Permalink .MediaType $sitelang | safeHTML }}
+    {{ printf "<link href=%q rel=\"alternate\" type=%q />" .Permalink .MediaType | safeHTML }}
   {{- end -}}
   {{ range .Translations }}
   {{- $lang := .Lang -}}
