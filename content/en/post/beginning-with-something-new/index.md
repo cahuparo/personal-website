@@ -45,7 +45,7 @@ So what people can expect are a variety of topic categories being part of rather
 
 ## Find my audience
 
-One important thing I want to point out here is that I will continue to write posts in both languages – English and [German]({{< relref path="/post/der-beginn-von-etwas-neuem/index.md" lang="de" >}}). While I can't guarantee that I will be motivated to translate each and every post into both languages, I plan to write the original post always based on the primary audience I would like to reach. Because of my work on international projects around the globe, this will likely be English for professional matters. For topics all around home automation, I know that there is quite a big group of people originating from the German speaking community so I might tend to give priority to create the German version first.
+One important thing I want to point out here is that I will continue to write posts in both languages – English and [German]({{< ref path="/post/der-beginn-von-etwas-neuem/index.md" lang="de" >}}). While I can't guarantee that I will be motivated to translate each and every post into both languages, I plan to write the original post always based on the primary audience I would like to reach. Because of my work on international projects around the globe, this will likely be English for professional matters. For topics all around home automation, I know that there is quite a big group of people originating from the German speaking community so I might tend to give priority to create the German version first.
 
 
 ## Behind the scenes
