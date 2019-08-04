@@ -33,6 +33,9 @@
     {{ printf "<link href=%q rel=\"alternate\" type=%q hreflang=%q title=\"Legacy Feed (RSS in %s)\" />" .Permalink .MediaType $lang $lang | safeHTML }}
   {{ end -}}
   {{ end -}}
+  {{ if and (eq site.Params.comments.engine 1) (site.Params.comments.disqus.shortname) }}
+  <link href="https://{{ site.Params.comments.disqus.shortname }}.disqus.com/comments.rss" rel="comments" type="rss+xml" title="Comments" />
+  {{ end }}
   <generator uri="https://gohugo.io/" version="{{hugo.Version}}">Hugo</generator>
   {{ with $author -}}
   <author>
@@ -48,8 +51,8 @@
   {{end -}}
   {{ with site.Copyright }}<rights>{{ replace (replace . "{year}" now.Year) "&copy;" "©" | plainify }}</rights>{{end }}
   {{ if not .Date.IsZero }}<updated>{{ .Date.UTC.Format "2006-01-02T15:04:05-07:00" | plainify  }}</updated>{{ end }}
-  <icon xml:base="{{ site.BaseURL }}">/img/icon-32.png</icon>
-  {{ if .Scratch.Get "og_image" }}<logo>{{ .Scratch.Get "og_image" | plainify }}</logo>{{end -}}
+  <icon>{{ site.BaseURL }}img/icon-32.png</icon>
+  <logo>{{ site.BaseURL }}img/icon-512.png</logo>
   {{- $start := now.AddDate -1 0 0}}
   {{- range $pages }}
   {{- if not .Params.DisableFeed }}{{ if ne .Section ""}}
@@ -78,6 +81,23 @@
       {{- .Content | safeHTML | chomp -}}
       ]]>
     </content>
+    {{if .NextInSection}}
+    <link href="{{.NextInSection.Permalink}}?utm_source=atom_feed" rel="next" title="{{.NextInSection.Title}}" />
+    {{end}}
+    {{if .PrevInSection}}
+    <link href="{{.PrevInSection.Permalink}}?utm_source=atom_feed" rel="prev" title="{{.PrevInSection.Title}}" />
+    {{end}}
+    {{ if site.Params.comments.engine | and (index site.Params.comments.commentable .Type) | and (ne .Params.commentable false) | or .Params.commentable }}
+    <link href="{{ .Permalink }}?utm_source=atom_feed#comments" rel="service.post" type="text/html" title="Add your comment" />
+    {{ end }}
+    {{ if ne .Type "page" }}
+      {{ $related := site.RegularPages.Related . | first 5 }}
+      {{ with $related }}
+          {{ range . }}
+          <link href="{{ .Permalink }}?utm_source=atom_feed" rel="related" type="text/html" title="{{ .Title }}" />
+          {{ end }}
+      {{ end }}
+    {{ end }}
   </entry>
   {{- end }}{{- end }}
   {{- end }}
