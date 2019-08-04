@@ -8,7 +8,7 @@
 {{- $author := site.GetPage (printf "/%s/%s" "authors" (.Scratch.Get "superuser_username")) -}}
 {{- printf "<?xml version=\"1.0\" encoding=\"utf-8\" standalone=\"yes\" ?>" | safeHTML }}
 <feed xmlns="http://www.w3.org/2005/Atom" xml:base="{{ site.BaseURL }}"{{- with site.LanguageCode }} xml:lang="{{.}}"{{end -}}>
-  <id>{{ .Permalink }}</id>
+  {{ $uuid := sha1 $.Site.BaseURL }}<id>urn:uuid:{{substr $uuid 0 8}}-{{substr $uuid 8 4}}-5{{substr $uuid 13 3}}-{{substr $uuid 16 1}}9{{substr $uuid 17 2}}-{{substr $uuid 21 12}}</id>
   <title type="text">{{ if ne .Title site.Title }}{{ with .Title }}{{.}} | {{ end }}{{end}}{{ site.Title }}</title>
   {{- with .Params.Subtitle }}<subtitle type="text">{{ . | plainify }}</subtitle>{{ end }}
   {{- with .OutputFormats.Get "HTML" }}
@@ -32,7 +32,7 @@
     {{ printf "<link href=%q rel=\"alternate\" type=%q hreflang=%q />" .Permalink .MediaType $lang | safeHTML }}
   {{ end -}}
   {{ end -}}
-  <generator url="https://gohugo.io" version="{{.Hugo.Version}}">Hugo</generator>
+  <generator uri="https://gohugo.io/" version="{{.Hugo.Version}}">Hugo</generator>
   {{ with $author -}}
   <author>
     <name>{{ .Params.name }}</name>
@@ -52,14 +52,24 @@
   {{- range $pages }}
   {{- if not .Params.DisableFeed }}{{ if ne .Section ""}}
   <entry>
-    {{ $uuid := sha1 $.Site.BaseURL }}<id>urn:uuid:{{substr $uuid 0 8}}-{{substr $uuid 8 4}}-5{{substr $uuid 13 3}}-{{substr $uuid 16 1}}9{{substr $uuid 17 2}}-{{substr $uuid 21 12}}</id>
+    {{ $uuid := sha1 .Permalink }}<id>urn:uuid:{{substr $uuid 0 8}}-{{substr $uuid 8 4}}-5{{substr $uuid 13 3}}-{{substr $uuid 16 1}}9{{substr $uuid 17 2}}-{{substr $uuid 21 12}}</id>
     <title type="text">{{ .Title | plainify }}</title>
-    <category term="{{.Section}}" />
+    <category term="{{.Section}}" label="{{.Section}}" />
     {{ with .Params.Subtitle }}<subtitle type="text">{{ . | plainify }}</subtitle>{{ end }}
     {{ if not .Lastmod.IsZero }}<updated>{{ .Lastmod.Format "2006-01-02T15:04:05-07:00" | safeHTML }}</updated>{{ end }}
     <published>{{ .Date.Format "2006-01-02T15:04:05-07:00" | safeHTML }}</published>
-    <link href="{{ .Permalink }}?utm_source=atom_feed" />
-    {{ with .Summary }}{{ if ne . "" }}<summary type="html">{{ . | safeHTML | chomp }}</summary>{{ end }}{{ end }}
+    <link href="{{ .Permalink }}?utm_source=atom_feed" rel="alternate" type="text/html" />
+    {{- range .Translations }}
+    {{- $link := printf "%s?utm_source=atom_feed" .Permalink | safeHTML }}
+    {{ printf "<link href=%q rel=\"alternate\" type=\"text/html\" hreflang=%q />" $link .Lang | safeHTML }}
+    {{ end -}}
+    {{ with .Summary }}{{ if ne . "" }}
+    <summary type"="html"">
+      {{- printf "<![CDATA[" | safeHTML }}      
+      {{ . | safeHTML | chomp }}
+      ]]>
+    </summary>
+    {{ end }}{{ end }}
     <content type="html">
       {{- printf "<![CDATA[" | safeHTML }}      
       {{- .Content | safeHTML | chomp -}}

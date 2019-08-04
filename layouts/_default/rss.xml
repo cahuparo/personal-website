@@ -33,7 +33,7 @@
     {{ end -}}
     {{ end -}}
     <description>{{ .Title | default site.Title }} (RSS)</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator>
+    <generator>Hugo v{{.Hugo.Version}} (https://gohugo.io/)</generator>
     {{ with $author -}}
     <managingEditor>{{ .Params.name }}</managingEditor>
     {{end -}}
