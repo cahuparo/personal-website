@@ -18,6 +18,13 @@ https://www.julian.pawlowski.me/* https://julian.pawlowski.me/:splat 301!
 # Optional: Redirect default Netlify subdomain to primary domain
 https://jpawlowski.netlify.com/* https://julian.pawlowski.me/:splat 301!
 
+/de/feed /de/abonnieren/ 302!
+/de/atom /de/abonnieren/ 302!
+/de/rss  /de/abonnieren/ 302!
+/feed /subscribe/ 302!
+/atom /subscribe/ 302!
+/rss  /subscribe/ 302!
+
 # /  /de/  301!  Language=de
 # /  /de/  302!  Language=de
 # /index.html  /de/  301!  Language=de

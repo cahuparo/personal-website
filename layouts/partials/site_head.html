@@ -136,25 +136,31 @@
   {{ end }}
   {{ end }}
 
+  {{ if not .IsHome }}
+
   {{- with .OutputFormats.Get "ATOM" }}
-    {{ printf "<link href=%q rel=\"alternate\" type=%q title=\"Modern Feed (Atom)\" />" .RelPermalink .MediaType | safeHTML }}
+    {{ printf "<link href=%q rel=\"alternate\" type=%q title=\"Section (Atom/Modern feed format)\" />" .RelPermalink .MediaType | safeHTML }}
   {{- end -}}
   {{- with .OutputFormats.Get "RSS" }}
-    {{ printf "<link href=%q rel=\"alternate\" type=%q title=\"Legacy Feed (RSS)\" />" .RelPermalink .MediaType | safeHTML }}
+    {{ printf "<link href=%q rel=\"alternate\" type=%q title=\"Section (RSS/Legacy feed format)\" />" .RelPermalink .MediaType | safeHTML }}
   {{- end -}}
   {{ range .Translations }}
   {{- $lang := .Lang -}}
   {{- $langstr := index site.Data.i18n.languages .Lang -}}
   {{- with .OutputFormats.Get "ATOM" }}
-    {{ printf "<link href=%q rel=\"alternate\" type=%q hreflang=%q title=\"[%s] Modern Feed (Atom)\" />" .RelPermalink .MediaType $lang $langstr | safeHTML }}
+    {{ printf "<link href=%q rel=\"alternate\" type=%q hreflang=%q title=\"[%s] Section (Atom/Modern feed format)\" />" .RelPermalink .MediaType $lang $langstr | safeHTML }}
   {{- end -}}
   {{- with .OutputFormats.Get "RSS" }}
-    {{ printf "<link href=%q rel=\"alternate\" type=%q hreflang=%q title=\"[%s] Legacy Feed (RSS)\" />" .RelPermalink .MediaType $lang $langstr | safeHTML }}
+    {{ printf "<link href=%q rel=\"alternate\" type=%q hreflang=%q title=\"[%s] Section (RSS/Legacy feed format)\" />" .RelPermalink .MediaType $lang $langstr | safeHTML }}
   {{ end -}}
   {{ end -}}
-  {{ if and (eq site.Params.comments.engine 1) (site.Params.comments.disqus.shortname) }}
-  <link href="https://{{ site.Params.comments.disqus.shortname }}.disqus.com/comments.rss" rel="comments" type="application/rss+xml" title="Comments" />
-  {{ end }}
+
+  {{ end -}}
+
+  <link href="atom.xml" rel="alternate" type="application/atom+xml" title="All english contents (Atom/Modern feed format)" />
+  <link href="index.xml" rel="alternate" type="application/rss+xml" title="All english contents (RSS/Legacy feed format)" />
+  <link href="de/atom.xml" rel="alternate" type="application/atom+xml" title="Alle deutschen Inhalte (Atom/Modernes Feed Format)" />
+  <link href="de/index.xml" rel="alternate" type="application/rss+xml" title="Alle deutschen Inhalte (RSS/Altes Feed Format)" />
 
   <link rel="manifest" href="{{ "index.webmanifest" | relURL }}">
   <link rel="icon" type="image/png" href="{{ "img/icon-32.png" | relURL }}">

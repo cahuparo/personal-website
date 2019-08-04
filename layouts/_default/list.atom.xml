@@ -16,10 +16,10 @@
     {{ printf "<link href=%q rel=\"alternate\" type=%q title=\"Website\" />" .Permalink .MediaType | safeHTML }}
   {{- end -}}
   {{- with .OutputFormats.Get "ATOM" }}
-    {{ printf "<link href=%q rel=\"self\" type=%q title=\"Modern Feed (Atom)\" />" .Permalink .MediaType | safeHTML }}
+    {{ printf "<link href=%q rel=\"self\" type=%q title=\"Atom/Modern feed format\" />" .Permalink .MediaType | safeHTML }}
   {{- end -}}
   {{- with .OutputFormats.Get "RSS" }}
-    {{ printf "<link href=%q rel=\"alternate\" type=%q title=\"Legacy Feed (RSS)\" />" .Permalink .MediaType | safeHTML }}
+    {{ printf "<link href=%q rel=\"alternate\" type=%q title=\"RSS/Legacy feed format\" />" .Permalink .MediaType | safeHTML }}
   {{- end -}}
   {{ range .Translations }}
   {{- $lang := .Lang -}}
@@ -28,10 +28,10 @@
     {{ printf "<link href=%q rel=\"alternate\" type=%q hreflang=%q title=\"[%s] Website\" />" .Permalink .MediaType $lang $langstr | safeHTML }}
   {{- end -}}
   {{- with .OutputFormats.Get "ATOM" }}
-    {{ printf "<link href=%q rel=\"alternate\" type=%q hreflang=%q title=\"[%s] Modern Feed (Atom)\" />" .Permalink .MediaType $lang $langstr | safeHTML }}
+    {{ printf "<link href=%q rel=\"alternate\" type=%q hreflang=%q title=\"[%s] Atom/Modern feed format\" />" .Permalink .MediaType $lang $langstr | safeHTML }}
   {{- end -}}
   {{- with .OutputFormats.Get "RSS" }}
-    {{ printf "<link href=%q rel=\"alternate\" type=%q hreflang=%q title=\"[%s] Legacy Feed (RSS)\" />" .Permalink .MediaType $lang $langstr | safeHTML }}
+    {{ printf "<link href=%q rel=\"alternate\" type=%q hreflang=%q title=\"[%s] RSS/Legacy feed format\" />" .Permalink .MediaType $lang $langstr | safeHTML }}
   {{ end -}}
   {{ end -}}
   {{ if and (eq site.Params.comments.engine 1) (site.Params.comments.disqus.shortname) }}
