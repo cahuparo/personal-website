@@ -64,7 +64,7 @@
     {{ printf "<link href=%q rel=\"alternate\" type=\"text/html\" hreflang=%q />" $link .Lang | safeHTML }}
     {{ end -}}
     {{ with .Summary }}{{ if ne . "" }}
-    <summary type"="html"">
+    <summary type="html">
       {{- printf "<![CDATA[" | safeHTML }}      
       {{ . | safeHTML | chomp }}
       ]]>
