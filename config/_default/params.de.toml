@@ -1,3 +1,4 @@
+subtitle = "Meine persönliche Website und Blog"
 address = "Büro: Elsenheimerstraße 61, München, Deutschland"
 contact_links = [
   {icon = "twitter", icon_pack = "fab", name = "Direktnachricht an @Loredo", link = "https://twitter.com/loredo"},
