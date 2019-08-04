@@ -10,7 +10,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xml:base="{{ site.BaseURL }}"{{- with site.LanguageCode }} xml:lang="{{.}}"{{end -}}>
   {{ $uuid := sha1 $.Site.BaseURL }}<id>urn:uuid:{{substr $uuid 0 8}}-{{substr $uuid 8 4}}-5{{substr $uuid 13 3}}-{{substr $uuid 16 1}}9{{substr $uuid 17 2}}-{{substr $uuid 21 12}}</id>
   <title type="text">{{ if ne .Title site.Title }}{{ with .Title }}{{.}} | {{ end }}{{end}}{{ site.Title }}</title>
-  {{- with .Params.Subtitle }}<subtitle type="text">{{ . | plainify }}</subtitle>{{ end }}
+  {{- with $.Site.Params.Subtitle }}<subtitle type="html">{{ . | safeHTML }}</subtitle>{{ end }}
   {{- with .OutputFormats.Get "HTML" }}
     {{ printf "<link href=%q rel=\"alternate\" type=%q />" .Permalink .MediaType | safeHTML }}
   {{- end -}}
@@ -62,15 +62,15 @@
     {{- $link := printf "%s?utm_source=atom_feed" .Permalink | safeHTML }}
     {{ printf "<link href=%q rel=\"alternate\" type=\"text/html\" hreflang=%q />" $link .Lang | safeHTML }}
     {{ end -}}
-    {{ with .Summary }}{{ if ne . "" }}
+    {{ if .Summary }}{{ if ne .Summary "" }}
     <summary type="html">
-      {{- printf "<![CDATA[" | safeHTML }}      
-      {{ . | safeHTML | chomp }}
+      {{- printf "<![CDATA[" | safeHTML }}
+      {{ .Summary | safeHTML | chomp }}
       ]]>
     </summary>
-    {{ end }}{{ end }}
+    {{- end }}{{- end }}
     <content type="html">
-      {{- printf "<![CDATA[" | safeHTML }}      
+      {{- printf "<![CDATA[" | safeHTML }}
       {{- .Content | safeHTML | chomp -}}
       ]]>
     </content>
