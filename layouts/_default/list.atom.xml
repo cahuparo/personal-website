@@ -9,8 +9,9 @@
 {{- printf "<?xml version=\"1.0\" encoding=\"utf-8\" standalone=\"yes\" ?>" | safeHTML }}
 <feed xmlns="http://www.w3.org/2005/Atom" xml:base="{{ site.BaseURL }}"{{- with site.LanguageCode }} xml:lang="{{.}}"{{end -}}>
   {{ $uuid := sha1 $.Site.BaseURL }}<id>urn:uuid:{{substr $uuid 0 8}}-{{substr $uuid 8 4}}-5{{substr $uuid 13 3}}-{{substr $uuid 16 1}}9{{substr $uuid 17 2}}-{{substr $uuid 21 12}}</id>
-  <title type="text">{{ if ne .Title site.Title }}{{ with .Title }}{{.}} | {{ end }}{{end}}{{ site.Title }}</title>
-  {{- with $.Site.Params.Subtitle }}<subtitle type="html">{{ . | safeHTML }}</subtitle>{{ end }}
+  <title type="text">{{ if ne .Title site.Title }}{{ with .Title }}{{. | plainify }} | {{ end }}{{end}}{{ site.Title | plainify }}</title>
+  {{- if (.Params.Subtitle) and (ne .Params.Subtitle "") }}<subtitle type="text">{{ .Params.Subtitle | plainify }}</subtitle>
+  {{- else if ($.Site.Params.Subtitle) and (ne $.Site.Params.Subtitle "") }}<subtitle type="text">{{ $.Site.Params.Subtitle | plainify }}</subtitle>{{ end }}
   {{- with .OutputFormats.Get "HTML" }}
     {{ printf "<link href=%q rel=\"alternate\" type=%q />" .Permalink .MediaType | safeHTML }}
   {{- end -}}
@@ -41,13 +42,13 @@
   {{ else -}}
   {{ with .Site.Author.name -}}
   <author>
-		<name>{{.}}</name>
-		{{ with $.Site.Author.email }}<email>{{.}}</email>{{end}}
+		<name>{{ . | plainify }}</name>
+		{{ with $.Site.Author.email }}<email>{{ . | plainify }}</email>{{end}}
 	</author>{{end}}
   {{end -}}
   {{ with site.Copyright }}<rights>{{ replace (replace . "{year}" now.Year) "&copy;" "©" | plainify }}</rights>{{end }}
-  {{ if not .Date.IsZero }}<updated>{{ .Date.UTC.Format "2006-01-02T15:04:05-07:00" | safeHTML }}</updated>{{ end }}
-  {{ if .Scratch.Get "og_image" }}<logo>{{ .Scratch.Get "og_image" }}</logo>{{end -}}
+  {{ if not .Date.IsZero }}<updated>{{ .Date.UTC.Format "2006-01-02T15:04:05-07:00" | plainify  }}</updated>{{ end }}
+  {{ if .Scratch.Get "og_image" }}<logo>{{ .Scratch.Get "og_image" | plainify }}</logo>{{end -}}
   {{- $start := now.AddDate -1 0 0}}
   {{- range $pages }}
   {{- if not .Params.DisableFeed }}{{ if ne .Section ""}}
