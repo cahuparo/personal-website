@@ -12,27 +12,27 @@
     <title>{{ if ne .Title site.Title }}{{ with .Title }}{{.}} | {{ end }}{{end}}{{ site.Title }}</title>
     <link>{{ .Permalink }}</link>
     {{- with .OutputFormats.Get "HTML" }}
-      {{ printf "<atom:link href=%q rel=\"alternate\" type=%q />" .Permalink .MediaType | safeHTML }}
+      {{ printf "<atom:link href=%q rel=\"alternate\" type=%q title=\"Website\" />" .Permalink .MediaType | safeHTML }}
     {{- end -}}
     {{- with .OutputFormats.Get "RSS" }}
-      {{ printf "<atom:link href=%q rel=\"self\" type=%q />" .Permalink .MediaType | safeHTML }}
+      {{ printf "<atom:link href=%q rel=\"self\" type=%q title=\"Legacy Feed (RSS)\" />" .Permalink .MediaType | safeHTML }}
     {{- end }}
     {{- with .OutputFormats.Get "ATOM" }}
-      {{ printf "<atom:link href=%q rel=\"alternate\" type=%q />" .Permalink .MediaType | safeHTML }}
+      {{ printf "<atom:link href=%q rel=\"alternate\" type=%q title=\"Modern Feed (Atom)\" />" .Permalink .MediaType | safeHTML }}
     {{- end }}
     {{ range .Translations }}
     {{- $lang := .Lang -}}
     {{- with .OutputFormats.Get "HTML" }}
-      {{ printf "<atom:link href=%q rel=\"alternate\" type=%q hreflang=%q />" .Permalink .MediaType $lang | safeHTML }}
-    {{- end -}}
-    {{- with .OutputFormats.Get "ATOM" }}
-      {{ printf "<atom:link href=%q rel=\"alternate\" type=%q hreflang=%q />" .Permalink .MediaType $lang | safeHTML }}
+      {{ printf "<atom:link href=%q rel=\"alternate\" type=%q hreflang=%q title=\"Website (in %s)\" />" .Permalink .MediaType $lang $lang | safeHTML }}
     {{- end -}}
     {{- with .OutputFormats.Get "RSS" }}
-      {{ printf "<atom:link href=%q rel=\"alternate\" type=%q hreflang=%q />" .Permalink .MediaType $lang | safeHTML }}
+      {{ printf "<atom:link href=%q rel=\"alternate\" type=%q hreflang=%q title=\"Legacy Feed (RSS in %s)\" />" .Permalink .MediaType $lang $lang | safeHTML }}
     {{ end -}}
+    {{- with .OutputFormats.Get "ATOM" }}
+      {{ printf "<atom:link href=%q rel=\"alternate\" type=%q hreflang=%q title=\"Modern Feed (Atom in %s)\" />" .Permalink .MediaType $lang $lang | safeHTML }}
+    {{- end -}}
     {{ end -}}
-    <description>{{ .Title | default site.Title }} (RSS)</description>
+    <description>{{ .Title | default site.Title | html }} (RSS Legacy Feed)</description>
     <generator>Hugo v{{.Hugo.Version}} (https://gohugo.io/)</generator>
     {{ with $author -}}
     <managingEditor>{{ .Params.name }}</managingEditor>
@@ -43,22 +43,27 @@
     {{- if .Scratch.Get "og_image" }}
     <image>
       <url>{{ .Scratch.Get "og_image" }}</url>
-      <title>{{ .Title | default site.Title }}</title>
+      <title>{{ if ne .Title site.Title }}{{ with .Title }}{{.}} | {{ end }}{{end}}{{ site.Title }}</title>
       <link>{{ .Permalink }}</link>
     </image>
     {{end -}}
-    {{ range $pages }}{{ if not .Params.DisableFeed }}
+    {{ range $pages }}
+    {{- if not .Params.DisableFeed }}{{ if ne .Section ""}}
     <item>
+      {{ $uuid := sha1 .Permalink }}<guid>urn:uuid:{{substr $uuid 0 8}}-{{substr $uuid 8 4}}-5{{substr $uuid 13 3}}-{{substr $uuid 16 1}}9{{substr $uuid 17 2}}-{{substr $uuid 21 12}}</guid>
       <title>{{ .Title | plainify }}</title>
       <link>{{ .Permalink }}</link>
       <pubDate>{{ .Date.Format "Mon, 02 Jan 2006 15:04:05 -0700" | safeHTML }}</pubDate>
-      <guid>{{ .Permalink }}</guid>
+      {{ range .Params.categories }}
+      <category>{{ . }}</category>
+      {{ end }}
       <description>
         {{- printf "<![CDATA[" | safeHTML }}      
         {{- .Content | safeHTML | chomp -}}
         ]]>
       </description>
     </item>
-    {{ end }}{{ end }}
+    {{- end }}{{- end }}
+    {{- end }}
   </channel>
 </rss>

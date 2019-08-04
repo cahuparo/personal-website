@@ -13,24 +13,24 @@
   {{- if (.Params.Subtitle) and (ne .Params.Subtitle "") }}<subtitle type="html">{{ .Params.Subtitle | html }}</subtitle>
   {{- else if ($.Site.Params.Subtitle) and (ne $.Site.Params.Subtitle "") }}<subtitle type="html">{{ $.Site.Params.Subtitle | html }}</subtitle>{{ end }}
   {{- with .OutputFormats.Get "HTML" }}
-    {{ printf "<link href=%q rel=\"alternate\" type=%q />" .Permalink .MediaType | safeHTML }}
+    {{ printf "<link href=%q rel=\"alternate\" type=%q title=\"Website\" />" .Permalink .MediaType | safeHTML }}
   {{- end -}}
   {{- with .OutputFormats.Get "ATOM" }}
-    {{ printf "<link href=%q rel=\"self\" type=%q />" .Permalink .MediaType | safeHTML }}
+    {{ printf "<link href=%q rel=\"self\" type=%q title=\"Modern Feed (Atom)\" />" .Permalink .MediaType | safeHTML }}
   {{- end -}}
   {{- with .OutputFormats.Get "RSS" }}
-    {{ printf "<link href=%q rel=\"alternate\" type=%q />" .Permalink .MediaType | safeHTML }}
+    {{ printf "<link href=%q rel=\"alternate\" type=%q title=\"Legacy Feed (RSS)\" />" .Permalink .MediaType | safeHTML }}
   {{- end -}}
   {{ range .Translations }}
   {{- $lang := .Lang -}}
   {{- with .OutputFormats.Get "HTML" }}
-    {{ printf "<link href=%q rel=\"alternate\" type=%q hreflang=%q />" .Permalink .MediaType $lang | safeHTML }}
+    {{ printf "<link href=%q rel=\"alternate\" type=%q hreflang=%q title=\"Website (in %s)\" />" .Permalink .MediaType $lang $lang | safeHTML }}
   {{- end -}}
   {{- with .OutputFormats.Get "ATOM" }}
-    {{ printf "<link href=%q rel=\"alternate\" type=%q hreflang=%q />" .Permalink .MediaType $lang | safeHTML }}
+    {{ printf "<link href=%q rel=\"alternate\" type=%q hreflang=%q title=\"Modern Feed (Atom in %s)\" />" .Permalink .MediaType $lang $lang | safeHTML }}
   {{- end -}}
   {{- with .OutputFormats.Get "RSS" }}
-    {{ printf "<link href=%q rel=\"alternate\" type=%q hreflang=%q />" .Permalink .MediaType $lang | safeHTML }}
+    {{ printf "<link href=%q rel=\"alternate\" type=%q hreflang=%q title=\"Legacy Feed (RSS in %s)\" />" .Permalink .MediaType $lang $lang | safeHTML }}
   {{ end -}}
   {{ end -}}
   <generator uri="https://gohugo.io/" version="{{.Hugo.Version}}">Hugo</generator>
@@ -48,6 +48,7 @@
   {{end -}}
   {{ with site.Copyright }}<rights>{{ replace (replace . "{year}" now.Year) "&copy;" "©" | plainify }}</rights>{{end }}
   {{ if not .Date.IsZero }}<updated>{{ .Date.UTC.Format "2006-01-02T15:04:05-07:00" | plainify  }}</updated>{{ end }}
+  <icon xml:base="{{ site.BaseURL }}">/img/icon-32.png</icon>
   {{ if .Scratch.Get "og_image" }}<logo>{{ .Scratch.Get "og_image" | plainify }}</logo>{{end -}}
   {{- $start := now.AddDate -1 0 0}}
   {{- range $pages }}
@@ -55,7 +56,6 @@
   <entry>
     {{ $uuid := sha1 .Permalink }}<id>urn:uuid:{{substr $uuid 0 8}}-{{substr $uuid 8 4}}-5{{substr $uuid 13 3}}-{{substr $uuid 16 1}}9{{substr $uuid 17 2}}-{{substr $uuid 21 12}}</id>
     <title type="html">{{ .Title | html }}</title>
-    <category term="{{.Section}}" label="{{.Section}}" />
     {{ if not .Lastmod.IsZero }}<updated>{{ .Lastmod.Format "2006-01-02T15:04:05-07:00" | safeHTML }}</updated>{{ end }}
     <published>{{ .Date.Format "2006-01-02T15:04:05-07:00" | safeHTML }}</published>
     <link href="{{ .Permalink }}?utm_source=atom_feed" rel="alternate" type="text/html" />
@@ -63,6 +63,9 @@
     {{- $link := printf "%s?utm_source=atom_feed" .Permalink | safeHTML }}
     {{ printf "<link href=%q rel=\"alternate\" type=\"text/html\" hreflang=%q />" $link .Lang | safeHTML }}
     {{ end -}}
+    {{ range .Params.categories }}
+    <category term="{{ . }}" label="{{ . }}" />
+    {{ end }}
     {{ if .Summary }}{{ if ne .Summary "" }}
     <summary type="html">
       {{- printf "<![CDATA[" | safeHTML }}
