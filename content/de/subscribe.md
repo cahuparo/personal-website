@@ -31,10 +31,10 @@ Es kann auch nur eine einzelne Kategorie oder ein einzelnes Schlagwort abonniert
 
 Die Kategorien eines Beitrags werden unter dem Titel angezeigt. Klicken Sie darauf, um weitere Artikel in dieser Kategorie zu sehen. Die selbe Adresse kann in einem Feedreader eingetragen werden, um diese Kategorie einzeln zu abonnieren.
 
-[Übersicht aller Kategorien](/de/categories/)
+[Liste aller Kategorien](/de/categories/)
 
 ### Abonnieren eines einzelnen Schlagworts
 
 Schlagworte werden am Ende eines Beitrags angezeigt. Klicken Sie darauf, um weitere Artikel mit diesem Schlagwort zu sehen. Die selbe Adresse kann in einem Feedreader eingetragen werden, um dieses Schlagwort einzeln zu abonnieren.
 
-[Übersicht aller Schlagworte](/de/tags/)
+[Liste aller Schlagworte](/de/tags/)

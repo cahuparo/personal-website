@@ -30,10 +30,10 @@ You can also subscribe to a single category or a single keyword. However, it is 
 
 The categories of a post are displayed under the title. Click on it to see more articles in this category. The same address can be entered in a feed reader to subscribe to this category individually.
 
-[Overview of all categories](/categories/)
+[List of all categories](/categories/)
 
 ### Subscribing to a single keyword
 
 Keywords are displayed at the end of a post. Click on it to see more articles with this keyword. The same address can be entered in a feed reader to subscribe to this keyword individually.
 
-[Overview of all keywords](/tags/)
+[List of all keywords](/tags/)
