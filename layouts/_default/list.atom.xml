@@ -82,12 +82,6 @@
       {{- .Content | safeHTML | chomp -}}
       ]]>
     </content>
-    {{if .NextInSection}}
-    <link href="{{.NextInSection.Permalink}}?utm_source=atom_feed" rel="next" title="{{.NextInSection.Title}}" />
-    {{end}}
-    {{if .PrevInSection}}
-    <link href="{{.PrevInSection.Permalink}}?utm_source=atom_feed" rel="prev" title="{{.PrevInSection.Title}}" />
-    {{end}}
     {{ if site.Params.comments.engine | and (index site.Params.comments.commentable .Type) | and (ne .Params.commentable false) | or .Params.commentable }}
     <link href="{{ .Permalink }}?utm_source=atom_feed#comments" rel="service.post" type="text/html" title="Add your comment" />
     {{ end }}
