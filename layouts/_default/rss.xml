@@ -9,7 +9,7 @@
 {{- printf "<?xml version=\"1.0\" encoding=\"utf-8\" standalone=\"yes\" ?>" | safeHTML }}
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>{{ if ne .Title site.Title }}{{ with .Title }}{{.}} | {{ end }}{{end}}{{ site.Title }}</title>
+    <title>{{ if ne .Title site.Title }}{{ with .Title }}{{.}} | {{ end }}{{end}}{{ site.Title }}{{ if .IsTranslated }} ({{ index site.Data.i18n.languages .Lang }}){{ end }}</title>
     <link>{{ .Permalink }}?utm_source=rss_feed</link>
     {{- with .OutputFormats.Get "HTML" }}
       {{ printf "<atom:link href=%q rel=\"alternate\" type=%q title=\"Website\" />" .Permalink .MediaType | safeHTML }}
@@ -22,14 +22,15 @@
     {{- end }}
     {{ range .Translations }}
     {{- $lang := .Lang -}}
+    {{- $langstr := index site.Data.i18n.languages .Lang -}}
     {{- with .OutputFormats.Get "HTML" }}
-      {{ printf "<atom:link href=%q rel=\"alternate\" type=%q hreflang=%q title=\"Website (in %s)\" />" .Permalink .MediaType $lang $lang | safeHTML }}
+      {{ printf "<atom:link href=%q rel=\"alternate\" type=%q hreflang=%q title=\"Website (%s)\" />" .Permalink .MediaType $lang $langstr | safeHTML }}
     {{- end -}}
     {{- with .OutputFormats.Get "RSS" }}
-      {{ printf "<atom:link href=%q rel=\"alternate\" type=%q hreflang=%q title=\"Legacy Feed (RSS in %s)\" />" .Permalink .MediaType $lang $lang | safeHTML }}
+      {{ printf "<atom:link href=%q rel=\"alternate\" type=%q hreflang=%q title=\"Legacy Feed (RSS, %s)\" />" .Permalink .MediaType $lang $langstr | safeHTML }}
     {{ end -}}
     {{- with .OutputFormats.Get "ATOM" }}
-      {{ printf "<atom:link href=%q rel=\"alternate\" type=%q hreflang=%q title=\"Modern Feed (Atom in %s)\" />" .Permalink .MediaType $lang $lang | safeHTML }}
+      {{ printf "<atom:link href=%q rel=\"alternate\" type=%q hreflang=%q title=\"Modern Feed (Atom, %s)\" />" .Permalink .MediaType $lang $langstr | safeHTML }}
     {{- end -}}
     {{ end -}}
     {{- if (.Params.Subtitle) and (ne .Params.Subtitle "") }}<description>{{ .Params.Subtitle | html }}</description>

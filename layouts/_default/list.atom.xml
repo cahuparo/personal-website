@@ -9,7 +9,7 @@
 {{- printf "<?xml version=\"1.0\" encoding=\"utf-8\" standalone=\"yes\" ?>" | safeHTML }}
 <feed xmlns="http://www.w3.org/2005/Atom"{{- with site.LanguageCode }} xml:lang="{{.}}"{{end -}}>
   {{ $uuid := sha1 $.Site.BaseURL }}<id>urn:uuid:{{substr $uuid 0 8}}-{{substr $uuid 8 4}}-5{{substr $uuid 13 3}}-{{substr $uuid 16 1}}9{{substr $uuid 17 2}}-{{substr $uuid 21 12}}</id>
-  <title type="html">{{ if ne .Title site.Title }}{{ with .Title }}{{. | html }} | {{ end }}{{end}}{{ site.Title | html }}</title>
+  <title type="html">{{ if ne .Title site.Title }}{{ with .Title }}{{. | html }} | {{ end }}{{end}}{{ site.Title | html }}{{ if .IsTranslated }} ({{ index site.Data.i18n.languages .Lang }}){{ end }}</title>
   {{- if (.Params.Subtitle) and (ne .Params.Subtitle "") }}<subtitle type="html">{{ .Params.Subtitle | html }}</subtitle>
   {{- else if ($.Site.Params.Subtitle) and (ne $.Site.Params.Subtitle "") }}<subtitle type="html">{{ $.Site.Params.Subtitle | html }}</subtitle>{{ end }}
   {{- with .OutputFormats.Get "HTML" }}
@@ -23,14 +23,15 @@
   {{- end -}}
   {{ range .Translations }}
   {{- $lang := .Lang -}}
+  {{- $langstr := index site.Data.i18n.languages .Lang -}}
   {{- with .OutputFormats.Get "HTML" }}
-    {{ printf "<link href=%q rel=\"alternate\" type=%q hreflang=%q title=\"Website (in %s)\" />" .Permalink .MediaType $lang $lang | safeHTML }}
+    {{ printf "<link href=%q rel=\"alternate\" type=%q hreflang=%q title=\"Website (%s)\" />" .Permalink .MediaType $lang $langstr | safeHTML }}
   {{- end -}}
   {{- with .OutputFormats.Get "ATOM" }}
-    {{ printf "<link href=%q rel=\"alternate\" type=%q hreflang=%q title=\"Modern Feed (Atom in %s)\" />" .Permalink .MediaType $lang $lang | safeHTML }}
+    {{ printf "<link href=%q rel=\"alternate\" type=%q hreflang=%q title=\"Modern Feed (Atom, %s)\" />" .Permalink .MediaType $lang $langstr | safeHTML }}
   {{- end -}}
   {{- with .OutputFormats.Get "RSS" }}
-    {{ printf "<link href=%q rel=\"alternate\" type=%q hreflang=%q title=\"Legacy Feed (RSS in %s)\" />" .Permalink .MediaType $lang $lang | safeHTML }}
+    {{ printf "<link href=%q rel=\"alternate\" type=%q hreflang=%q title=\"Legacy Feed (RSS, %s)\" />" .Permalink .MediaType $lang $langstr | safeHTML }}
   {{ end -}}
   {{ end -}}
   {{ if and (eq site.Params.comments.engine 1) (site.Params.comments.disqus.shortname) }}
