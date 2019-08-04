@@ -7,7 +7,7 @@
 {{- end -}}
 {{- $author := site.GetPage (printf "/%s/%s" "authors" (.Scratch.Get "superuser_username")) -}}
 {{- printf "<?xml version=\"1.0\" encoding=\"utf-8\" standalone=\"yes\" ?>" | safeHTML }}
-<feed xmlns="http://www.w3.org/2005/Atom" xml:base="{{ site.BaseURL }}"{{- with site.LanguageCode }} xml:lang="{{.}}"{{end -}}>
+<feed xmlns="http://www.w3.org/2005/Atom"{{- with site.LanguageCode }} xml:lang="{{.}}"{{end -}}>
   {{ $uuid := sha1 $.Site.BaseURL }}<id>urn:uuid:{{substr $uuid 0 8}}-{{substr $uuid 8 4}}-5{{substr $uuid 13 3}}-{{substr $uuid 16 1}}9{{substr $uuid 17 2}}-{{substr $uuid 21 12}}</id>
   <title type="text">{{ if ne .Title site.Title }}{{ with .Title }}{{. | plainify }} | {{ end }}{{end}}{{ site.Title | plainify }}</title>
   {{- if (.Params.Subtitle) and (ne .Params.Subtitle "") }}<subtitle type="text">{{ .Params.Subtitle | plainify }}</subtitle>
@@ -70,7 +70,7 @@
       ]]>
     </summary>
     {{- end }}{{- end }}
-    <content type="html">
+    <content type="html" xml:base="{{ site.BaseURL }}">
       {{- printf "<![CDATA[" | safeHTML }}
       {{- .Content | safeHTML | chomp -}}
       ]]>
