@@ -37,7 +37,7 @@
   {{ if and (eq site.Params.comments.engine 1) (site.Params.comments.disqus.shortname) }}
   <link href="https://{{ site.Params.comments.disqus.shortname }}.disqus.com/comments.rss" rel="comments" type="application/rss+xml" title="Comments" />
   {{ end }}
-  <generator uri="https://gohugo.io/" version="{{hugo.Version}}">Hugo</generator>
+  <generator uri="https://gohugo.io/" version="{{hugo.Version}}">Hugo @ Source Themes Academic (https://sourcethemes.com/academic/)</generator>
   {{ with $author -}}
   <author>
     <name>{{ .Params.name }}</name>

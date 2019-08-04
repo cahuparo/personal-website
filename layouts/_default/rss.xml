@@ -36,7 +36,7 @@
     {{- if (.Params.Subtitle) and (ne .Params.Subtitle "") }}<description>{{ .Params.Subtitle | html }}</description>
     {{- else if ($.Site.Params.Subtitle) and (ne $.Site.Params.Subtitle "") }}<description>{{ $.Site.Params.Subtitle | html }}</description>
     {{- else }}<description />{{ end }}
-    <generator>Hugo v{{hugo.Version}} (https://gohugo.io/)</generator>
+    <generator>Hugo v{{hugo.Version}} @ Source Themes Academic (https://sourcethemes.com/academic/)</generator>
 		{{ with $.Site.Author.email }}<managingEditor>{{ . | plainify }}</managingEditor>{{end}}
     {{- with site.LanguageCode }}<language>{{.}}</language>{{end -}}
     {{- with site.Copyright }}<copyright>{{ replace (replace . "{year}" now.Year) "&copy;" "©" | plainify }}</copyright>{{end -}}
