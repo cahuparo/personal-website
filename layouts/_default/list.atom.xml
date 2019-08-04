@@ -54,7 +54,7 @@
   {{- range $pages }}
   {{- if not .Params.DisableFeed }}{{ if ne .Section ""}}
   <entry>
-    {{ $uuid := sha1 .Permalink }}<id>urn:uuid:{{substr $uuid 0 8}}-{{substr $uuid 8 4}}-5{{substr $uuid 13 3}}-{{substr $uuid 16 1}}9{{substr $uuid 17 2}}-{{substr $uuid 21 12}}</id>
+    {{ $uuid := sha1 .RelPermalink }}<id>urn:uuid:{{substr $uuid 0 8}}-{{substr $uuid 8 4}}-5{{substr $uuid 13 3}}-{{substr $uuid 16 1}}9{{substr $uuid 17 2}}-{{substr $uuid 21 12}}</id>
     <title type="html">{{ .Title | html }}</title>
     {{ if not .Lastmod.IsZero }}<updated>{{ .Lastmod.Format "2006-01-02T15:04:05-07:00" | safeHTML }}</updated>{{ end }}
     <published>{{ .Date.Format "2006-01-02T15:04:05-07:00" | safeHTML }}</published>
@@ -64,7 +64,7 @@
     {{ printf "<link href=%q rel=\"alternate\" type=\"text/html\" hreflang=%q />" $link .Lang | safeHTML }}
     {{ end -}}
     {{ range .Params.categories }}
-    <category term="{{ . }}" label="{{ . }}" />
+    <category term="{{ . }}" label="{{ . | html }}" />
     {{ end }}
     {{ if .Summary }}{{ if ne .Summary "" }}
     <summary type="html">

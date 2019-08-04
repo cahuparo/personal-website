@@ -48,12 +48,12 @@
     {{ range $pages }}
     {{- if not .Params.DisableFeed }}{{ if ne .Section ""}}
     <item>
-      {{ $uuid := sha1 .Permalink }}<guid isPermaLink="false">urn:uuid:{{substr $uuid 0 8}}-{{substr $uuid 8 4}}-5{{substr $uuid 13 3}}-{{substr $uuid 16 1}}9{{substr $uuid 17 2}}-{{substr $uuid 21 12}}</guid>
+      {{ $uuid := sha1 .RelPermalink }}<guid isPermaLink="false">urn:uuid:{{substr $uuid 0 8}}-{{substr $uuid 8 4}}-5{{substr $uuid 13 3}}-{{substr $uuid 16 1}}9{{substr $uuid 17 2}}-{{substr $uuid 21 12}}</guid>
       <title>{{ .Title | plainify }}</title>
       <link>{{ .Permalink }}</link>
       <pubDate>{{ .Date.Format "Mon, 02 Jan 2006 15:04:05 -0700" | safeHTML }}</pubDate>
       {{ range .Params.categories }}
-      <category>{{ . }}</category>
+      <category>{{ . | html }}</category>
       {{ end }}
       <description>
         {{- printf "<![CDATA[" | safeHTML }}      
