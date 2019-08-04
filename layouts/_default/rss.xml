@@ -10,8 +10,6 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>{{ if ne .Title site.Title }}{{ with .Title }}{{.}} | {{ end }}{{end}}{{ site.Title }}</title>
-    {{- if (.Params.Subtitle) and (ne .Params.Subtitle "") }}<atom:subtitle type="html">{{ .Params.Subtitle | html }}</atom:subtitle>
-    {{- else if ($.Site.Params.Subtitle) and (ne $.Site.Params.Subtitle "") }}<atom:subtitle type="html">{{ $.Site.Params.Subtitle | html }}</atom:subtitle>{{ end }}
     <link>{{ .Permalink }}</link>
     {{- with .OutputFormats.Get "HTML" }}
       {{ printf "<atom:link href=%q rel=\"alternate\" type=%q title=\"Website\" />" .Permalink .MediaType | safeHTML }}
