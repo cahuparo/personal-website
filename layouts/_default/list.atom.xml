@@ -33,7 +33,7 @@
     {{ printf "<link href=%q rel=\"alternate\" type=%q hreflang=%q title=\"Legacy Feed (RSS in %s)\" />" .Permalink .MediaType $lang $lang | safeHTML }}
   {{ end -}}
   {{ end -}}
-  <generator uri="https://gohugo.io/" version="{{.Hugo.Version}}">Hugo</generator>
+  <generator uri="https://gohugo.io/" version="{{hugo.Version}}">Hugo</generator>
   {{ with $author -}}
   <author>
     <name>{{ .Params.name }}</name>
