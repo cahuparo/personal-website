@@ -22,7 +22,7 @@ Two different file formats are available: I recommend to use the modern [Atom fe
 - <a href="/feed.atom" rel="related" type="application/atom+xml">Atom (English)</a>
 - <a href="/de/feed.atom" rel="related" type="application/atom+xml">Atom (German)</a>
 - <a href="/feed.rss" rel="related" type="application/rss+xml">RSS (English)</a>
-- <a href="/en/feed.rss" rel="related" type="application/rss+xml">RSS (German)</a>
+- <a href="/de/feed.rss" rel="related" type="application/rss+xml">RSS (German)</a>
 
 You can also subscribe to a single category or a single keyword. However, it is not possible to combine several categories or keywords, each of which must be subscribed to individually.
 
