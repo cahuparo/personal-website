@@ -20,10 +20,10 @@ Je nach Interesse kann es also sinnvoll sein, beide Sprachen zu abonnieren, um t
 
 Es stehen zwei unterschiedliche Dateiformate zur Verfügung: Ich empfehle die Nutzung des modernen [Atom Feed](https://de.wikipedia.org/wiki/Atom_(Format)) Formats, biete jedoch für eine bessere Kompatibilität mit älterer Software auch einen [RSS Feed](https://de.wikipedia.org/wiki/RSS_(Web-Feed)).
 
-- <a href="/de/atom.xml" rel="related" type="application/atom+xml">Atom (Deutsch)</a>
-- <a href="/atom.xml" rel="related" type="application/atom+xml">Atom (Englisch)</a>
-- <a href="/de/index.xml" rel="related" type="application/rss+xml">RSS (Deutsch)</a>
-- <a href="/index.xml" rel="related" type="application/rss+xml">RSS (Englisch)</a>
+- <a href="/de/feed.atom" rel="related" type="application/atom+xml">Atom (Deutsch)</a>
+- <a href="/feed.atom" rel="related" type="application/atom+xml">Atom (Englisch)</a>
+- <a href="/de/feed.rss" rel="related" type="application/rss+xml">RSS (Deutsch)</a>
+- <a href="/feed.rss" rel="related" type="application/rss+xml">RSS (Englisch)</a>
 
 Es kann auch nur eine einzelne Kategorie oder ein einzelnes Schlagwort abonniert werden. Die Kombination aus mehreren Kategorien oder Schlagworten ist jedoch nicht möglich, diese müssen jeweils einzeln abonniert werden.
 

@@ -1,4 +1,4 @@
-https://loredo.me/rss https://julian.pawlowski.me/de/rss.xml 301!
+https://loredo.me/rss https://julian.pawlowski.me/de/feed.rss 301!
 https://loredo.me/* https://julian.pawlowski.me/:splat 301!
 https://www.loredo.me/* https://julian.pawlowski.me/:splat 301!
 
@@ -17,6 +17,9 @@ https://www.julian.pawlowski.me/* https://julian.pawlowski.me/:splat 301!
 
 # Optional: Redirect default Netlify subdomain to primary domain
 https://jpawlowski.netlify.com/* https://julian.pawlowski.me/:splat 301!
+
+https://julian.pawlowski.me/de/index.xml https://julian.pawlowski.me/de/feed.rss 301!
+https://julian.pawlowski.me/de/atom.xml https://julian.pawlowski.me/de/feed.atom 301!
 
 /de/feed /de/abonnieren/ 302!
 /de/atom /de/abonnieren/ 302!
