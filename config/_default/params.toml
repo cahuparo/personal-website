@@ -132,7 +132,7 @@ docs_section_pager = true  # Display pager in Docs layout (e.g. tutorials)?
 sharing = true
 
 #feedSections = [ "page", "post", "docs", "project", "publication", "talk" ]
-feedSections = [ "post", "docs", "project" ]
+feedSections = [ "post" ]
 
 # Configuration of publication pages.
 [publications]
