@@ -57,8 +57,8 @@
   {{- else }}
     {{- with $author }}
       <author>
-        <name>{{- .Params.name }}</name>
-        <uri>{{- .Permalink }}</uri>
+        <name>{{ .Params.name }}</name>
+        <uri>{{ .Permalink }}</uri>
         {{- /* with .Params.email }}
           <email>{{ . | plainify }}</email>
         {{ end */ -}}
@@ -89,13 +89,19 @@
       {{- with .Params.authors -}}
         {{- range . -}} <!-- Assuming the author front-matter to be a list -->
           {{- $author := site.GetPage (printf "/%s/%s" "authors" .) }}
-          {{- with $author }}
+          {{- if $author.Params.name }}
+            {{- with $author }}
+              <author>
+                <name>{{ .Params.name }}</name>
+                <uri>{{ .Permalink }}</uri>
+                {{- /* with .Params.email }}
+                  <email>{{ . | plainify }}</email>
+                {{ end */ -}}
+              </author>
+            {{- end -}}
+          {{- else }}
             <author>
-              <name>{{- .Params.name }}</name>
-              <uri>{{- .Permalink }}</uri>
-              {{- /* with .Params.email }}
-                <email>{{ . | plainify }}</email>
-              {{ end */ -}}
+              <name>{{ . }}</name>
             </author>
           {{- end -}}
         {{- end -}}
