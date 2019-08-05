@@ -5,7 +5,6 @@ slug: abonnieren
 share: false
 commentable: false
 editable: false
-disablefeed: true
 ---
 
 Alle Inhalte meiner Webseite stehen ungekürzt auch als sogenannter [Web-Feed](https://de.wikipedia.org/wiki/Web-Feed) zur Verfügung und können über einen [Feedreader](https://de.wikipedia.org/wiki/Feedreader) der Wahl auf Workstations und Mobilgeräten abonniert werden.

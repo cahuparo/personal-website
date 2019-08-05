@@ -21,7 +21,6 @@ categories:
 - Telekommunikation
 date: "2012-06-19T00:00:00Z"
 date_end: "2013-12-31T00:00:00Z"
-disablefeed: true
 
 image:
   caption: Foto von Paweł Czerwiński auf Unsplash

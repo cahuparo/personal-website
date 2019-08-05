@@ -15,7 +15,6 @@ tags:
 - Multi-Platform
 - Current Projects
 date: "2018-07-28T00:00:00Z"
-disablefeed: true
 
 # Optional external URL for project (replaces project detail page).
 #external_link: "https://github.com/fhem/fhem-docker"
