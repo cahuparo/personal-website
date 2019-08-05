@@ -47,28 +47,38 @@ enableRobotsTXT = true
   taxonomy = [ "HTML", "RSS", "ATOM" ]
   taxonomyTerm = [ "HTML", "RSS", "ATOM" ]
 
-[mediaTypes."application/manifest+json"]
-  suffixes = ["webmanifest"]
+[mediaTypes]
+  [mediaTypes."application/manifest+json"]
+    suffixes = ["webmanifest"]
 
-[outputFormats.WebAppManifest]
-  mediaType = "application/manifest+json"
-  rel = "manifest"
+  [mediaTypes."application/rss+xml"]
+    suffixes = ["rss"]
 
-[mediaTypes."application/atom+xml"]
-  suffixes = ["xml"]
+  [mediaTypes."application/atom+xml"]
+    suffixes = ["atom"]
 
-[outputFormats.Atom]
-  mediaType = "application/atom+xml"
-  baseName = "atom"
-  isHTML = false
-  isPlainText = false
-  noUgly = true
-  Rel = "alternate"
+[outputFormats]
+  [outputFormats.WebAppManifest]
+    rel = "manifest"
+    mediaType = "application/manifest+json"
 
-#[outputFormats.RSS]
-#  mediaType = "application/rss+xml"
-#  baseName = "rss"
-#  isPlainText = false
+  [outputFormats.Atom]
+    mediaType = "application/atom+xml"
+    baseName = "feed"
+    rel = "alternate"
+    isHTML = false
+    isPlainText = false
+    noUgly = true
+    permalinkable = false
+
+  [outputFormats.RSS]
+    mediaType = "application/rss+xml"
+    baseName = "feed"
+    rel = "alternate"
+    isHTML = false
+    isPlainText = false
+    noUgly = true
+    permalinkable = false
 
 # Configure BlackFriday Markdown rendering.
 #   See: https://gohugo.io/getting-started/configuration/#configure-blackfriday
