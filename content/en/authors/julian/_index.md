@@ -51,7 +51,7 @@ social:
 #  link: 'https://www.youtube.com/channel/UC9h6dQEptSqnBLdKKHlXLwQ'
 - icon: linkedin-in
   icon_pack: fab
-  link: https://www.linkedin.com/in/julianpawlowski/
+  link: https://de.linkedin.com/in/julianpawlowski/en
 - icon: xing
   icon_pack: fab
   link: https://www.xing.com/profile/Julian_Pawlowski
