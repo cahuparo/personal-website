@@ -1,3 +1,12 @@
+/atom.xml
+  Content-Type: application/atom+xml
+/index.xml
+  Content-Type: application/rss+xml
+/*/atom.xml
+  Content-Type: application/atom+xml
+/*/index.xml
+  Content-Type: application/rss+xml
+
 /*
   Content-Security-Policy-Report-Only: report-uri https://jpawlowski.report-uri.com/r/d/csp/wizard; style-src-elem use.fontawesome.com fonts.googleapis.com 'self' c.disquscdn.com cdnjs.cloudflare.com; connect-src 'self' www.google-analytics.com; font-src cdnjs.cloudflare.com fonts.gstatic.com use.fontawesome.com data; frame-src disqus.com www.youtube.com c.disquscdn.com; img-src 'self' a.tile.openstreetmap.org b.tile.openstreetmap.org c.tile.openstreetmap.org cdnjs.cloudflare.com www.google-analytics.com c.disquscdn.com referrer.disqus.com data; prefetch-src disqus.com; manifest-src 'self'; script-src-elem 'self' cdnjs.cloudflare.com loredo.disqus.com www.google-analytics.com; child-src disqus.com www.youtube.com; default-src 'self' 'unsafe-inline' c.disquscdn.com cdnjs.cloudflare.com disqus.com fonts.googleapis.com fonts.gstatic.com loredo.disqus.com use.fontawesome.com www.google-analytics.com data; style-src use.fontawesome.com fonts.googleapis.com cdnjs.cloudflare.com c.disquscdn.com 'self'; script-src 'self' cdnjs.cloudflare.com loredo.disqus.com www.google-analytics.com
   Report-To: {"group":"default","max_age":31536000,"endpoints":[{"url":"https://jpawlowski.s-uri.com/a/d/g"}],"include_subdomains":true}
