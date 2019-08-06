@@ -1,250 +1,204 @@
-{{- printf "<?xml version=\"1.0\" encoding=\"utf-8\"?>" | safeHTML }}
-<feed xmlns="http://www.w3.org/2005/Atom"{{ with site.LanguageCode }} xml:lang="{{.}}"{{ end }}>
+{{ printf `<?xml version="1.0" encoding="utf-8"?>` | safeHTML }} {{/* ref: https://validator.w3.org/feed/docs/atom.html */}}
+<feed xmlns="http://www.w3.org/2005/Atom"{{ with site.LanguageCode }} xml:lang="{{ . }}"{{ end }}>
     <generator uri="https://gohugo.io/" version="{{ hugo.Version }}">Hugo</generator>
-    {{ $uuid := sha1 $.Site.BaseURL -}}
-    <id>urn:uuid:{{substr $uuid 0 8}}-{{substr $uuid 8 4}}-5{{substr $uuid 13 3}}-{{substr $uuid 16 1}}9{{substr $uuid 17 2}}-{{substr $uuid 21 12}}</id>
-    {{ printf `<title type="html"><![CDATA[` | safeHTML }}
-        {{- if ne .Title site.Title }}
-            {{- with .Title }}{{. | safeHTML }} | {{ end -}}
+    <title>
+        {{- with .Title -}}
+            {{- if (not (eq . site.Title)) }}
+                {{ . }} on
+            {{ end }}
+        {{ end }}
+        {{ site.Title -}}
+        {{- if .IsTranslated }} ({{ index site.Data.i18n.languages .Lang }}){{ end -}}
+    </title>
+    {{ $output_formats := .OutputFormats }}
+    {{ range $output_formats -}}
+        {{- $rel := (or (and (eq "atom" (.Name | lower)) "self") "alternate") -}}
+        {{ with $output_formats.Get .Name }}
+            {{ printf `<link href=%q rel=%q type=%q title=%q />` .Permalink $rel .MediaType.Type .Name | safeHTML }}
         {{- end -}}
-        {{- site.Title | safeHTML }}
-        {{- if .IsTranslated }} ({{- index site.Data.i18n.languages .Lang }}){{ end -}}
-    {{ printf `]]></title>` | safeHTML }}
-    {{- if (.Params.subtitle) and (ne .Params.subtitle "") }}
-        {{ printf `<subtitle type="html"><![CDATA[` | safeHTML }}
-            {{- .Params.subtitle | safeHTML -}}
-        {{ printf `]]></subtitle>` | safeHTML }}
-    {{- else if ($.Site.Params.subtitle) and (ne $.Site.Params.subtitle "") }}
-        {{ printf `<subtitle type="html"><![CDATA[` | safeHTML }}
-            {{- $.Site.Params.subtitle | safeHTML -}}
-        {{ printf `]]></subtitle>` | safeHTML }}
-    {{- end }}
-    {{ with .OutputFormats.Get "HTML" }}
-        {{- printf "<link href=%q rel=\"alternate\" type=%q title=\"Website\" />" .Permalink .MediaType | safeHTML }}
-    {{- end }}
-    {{ with .OutputFormats.Get "ATOM" }}
-        {{- printf "<link href=%q rel=\"self\" type=%q title=\"Atom/Modern feed format\" />" .Permalink .MediaType | safeHTML }}
-    {{- end }}
-    {{ with .OutputFormats.Get "RSS" }}
-        {{- printf "<link href=%q rel=\"alternate\" type=%q title=\"RSS/Legacy feed format\" />" .Permalink .MediaType | safeHTML }}
     {{- end }}
     {{- range .Translations }}
         {{- $lang := .Lang }}
         {{- $langstr := index site.Data.i18n.languages .Lang }}
-        {{ with .OutputFormats.Get "HTML" }}
-            {{- printf "<link href=%q rel=\"alternate\" type=%q hreflang=%q title=\"[%s] Website\" />" .Permalink .MediaType $lang $langstr | safeHTML }}
+        {{ range $output_formats -}}
+            {{ with $output_formats.Get .Name }}
+                {{ printf `<link href=%q rel="alternate" type=%q hreflang=%q title="[%s] %s" />` .Permalink .MediaType.Type $lang $langstr .Name | safeHTML }}
+            {{- end -}}
         {{- end }}
-        {{ with .OutputFormats.Get "ATOM" }}
-            {{- printf "<link href=%q rel=\"alternate\" type=%q hreflang=%q title=\"[%s] Atom/Modern feed format\" />" .Permalink .MediaType $lang $langstr | safeHTML }}
-        {{- end }}
-        {{ with .OutputFormats.Get "RSS" }}
-            {{- printf "<link href=%q rel=\"alternate\" type=%q hreflang=%q title=\"[%s] RSS/Legacy feed format\" />" .Permalink .MediaType $lang $langstr | safeHTML }}
-        {{- end }}
-    {{- end }}
-    {{- if and (eq site.Params.comments.engine 1) (site.Params.comments.disqus.shortname) }}
-        <link href="https://{{- site.Params.comments.disqus.shortname }}.disqus.com/comments.rss" rel="comments" type="application/rss+xml" />
     {{- end }}
     <updated>{{ now.Format "2006-01-02T15:04:05-07:00" | safeHTML }}</updated>
+    {{ with site.Copyright }}
+        {{- $copyright := . | replace "{year}" now.Year -}} {{/* In case the site.copyright uses a special string "{year}" */}}
+        {{- $copyright = $copyright | replace "&copy;" "©" -}}
+        <rights>{{ $copyright | plainify }}</rights>
+    {{- end }}
+    {{ with .Param "feed" }}
+        {{/* For this to work, the $icon file should be present in the assets/ directory */}}
+        {{- $icon := .icon | default "icon.svg" -}}
+        {{- with resources.Get $icon -}}
+            <icon>{{ (. | fingerprint).Permalink }}</icon>
+        {{- end }}
 
-    {{ $authors := "" }}
-    {{ if isset site "Author" }}
-        {{ $authors = site.Author }}
-    {{ else if isset site "Authors" }}
-        {{ $authors = site.Authors }}
-    {{ else if isset site "author" }}
-        {{ $authors = site.author }}
-    {{ else if isset site "authors" }}
-        {{ $authors = site.authors }}
-    {{ else if isset site.Params "Author" }}
-        {{ $authors = site.Params.Author }}
-    {{ else if isset site.Params "Authors" }}
-        {{ $authors = site.Params.Authors }}
-    {{ else if isset site.Params "author" }}
-        {{ $authors = site.Params.author }}
-    {{ else if isset site.Params "authors" }}
-        {{ $authors = site.Params.authors }}
+        {{/* For this to work, the $logo file should be present in the assets/ directory */}}
+        {{- $logo := .logo | default "logo.svg" -}}
+        {{- with resources.Get $logo -}}
+            <logo>{{ (. | fingerprint).Permalink }}</logo>
+        {{- end }}
     {{ end }}
-    {{ if and $authors (reflect.IsSlice $authors) }} <!-- if authors are defined as slice -->
-        {{ range $authors }}
-            {{- $author := site.GetPage (printf "/%s/%s" "authors" .) }}
+    {{ if site.Author.name }} <!-- this is a single author map -->
+        {{ with site.Author }}
+            {{- $author := site.GetPage (printf "/%s/%s" "authors" .name) }}
             <author>
-                {{- if and $author (isset $author.Params "name") }} <!-- use author name from profile page if found -->
-                    <name>{{ $author.Params.name | plainify }}</name>
-                {{- else -}}
+                {{- with $author.Params.name }} <!-- use author name from profile page if found -->
                     <name>{{ . | plainify }}</name>
+                {{- else -}}
+                    <name>{{ .name | plainify }}</name>
                 {{- end -}}
-                {{- if and $author (isset $author.Params "uri") }} <!-- use different author uri from profile page if found -->
-                    <uri>{{ $author.Params.uri | safeHTML }}</uri>
-                {{- else if $author }} <!-- link to profile page -->
-                    <uri>{{ $author.Permalink }}</uri>
+                {{- with .uri }} <!-- explicitly overwrite uri -->
+                    <uri>{{ . | safeHTML }}</uri>
+                {{- else }}
+                    {{ with $author }}
+                        {{- with .Params.uri }} <!-- use different author uri from profile page if found -->
+                            <uri>{{ . | safeHTML }}</uri>
+                        {{- else }} <!-- link to profile page -->
+                            <uri>{{ .Permalink }}</uri>
+                        {{- end -}}
+                    {{- end -}}
                 {{- end -}}
-                {{- if and $author (isset $author.Params "email") }} <!-- use author email from profile page if found -->
-                    <email>{{ $author.Params.email | safeHTML }}</email>
+                {{- with .email }} <!-- explicitly overwrite email -->
+                    <email>{{ . | safeHTML }}</email>
+                {{- else }}
+                    {{ with $author }}
+                        {{- with .Params.email }} <!-- use different author email from profile page if found -->
+                            <email>{{ . | safeHTML }}</email>
+                        {{- end -}}
+                    {{- end -}}
+                {{- end -}}
+            </author>
+        {{- end -}}
+    {{ else }} <!-- this is a multi author map -->
+        {{ range $elem_index, $elem_val := site.Author }}
+            {{- $name := .name | default $elem_index }}
+            {{- $author := site.GetPage (printf "/%s/%s" "authors" $name) }}
+            <author>
+                {{- with $author.Params.name }} <!-- use author name from profile page if found -->
+                    <name>{{ . | plainify }}</name>
+                {{- else -}}
+                    <name>{{ $name | plainify }}</name>
+                {{- end -}}
+                {{- with .uri }} <!-- explicitly overwrite uri -->
+                    <uri>{{ . | safeHTML }}</uri>
+                {{- else }}
+                    {{ with $author }}
+                        {{- with .Params.uri }} <!-- use different author uri from profile page if found -->
+                            <uri>{{ . | safeHTML }}</uri>
+                        {{- else }} <!-- link to profile page -->
+                            <uri>{{ .Permalink }}</uri>
+                        {{- end -}}
+                    {{- end -}}
+                {{- end -}}
+                {{- with .email }} <!-- explicitly overwrite email -->
+                    <email>{{ . | safeHTML }}</email>
+                {{- else }}
+                    {{ with $author }}
+                        {{- with .Params.email }} <!-- use different author email from profile page if found -->
+                            <email>{{ . | safeHTML }}</email>
+                        {{- end -}}
+                    {{- end -}}
                 {{- end -}}
             </author>
         {{ end }}
-    {{ else if and $authors (reflect.IsMap $authors) }} <!-- if authors are defined as map -->
-        {{ if isset $authors "name" }} <!-- this is a single author map -->
-            {{ with $authors }}
-                {{- $author := site.GetPage (printf "/%s/%s" "authors" .name) }}
-                <author>
-                    {{- if and $author (isset $author.Params "name") }} <!-- use author name from profile page if found -->
-                        <name>{{ $author.Params.name | plainify }}</name>
-                    {{- else -}}
-                        <name>{{ .name | plainify }}</name>
-                    {{- end -}}
-                    {{- if isset . "uri" }} <!-- explicitly overwrite uri -->
-                        <uri>{{ .uri | safeHTML }}</uri>
-                    {{- else if and $author (isset $author.Params "uri") }} <!-- use different author uri from profile page if found -->
-                        <uri>{{ $author.Params.uri | safeHTML }}</uri>
-                    {{- else if $author }} <!-- link to profile page -->
-                        <uri>{{ $author.Permalink }}</uri>
-                    {{- end -}}
-                    {{- if isset . "email" }} <!-- explicitly overwrite email -->
-                        <email>{{ .email | plainify }}</email>
-                    {{- else if and $author (isset $author.Params "email") }} <!-- use author email from profile page if found -->
-                        <email>{{ $author.Params.email | safeHTML }}</email>
-                    {{- end -}}
-                </author>
-            {{ end }}
-        {{ else }} <!-- this is a multi author map -->
-            {{ range $elem_index, $elem_val := $authors }}
-                {{- $name := $elem_index }}
-                {{ if isset . "name" }}
-                    {{- $name = .name }}
-                {{ end }}
-                {{- $author := site.GetPage (printf "/%s/%s" "authors" $name) }}
-                <author>
-                    {{- if and $author (isset $author.Params "name") }} <!-- use author name from profile page if found -->
-                        <name>{{ $author.Params.name | plainify }}</name>
-                    {{- else -}}
-                        <name>{{ $name | plainify }}</name>
-                    {{- end -}}
-                    {{- if isset . "uri" }} <!-- explicitly overwrite uri -->
-                        <uri>{{ .uri | safeHTML }}</uri>
-                    {{- else if and $author (isset $author.Params "uri") }} <!-- use different author uri from profile page if found -->
-                        <uri>{{ $author.Params.uri | safeHTML }}</uri>
-                    {{- else if $author }} <!-- link to profile page -->
-                        <uri>{{ $author.Permalink }}</uri>
-                    {{- end -}}
-                    {{- if isset . "email" }} <!-- explicitly overwrite email -->
-                        <email>{{ .email | plainify }}</email>
-                    {{- else if and $author (isset $author.Params "email") }} <!-- use author email from profile page if found -->
-                        <email>{{ $author.Params.email | safeHTML }}</email>
-                    {{- end -}}
-                </author>
-            {{ end }}
-        {{ end }}
-    {{ else if $authors }} <!-- simple author name -->
-        <author><name>{{ $authors | plainify }}</name></author>
-    {{- else }}
-        {{- $author := site.GetPage (printf "/%s/%s" "authors" (.Scratch.Get "superuser_username")) }}
-        {{- if $author.Params.name }} <!-- fallback: a profile page for a superuser was found -->
-            {{ with $author }}
-                <author>
-                    <name>{{ .Params.name | plainify }}</name>
-                    {{ with site.Author.uri }} <!-- author uri may be overwritten for site level -->
-                        <uri>{{ . | safeHTML }}</uri>
-                    {{ else -}}
-                        <uri>{{ .Permalink }}</uri>
-                    {{ end -}}
-                    {{ with site.Author.email }} <!-- author email may be overwritten for site level -->
-                        <email>{{ . | plainify }}</email>
-                    {{ else -}}
-                        {{- with .Params.email }} <!-- default: author email from profile page disabled for privacy reasons -->
-                            <email>{{ . | plainify }}</email>
-                        {{ end -}}
-                    {{ end -}}
-                </author>
-            {{- end -}}
-        {{- end -}}
-    {{- end -}}
-
+    {{ end }}
     {{ $contributors := "" }}
-    {{ if isset site "Contributor" }}
-        {{ $contributors = site.Contributor }}
-    {{ else if isset site "Contributors" }}
-        {{ $contributors = site.Contributors }}
-    {{ else if isset site "contributor" }}
-        {{ $contributors = site.contributor }}
-    {{ else if isset site "contributors" }}
-        {{ $contributors = site.contributors }}
-    {{ else if isset site.Params "Contributor" }}
-        {{ $contributors = site.Params.Contributor }}
-    {{ else if isset site.Params "Contributors" }}
-        {{ $contributors = site.Params.Contributors }}
-    {{ else if isset site.Params "contributor" }}
-        {{ $contributors = site.Params.contributor }}
-    {{ else if isset site.Params "contributors" }}
-        {{ $contributors = site.Params.contributors }}
+    {{ with site.Params.contributor }}
+        {{ $contributors = . }}
+    {{ else }}
+        {{ with site.Params.contributors }}
+            {{ $contributors = . }}
+        {{ end }}
     {{ end }}
     {{ if and $contributors (reflect.IsSlice $contributors) }} <!-- if contributors are defined as slice -->
         {{ range $contributors }}
             {{- $contributor := site.GetPage (printf "/%s/%s" "authors" .) }}
             <contributor>
-                {{- if and $contributor (isset $contributor.Params "name") }} <!-- use contributor name from profile page if found -->
-                    <name>{{ $contributor.Params.name | plainify }}</name>
+                {{- with $contributor.Params.name }} <!-- use contributor name from profile page if found -->
+                    <name>{{ . | plainify }}</name>
                 {{- else -}}
                     <name>{{ . | plainify }}</name>
                 {{- end -}}
-                {{- if and $contributor (isset $contributor.Params "uri") }} <!-- use different contributor uri from profile page if found -->
-                    <uri>{{ $contributor.Params.uri | safeHTML }}</uri>
-                {{- else if $contributor }} <!-- link to profile page -->
-                    <uri>{{ $contributor.Permalink }}</uri>
-                {{- end -}}
-                {{- if and $contributor (isset $contributor.Params "email") }} <!-- use contributor email from profile page if found -->
-                    <email>{{ $contributor.Params.email | safeHTML }}</email>
+                {{ with $contributor }}
+                    {{- with .Params.uri }} <!-- use different contributor uri from profile page if found -->
+                        <uri>{{ . | safeHTML }}</uri>
+                    {{- else }} <!-- link to profile page -->
+                        <uri>{{ .Permalink }}</uri>
+                    {{- end -}}
+                    {{- with .Params.email }} <!-- use different contributor email from profile page if found -->
+                        <email>{{ . | safeHTML }}</email>
+                    {{- end -}}
                 {{- end -}}
             </contributor>
         {{ end }}
     {{ else if and $contributors (reflect.IsMap $contributors) }} <!-- if contributors are defined as map -->
-        {{ if isset $contributors "name" }} <!-- this is a single contributor map -->
+        {{ if $contributors.name }} <!-- this is a single contributor map -->
             {{ with $contributors }}
                 {{- $contributor := site.GetPage (printf "/%s/%s" "authors" .name) }}
                 <contributor>
-                    {{- if and $contributor (isset $contributor.Params "name") }} <!-- use contributor name from profile page if found -->
-                        <name>{{ $contributor.Params.name | plainify }}</name>
+                    {{- with $contributor.Params.name }} <!-- use contributor name from profile page if found -->
+                        <name>{{ . | plainify }}</name>
                     {{- else -}}
                         <name>{{ .name | plainify }}</name>
                     {{- end -}}
-                    {{- if isset . "uri" }} <!-- explicitly overwrite uri -->
-                        <uri>{{ .uri | safeHTML }}</uri>
-                    {{- else if and $contributor (isset $contributor.Params "uri") }} <!-- use different contributor uri from profile page if found -->
-                        <uri>{{ $contributor.Params.uri | safeHTML }}</uri>
-                    {{- else if $contributor }} <!-- link to profile page -->
-                        <uri>{{ $contributor.Permalink }}</uri>
+                    {{- with .uri }} <!-- explicitly overwrite uri -->
+                        <uri>{{ . | safeHTML }}</uri>
+                    {{- else }}
+                        {{ with $contributor }}
+                            {{- with .Params.uri }} <!-- use different contributor uri from profile page if found -->
+                                <uri>{{ . | safeHTML }}</uri>
+                            {{- else }} <!-- link to profile page -->
+                                <uri>{{ .Permalink }}</uri>
+                            {{- end -}}
+                        {{- end -}}
                     {{- end -}}
-                    {{- if isset . "email" }} <!-- explicitly overwrite email -->
-                        <email>{{ .email | plainify }}</email>
-                    {{- else if and $contributor (isset $contributor.Params "email") }} <!-- use contributor email from profile page if found -->
-                        <email>{{ $contributor.Params.email | safeHTML }}</email>
+                    {{- with .email }} <!-- explicitly overwrite email -->
+                        <email>{{ . | safeHTML }}</email>
+                    {{- else }}
+                        {{ with $contributor }}
+                            {{- with .Params.email }} <!-- use different contributor email from profile page if found -->
+                                <email>{{ . | safeHTML }}</email>
+                            {{- end -}}
+                        {{- end -}}
                     {{- end -}}
                 </contributor>
             {{ end }}
         {{ else }} <!-- this is a multi contributor map -->
             {{ range $elem_index, $elem_val := $contributors }}
-                {{- $name := $elem_index }}
-                {{ if isset . "name" }}
-                    {{- $name = .name }}
-                {{ end }}
+                {{- $name := .name | default $elem_index }}
                 {{- $contributor := site.GetPage (printf "/%s/%s" "authors" $name) }}
                 <contributor>
-                    {{- if and $contributor (isset $contributor.Params "name") }} <!-- use contributor name from profile page if found -->
-                        <name>{{ $contributor.Params.name | plainify }}</name>
+                    {{- with $contributor.Params.name }} <!-- use contributor name from profile page if found -->
+                        <name>{{ . | plainify }}</name>
                     {{- else -}}
                         <name>{{ $name | plainify }}</name>
                     {{- end -}}
-                    {{- if isset . "uri" }} <!-- explicitly overwrite uri -->
-                        <uri>{{ .uri | safeHTML }}</uri>
-                    {{- else if and $contributor (isset $contributor.Params "uri") }} <!-- use different contributor uri from profile page if found -->
-                        <uri>{{ $contributor.Params.uri | safeHTML }}</uri>
-                    {{- else if $contributor }} <!-- link to profile page -->
-                        <uri>{{ $contributor.Permalink }}</uri>
+                    {{- with .uri }} <!-- explicitly overwrite uri -->
+                        <uri>{{ . | safeHTML }}</uri>
+                    {{- else }}
+                        {{ with $contributor }}
+                            {{- with .Params.uri }} <!-- use different contributor uri from profile page if found -->
+                                <uri>{{ . | safeHTML }}</uri>
+                            {{- else }} <!-- link to profile page -->
+                                <uri>{{ .Permalink }}</uri>
+                            {{- end -}}
+                        {{- end -}}
                     {{- end -}}
-                    {{- if isset . "email" }} <!-- explicitly overwrite email -->
-                        <email>{{ .email | plainify }}</email>
-                    {{- else if and $contributor (isset $contributor.Params "email") }} <!-- use contributor email from profile page if found -->
-                        <email>{{ $contributor.Params.email | safeHTML }}</email>
+                    {{- with .email }} <!-- explicitly overwrite email -->
+                        <email>{{ . | safeHTML }}</email>
+                    {{- else }}
+                        {{ with $contributor }}
+                            {{- with .Params.email }} <!-- use different contributor email from profile page if found -->
+                                <email>{{ . | safeHTML }}</email>
+                            {{- end -}}
+                        {{- end -}}
                     {{- end -}}
                 </contributor>
             {{ end }}
@@ -252,116 +206,123 @@
     {{ else if $contributors }} <!-- simple contributor name -->
         <contributor><name>{{ $contributors | plainify }}</name></contributor>
     {{ end }}
-    {{ with site.Copyright }}
-        <rights>
-            {{- replace (replace . "{year}" now.Year) "&copy;" "©" | plainify -}}
-        </rights>
-    {{- end }}
-    {{- $icon := site.Params.feedicon | default "icon-32.png" -}}
-    {{- $iconpaths := printf "static/img/%s" $icon -}}
-    {{- $iconpath := printf "img/%s" $icon -}}
-    {{- if (fileExists $iconpaths) }}
-        <icon>{{ $iconpath | absURL }}</icon>
-    {{- end }}
-    {{- $logo := site.Params.feedlogo | default "logo.svg" -}}
-    {{- $logopaths := printf "static/img/%s" $logo -}}
-    {{- $logopath := printf "img/%s" $logo -}}
-    {{- if (fileExists $logopaths) }}
-        <logo>{{ $logopath | absURL }}</logo>
-    {{- end }}
+    {{ with site.Params.id }}
+        <id>{{ . | plainify }}</id>
+    {{ else }}
+        <id>{{ .Permalink }}</id>
+    {{ end }}
     {{- $limit := (cond (le site.Config.Services.RSS.Limit 0) 65536 site.Config.Services.RSS.Limit) }}
-    {{- $feed_sections := $.Site.Params.feedSections | default site.Params.mainSections }}
-    {{ range first $limit (where (where .Pages "Type" "in" $feed_sections) ".Params.disablefeed" "!=" true ) }}
+    {{- $feed_sections := site.Params.feedSections | default site.Params.mainSections -}}
+    {{/* Range through only the pages with a Type in $feed_sections */}}
+    {{- $pages := where .Pages "Type" "in" $feed_sections -}}
+    {{- range first $limit $pages }}
         {{ $page := . }}
         <entry>
             {{ printf `<title type="html"><![CDATA[%s]]></title>` .Title | safeHTML }}
             <link href="{{ .Permalink }}?utm_source=atom_feed" rel="alternate" type="text/html" />
             {{- range .Translations }}
                 {{- $link := printf "%s?utm_source=atom_feed" .Permalink | safeHTML }}
-                {{- printf "<link href=%q rel=\"alternate\" type=\"text/html\" hreflang=%q />" $link .Lang | safeHTML }}
+                {{- printf `<link href=%q rel="alternate" type="text/html" hreflang=%q />` $link .Lang | safeHTML }}
             {{- end }}
-            {{- if site.Params.comments.engine | and (index site.Params.comments.commentable .Type) | and (ne .Params.commentable false) | or .Params.commentable }}
-                <link href="{{ .Permalink }}?utm_source=atom_feed#comments" rel="service.post" type="text/html" />
-            {{- end }}
+            {{/* rel=related: See https://validator.w3.org/feed/docs/atom.html#link */}}
             {{- range first 5 (site.RegularPages.Related .) }}
                 <link href="{{ .Permalink }}?utm_source=atom_feed" rel="related" type="text/html" title="{{ .Title }}" />
             {{- end }}
-            {{- $uuid := sha1 .RelPermalink }}
-            <id>urn:uuid:{{substr $uuid 0 8}}-{{substr $uuid 8 4}}-5{{substr $uuid 13 3}}-{{substr $uuid 16 1}}9{{substr $uuid 17 2}}-{{substr $uuid 21 12}}</id>
-
+            {{ with .Params.id }}
+                <id>{{ . | plainify }}</id>
+            {{ else }}
+                <id>{{ .Permalink }}</id>
+            {{ end }}
             {{ $authors := "" }}
-            {{ if isset .Params "author" }}
-                {{ $authors = .Params.author }}
-            {{ else if isset .Params "authors" }}
-                {{ $authors = .Params.authors }}
+            {{ with .Params.author }}
+                {{ $authors = . }}
+            {{ else }}
+                {{ with .Params.authors }}
+                    {{ $authors = . }}
+                {{ end }}
             {{ end }}
             {{ if and $authors (reflect.IsSlice $authors) }} <!-- if authors are defined as slice -->
                 {{ range $authors }}
                     {{- $author := site.GetPage (printf "/%s/%s" "authors" .) }}
                     <author>
-                        {{- if and $author (isset $author.Params "name") }} <!-- use author name from profile page if found -->
-                            <name>{{ $author.Params.name | plainify }}</name>
+                        {{- with $author.Params.name }} <!-- use author name from profile page if found -->
+                            <name>{{ . | plainify }}</name>
                         {{- else -}}
                             <name>{{ . | plainify }}</name>
                         {{- end -}}
-                        {{- if and $author (isset $author.Params "uri") }} <!-- use different author uri from profile page if found -->
-                            <uri>{{ $author.Params.uri | safeHTML }}</uri>
-                        {{- else if $author }} <!-- link to profile page -->
-                            <uri>{{ $author.Permalink }}</uri>
-                        {{- end -}}
-                        {{- if and $author (isset $author.Params "email") }} <!-- use author email from profile page if found -->
-                            <email>{{ $author.Params.email | safeHTML }}</email>
+                        {{ with $author }}
+                            {{- with .Params.uri }} <!-- use different author uri from profile page if found -->
+                                <uri>{{ . | safeHTML }}</uri>
+                            {{- else }} <!-- link to profile page -->
+                                <uri>{{ .Permalink }}</uri>
+                            {{- end -}}
+                            {{- with .Params.email }} <!-- use different author email from profile page if found -->
+                                <email>{{ . | safeHTML }}</email>
+                            {{- end -}}
                         {{- end -}}
                     </author>
                 {{ end }}
             {{ else if and $authors (reflect.IsMap $authors) }} <!-- if authors are defined as map -->
-                {{ if isset $authors "name" }} <!-- this is a single author map -->
+                {{ if $authors.name }} <!-- this is a single author map -->
                     {{ with $authors }}
                         {{- $author := site.GetPage (printf "/%s/%s" "authors" .name) }}
                         <author>
-                            {{- if and $author (isset $author.Params "name") }} <!-- use author name from profile page if found -->
-                                <name>{{ $author.Params.name | plainify }}</name>
+                            {{- with $author.Params.name }} <!-- use author name from profile page if found -->
+                                <name>{{ . | plainify }}</name>
                             {{- else -}}
                                 <name>{{ .name | plainify }}</name>
                             {{- end -}}
-                            {{- if isset . "uri" }} <!-- explicitly overwrite uri -->
-                                <uri>{{ .uri | safeHTML }}</uri>
-                            {{- else if and $author (isset $author.Params "uri") }} <!-- use different author uri from profile page if found -->
-                                <uri>{{ $author.Params.uri | safeHTML }}</uri>
-                            {{- else if $author }} <!-- link to profile page -->
-                                <uri>{{ $author.Permalink }}</uri>
+                            {{- with .uri }} <!-- explicitly overwrite uri -->
+                                <uri>{{ . | safeHTML }}</uri>
+                            {{- else }}
+                                {{ with $author }}
+                                    {{- with .Params.uri }} <!-- use different author uri from profile page if found -->
+                                        <uri>{{ . | safeHTML }}</uri>
+                                    {{- else }} <!-- link to profile page -->
+                                        <uri>{{ .Permalink }}</uri>
+                                    {{- end -}}
+                                {{- end -}}
                             {{- end -}}
-                            {{- if isset . "email" }} <!-- explicitly overwrite email -->
-                                <email>{{ .email | plainify }}</email>
-                            {{- else if and $author (isset $author.Params "email") }} <!-- use author email from profile page if found -->
-                                <email>{{ $author.Params.email | safeHTML }}</email>
+                            {{- with .email }} <!-- explicitly overwrite email -->
+                                <email>{{ . | safeHTML }}</email>
+                            {{- else }}
+                                {{ with $author }}
+                                    {{- with .Params.email }} <!-- use different author email from profile page if found -->
+                                        <email>{{ . | safeHTML }}</email>
+                                    {{- end -}}
+                                {{- end -}}
                             {{- end -}}
                         </author>
                     {{ end }}
                 {{ else }} <!-- this is a multi author map -->
                     {{ range $elem_index, $elem_val := $authors }}
-                        {{- $name := $elem_index }}
-                        {{ if isset . "name" }}
-                            {{- $name = .name }}
-                        {{ end }}
+                        {{- $name := .name | default $elem_index }}
                         {{- $author := site.GetPage (printf "/%s/%s" "authors" $name) }}
                         <author>
-                            {{- if and $author (isset $author.Params "name") }} <!-- use author name from profile page if found -->
-                                <name>{{ $author.Params.name | plainify }}</name>
+                            {{- with $author.Params.name }} <!-- use author name from profile page if found -->
+                                <name>{{ . | plainify }}</name>
                             {{- else -}}
                                 <name>{{ $name | plainify }}</name>
                             {{- end -}}
-                            {{- if isset . "uri" }} <!-- explicitly overwrite uri -->
-                                <uri>{{ .uri | safeHTML }}</uri>
-                            {{- else if and $author (isset $author.Params "uri") }} <!-- use different author uri from profile page if found -->
-                                <uri>{{ $author.Params.uri | safeHTML }}</uri>
-                            {{- else if $author }} <!-- link to profile page -->
-                                <uri>{{ $author.Permalink }}</uri>
+                            {{- with .uri }} <!-- explicitly overwrite uri -->
+                                <uri>{{ . | safeHTML }}</uri>
+                            {{- else }}
+                                {{ with $author }}
+                                    {{- with .Params.uri }} <!-- use different author uri from profile page if found -->
+                                        <uri>{{ . | safeHTML }}</uri>
+                                    {{- else }} <!-- link to profile page -->
+                                        <uri>{{ .Permalink }}</uri>
+                                    {{- end -}}
+                                {{- end -}}
                             {{- end -}}
-                            {{- if isset . "email" }} <!-- explicitly overwrite email -->
-                                <email>{{ .email | plainify }}</email>
-                            {{- else if and $author (isset $author.Params "email") }} <!-- use author email from profile page if found -->
-                                <email>{{ $author.Params.email | safeHTML }}</email>
+                            {{- with .email }} <!-- explicitly overwrite email -->
+                                <email>{{ . | safeHTML }}</email>
+                            {{- else }}
+                                {{ with $author }}
+                                    {{- with .Params.email }} <!-- use different author email from profile page if found -->
+                                        <email>{{ . | safeHTML }}</email>
+                                    {{- end -}}
+                                {{- end -}}
                             {{- end -}}
                         </author>
                     {{ end }}
@@ -369,80 +330,96 @@
             {{ else if $authors }} <!-- simple author name -->
                 <author><name>{{ $authors | plainify }}</name></author>
             {{ end }}
-
             {{ $contributors := "" }}
-            {{ if isset .Params "contributor" }}
-                {{ $contributors = .Params.contributor }}
-            {{ else if isset .Params "contributors" }}
-                {{ $contributors = .Params.contributors }}
+            {{ with .Params.contributor }}
+                {{ $contributors = . }}
+            {{ else }}
+                {{ with .Params.contributors }}
+                    {{ $contributors = . }}
+                {{ end }}
             {{ end }}
             {{ if and $contributors (reflect.IsSlice $contributors) }} <!-- if contributors are defined as slice -->
                 {{ range $contributors }}
                     {{- $contributor := site.GetPage (printf "/%s/%s" "authors" .) }}
                     <contributor>
-                        {{- if and $contributor (isset $contributor.Params "name") }} <!-- use contributor name from profile page if found -->
-                            <name>{{ $contributor.Params.name | plainify }}</name>
+                        {{- with $contributor.Params.name }} <!-- use contributor name from profile page if found -->
+                            <name>{{ . | plainify }}</name>
                         {{- else -}}
                             <name>{{ . | plainify }}</name>
                         {{- end -}}
-                        {{- if and $contributor (isset $contributor.Params "uri") }} <!-- use different contributor uri from profile page if found -->
-                            <uri>{{ $contributor.Params.uri | safeHTML }}</uri>
-                        {{- else if $contributor }} <!-- link to profile page -->
-                            <uri>{{ $contributor.Permalink }}</uri>
-                        {{- end -}}
-                        {{- if and $contributor (isset $contributor.Params "email") }} <!-- use contributor email from profile page if found -->
-                            <email>{{ $contributor.Params.email | safeHTML }}</email>
+                        {{ with $contributor }}
+                            {{- with .Params.uri }} <!-- use different contributor uri from profile page if found -->
+                                <uri>{{ . | safeHTML }}</uri>
+                            {{- else }} <!-- link to profile page -->
+                                <uri>{{ .Permalink }}</uri>
+                            {{- end -}}
+                            {{- with .Params.email }} <!-- use different contributor email from profile page if found -->
+                                <email>{{ . | safeHTML }}</email>
+                            {{- end -}}
                         {{- end -}}
                     </contributor>
                 {{ end }}
             {{ else if and $contributors (reflect.IsMap $contributors) }} <!-- if contributors are defined as map -->
-                {{ if isset $contributors "name" }} <!-- this is a single contributor map -->
+                {{ if $contributors.name }} <!-- this is a single contributor map -->
                     {{ with $contributors }}
                         {{- $contributor := site.GetPage (printf "/%s/%s" "authors" .name) }}
                         <contributor>
-                            {{- if and $contributor (isset $contributor.Params "name") }} <!-- use contributor name from profile page if found -->
-                                <name>{{ $contributor.Params.name | plainify }}</name>
+                            {{- with $contributor.Params.name }} <!-- use contributor name from profile page if found -->
+                                <name>{{ . | plainify }}</name>
                             {{- else -}}
                                 <name>{{ .name | plainify }}</name>
                             {{- end -}}
-                            {{- if isset . "uri" }} <!-- explicitly overwrite uri -->
-                                <uri>{{ .uri | safeHTML }}</uri>
-                            {{- else if and $contributor (isset $contributor.Params "uri") }} <!-- use different contributor uri from profile page if found -->
-                                <uri>{{ $contributor.Params.uri | safeHTML }}</uri>
-                            {{- else if $contributor }} <!-- link to profile page -->
-                                <uri>{{ $contributor.Permalink }}</uri>
+                            {{- with .uri }} <!-- explicitly overwrite uri -->
+                                <uri>{{ . | safeHTML }}</uri>
+                            {{- else }}
+                                {{ with $contributor }}
+                                    {{- with .Params.uri }} <!-- use different contributor uri from profile page if found -->
+                                        <uri>{{ . | safeHTML }}</uri>
+                                    {{- else }} <!-- link to profile page -->
+                                        <uri>{{ .Permalink }}</uri>
+                                    {{- end -}}
+                                {{- end -}}
                             {{- end -}}
-                            {{- if isset . "email" }} <!-- explicitly overwrite email -->
-                                <email>{{ .email | plainify }}</email>
-                            {{- else if and $contributor (isset $contributor.Params "email") }} <!-- use contributor email from profile page if found -->
-                                <email>{{ $contributor.Params.email | safeHTML }}</email>
+                            {{- with .email }} <!-- explicitly overwrite email -->
+                                <email>{{ . | safeHTML }}</email>
+                            {{- else }}
+                                {{ with $contributor }}
+                                    {{- with .Params.email }} <!-- use different contributor email from profile page if found -->
+                                        <email>{{ . | safeHTML }}</email>
+                                    {{- end -}}
+                                {{- end -}}
                             {{- end -}}
                         </contributor>
                     {{ end }}
                 {{ else }} <!-- this is a multi contributor map -->
                     {{ range $elem_index, $elem_val := $contributors }}
-                        {{- $name := $elem_index }}
-                        {{ if isset . "name" }}
-                            {{- $name = .name }}
-                        {{ end }}
+                        {{- $name := .name | default $elem_index }}
                         {{- $contributor := site.GetPage (printf "/%s/%s" "authors" $name) }}
                         <contributor>
-                            {{- if and $contributor (isset $contributor.Params "name") }} <!-- use contributor name from profile page if found -->
-                                <name>{{ $contributor.Params.name | plainify }}</name>
+                            {{- with $contributor.Params.name }} <!-- use contributor name from profile page if found -->
+                                <name>{{ . | plainify }}</name>
                             {{- else -}}
                                 <name>{{ $name | plainify }}</name>
                             {{- end -}}
-                            {{- if isset . "uri" }} <!-- explicitly overwrite uri -->
-                                <uri>{{ .uri | safeHTML }}</uri>
-                            {{- else if and $contributor (isset $contributor.Params "uri") }} <!-- use different contributor uri from profile page if found -->
-                                <uri>{{ $contributor.Params.uri | safeHTML }}</uri>
-                            {{- else if $contributor }} <!-- link to profile page -->
-                                <uri>{{ $contributor.Permalink }}</uri>
+                            {{- with .uri }} <!-- explicitly overwrite uri -->
+                                <uri>{{ . | safeHTML }}</uri>
+                            {{- else }}
+                                {{ with $contributor }}
+                                    {{- with .Params.uri }} <!-- use different contributor uri from profile page if found -->
+                                        <uri>{{ . | safeHTML }}</uri>
+                                    {{- else }} <!-- link to profile page -->
+                                        <uri>{{ .Permalink }}</uri>
+                                    {{- end -}}
+                                {{- end -}}
                             {{- end -}}
-                            {{- if isset . "email" }} <!-- explicitly overwrite email -->
-                                <email>{{ .email | plainify }}</email>
-                            {{- else if and $contributor (isset $contributor.Params "email") }} <!-- use contributor email from profile page if found -->
-                                <email>{{ $contributor.Params.email | safeHTML }}</email>
+                            {{- with .email }} <!-- explicitly overwrite email -->
+                                <email>{{ . | safeHTML }}</email>
+                            {{- else }}
+                                {{ with $contributor }}
+                                    {{- with .Params.email }} <!-- use different contributor email from profile page if found -->
+                                        <email>{{ . | safeHTML }}</email>
+                                    {{- end -}}
+                                {{- end -}}
                             {{- end -}}
                         </contributor>
                     {{ end }}
@@ -450,24 +427,18 @@
             {{ else if $contributors }} <!-- simple contributor name -->
                 <contributor><name>{{ $contributors | plainify }}</name></contributor>
             {{ end }}
-
             <published>{{ .Date.Format "2006-01-02T15:04:05-07:00" | safeHTML }}</published>
             <updated>{{ .Lastmod.Format "2006-01-02T15:04:05-07:00" | safeHTML }}</updated>
-            {{- if ne .Summary "" }}
-                {{ printf `<summary type="html"><![CDATA[%s]]></summary>` .Summary | safeHTML }}
-            {{- end }}
-            {{- $description1 := .Description | default "" }}
-            {{- $description := (cond (eq "" $description1) "" (printf "<blockquote>%s</blockquote>" ($description1 | markdownify | chomp ))) }}
-            {{- if or (ne .Content "") (ne $description "") }}
-                {{ printf `<content type="html"><![CDATA[%s%s]]></content>` $description .Content | safeHTML }}
-            {{- end }}
-            {{- with site.Taxonomies }}
-                {{- range $taxo,$_ := . }} <!-- Defaults taxos: "tags", "categories" -->
-                    {{- with $page.Param $taxo }}
-                        {{- $taxo_list := . }} <!-- $taxo_list will be the tags/categories list -->
-                        {{- with site.GetPage (printf "/%s" $taxo) }}
-                            {{- $taxonomy_page := . }}
-                            {{- range $taxo_list }} <!-- Below, assuming pretty URLs -->
+            {{ $description1 := .Description | default "" }}
+            {{ $description := (cond (eq "" $description1) "" (printf "<blockquote>%s</blockquote>" ($description1 | markdownify))) }}
+            {{ printf `<content type="html"><![CDATA[%s%s]]></content>` $description .Content | safeHTML }}
+            {{ with site.Taxonomies }}
+                {{ range $taxo,$_ := . }} <!-- Defaults taxos: "tags", "categories" -->
+                    {{ with $page.Param $taxo }}
+                        {{ $taxo_list := . }} <!-- $taxo_list will be the tags/categories list -->
+                        {{ with site.GetPage (printf "/%s" $taxo) }}
+                            {{ $taxonomy_page := . }}
+                            {{ range $taxo_list }} <!-- Below, assuming pretty URLs -->
                                 <category scheme="{{ printf "%s%s" $taxonomy_page.Permalink (. | urlize) }}" term="{{ (. | urlize) }}" label="{{ . }}" />
                             {{ end }}
                         {{ end }}
