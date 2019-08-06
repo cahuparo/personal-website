@@ -41,6 +41,10 @@ ignoreFiles = ["\\.ipynb$", ".ipynb_checkpoints$", "\\.Rmd$", "\\.Rmarkdown$", "
 
 enableRobotsTXT = true
 
+[Author]
+  name = "Julian Pawlowski"
+  uri = "https://julian.pawlowski.me/about/"
+
 [outputs]
   home = [ "HTML", "JSON", "RSS", "ATOM", "WebAppManifest" ]
   section = [ "HTML", "RSS", "ATOM" ]
