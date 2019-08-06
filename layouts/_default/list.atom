@@ -1,6 +1,6 @@
 {{- printf "<?xml version=\"1.0\" encoding=\"utf-8\"?>" | safeHTML }}
 <feed xmlns="http://www.w3.org/2005/Atom"{{ with site.LanguageCode }} xml:lang="{{.}}"{{ end }}>
-    <generator uri="https://gohugo.io/" version="{{hugo.Version}}">Hugo</generator>
+    <generator uri="https://gohugo.io/" version="{{ hugo.Version }}">Hugo</generator>
     {{ $uuid := sha1 $.Site.BaseURL -}}
     <id>urn:uuid:{{substr $uuid 0 8}}-{{substr $uuid 8 4}}-5{{substr $uuid 13 3}}-{{substr $uuid 16 1}}9{{substr $uuid 17 2}}-{{substr $uuid 21 12}}</id>
     {{ printf `<title type="html"><![CDATA[` | safeHTML }}
@@ -252,58 +252,6 @@
     {{ else if $contributors }} <!-- simple contributor name -->
         <contributor><name>{{ $contributors | plainify }}</name></contributor>
     {{ end }}
-
-
-
-    {{- /* if site.Author.name }}
-        <author>
-            <name>{{ site.Author.name | plainify }}</name>
-            {{- with site.Author.uri }}
-                <uri>{{ . | safeHTML }}</uri>
-            {{- end -}}
-            {{- with site.Author.email }}
-                <email>{{ . | plainify }}</email>
-            {{ end -}}
-        </author>
-    {{ else if site.Author }}
-        {{- range site.Author -}} <!-- Assuming the authors site parameter to be a list -->
-            {{ if .name }}
-                <author>
-                    <name>{{ .name | plainify }}</name>
-                    {{- with .uri }}
-                        <uri>{{ . | safeHTML }}</uri>
-                    {{- end -}}
-                    {{- with .email }}
-                        <email>{{ . | plainify }}</email>
-                    {{ end -}}
-                </author>
-            {{ end -}}
-        {{ end -}}
-    {{- else }}
-        {{- $author := site.GetPage (printf "/%s/%s" "authors" (.Scratch.Get "superuser_username")) }}
-        {{- if $author.Params.name }} <!-- fallback: a profile page for a superuser was found -->
-            {{ with $author }}
-                <author>
-                    <name>{{ .Params.name | plainify }}</name>
-                    {{ with site.Author.uri }} <!-- author uri may be overwritten for site level -->
-                        <uri>{{ . | safeHTML }}</uri>
-                    {{ else -}}
-                        <uri>{{ .Permalink }}</uri>
-                    {{ end -}}
-                    {{ with site.Author.email }} <!-- author email may be overwritten for site level -->
-                        <email>{{ . | plainify }}</email>
-                    {{ else -}}
-                        {{- with .Params.email }} <!-- default: author email from profile page disabled for privacy reasons -->
-                            <email>{{ . | plainify }}</email>
-                        {{ end -}}
-                    {{ end -}}
-                </author>
-            {{- end -}}
-        {{- end -}}
-    {{- end */ -}}
-
-
-
     {{ with site.Copyright }}
         <rights>
             {{- replace (replace . "{year}" now.Year) "&copy;" "©" | plainify -}}
