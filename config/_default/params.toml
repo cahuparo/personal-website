@@ -131,8 +131,17 @@ docs_section_pager = true  # Display pager in Docs layout (e.g. tutorials)?
 # Enable in-built social sharing buttons? (true/false)
 sharing = true
 
+# used as unique identifier in atom feed
+#  gnerated using https://www.uuidgenerator.net/
+# Also see RFC3987 and RFC2141
+id = "urn:uuid:874a1312-edd1-406a-8fdd-b8ee6a29e6d1"
+
 #feedSections = [ "page", "post", "docs", "project", "publication", "talk" ]
 feedSections = [ "post" ]
+
+[feed]
+  icon = "img/icon-32.png"
+  logo = "img/icon-512.png"
 
 # Configuration of publication pages.
 [publications]

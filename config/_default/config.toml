@@ -23,7 +23,7 @@ googleAnalytics = "UA-144239485-1"
 ############################
 
 # Name of Academic theme folder in `themes/`.
-theme = "academic"
+theme = [ "hugo-atom-feed", "academic" ]
 
 # Get last modified date for content from Git?
 enableGitInfo = false
@@ -47,38 +47,38 @@ enableRobotsTXT = true
   taxonomy = [ "HTML", "RSS", "ATOM" ]
   taxonomyTerm = [ "HTML", "RSS", "ATOM" ]
 
-[mediaTypes]
-  [mediaTypes."application/manifest+json"]
-    suffixes = ["webmanifest"]
+[mediaTypes."application/manifest+json"]
+  suffixes = ["webmanifest"]
 
-  [mediaTypes."application/rss+xml"]
-    suffixes = ["rss"]
+[mediaTypes."application/rss+xml"]
+  suffixes = ["rss"]
 
-  [mediaTypes."application/atom+xml"]
-    suffixes = ["atom"]
+[mediaTypes."application/atom+xml"]
+  suffixes = ["atom"]
 
-[outputFormats]
-  [outputFormats.WebAppManifest]
-    rel = "manifest"
-    mediaType = "application/manifest+json"
+[outputFormats.WebAppManifest]
+  name = "WebAppManifest"
+  rel = "manifest"
+  mediaType = "application/manifest+json"
 
-  [outputFormats.Atom]
-    mediaType = "application/atom+xml"
-    baseName = "feed"
-    rel = "alternate"
-    isHTML = false
-    isPlainText = false
-    noUgly = true
-    permalinkable = false
+[outputFormats.Atom]
+  name = "Atom"
+  mediaType = "application/atom+xml"
+  baseName = "feed"
+  isPlainText = false
+  # rel = "alternate"
+  # isHTML = false
+  # noUgly = true
+  # permalinkable = false
 
-  [outputFormats.RSS]
-    mediaType = "application/rss+xml"
-    baseName = "feed"
-    rel = "alternate"
-    isHTML = false
-    isPlainText = false
-    noUgly = true
-    permalinkable = false
+[outputFormats.RSS]
+  mediaType = "application/rss+xml"
+  baseName = "feed"
+  isPlainText = false
+  # rel = "alternate"
+  # isHTML = false
+  # noUgly = true
+  # permalinkable = false
 
 # Configure BlackFriday Markdown rendering.
 #   See: https://gohugo.io/getting-started/configuration/#configure-blackfriday

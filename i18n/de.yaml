@@ -1,2 +1,4 @@
-- id: hobbies
-  translation: Hobbys
+-   id: hobbies
+    translation: Hobbys
+-   id: feed_title_on
+    translation: "von"
