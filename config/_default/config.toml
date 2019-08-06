@@ -53,36 +53,34 @@ enableRobotsTXT = true
 
 [mediaTypes."application/manifest+json"]
   suffixes = ["webmanifest"]
-
-[mediaTypes."application/rss+xml"]
-  suffixes = ["rss"]
-
-[mediaTypes."application/atom+xml"]
-  suffixes = ["atom"]
-
 [outputFormats.WebAppManifest]
   name = "WebAppManifest"
   rel = "manifest"
   mediaType = "application/manifest+json"
 
+[mediaTypes."application/atom+xml"]
+  suffixes = ["atom"]
 [outputFormats.Atom]
+  # https://filext.com/file-extension/ATOM
   name = "Atom"
   mediaType = "application/atom+xml"
-  baseName = "feed"
+  baseName = "feed" # generated file = <baseName>.<mediaType."application/atom+xml".suffixes[0]> = feed.atom
   isPlainText = false
-  # rel = "alternate"
-  # isHTML = false
-  # noUgly = true
-  # permalinkable = false
+  rel = "alternate"
+  isHTML = false
+  noUgly = true
+  permalinkable = false
 
+[mediaTypes."application/rss+xml"]
+  suffixes = ["rss"]
 [outputFormats.RSS]
   mediaType = "application/rss+xml"
   baseName = "feed"
   isPlainText = false
-  # rel = "alternate"
-  # isHTML = false
-  # noUgly = true
-  # permalinkable = false
+  rel = "alternate"
+  isHTML = false
+  noUgly = true
+  permalinkable = false
 
 # Configure BlackFriday Markdown rendering.
 #   See: https://gohugo.io/getting-started/configuration/#configure-blackfriday
