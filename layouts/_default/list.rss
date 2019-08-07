@@ -48,7 +48,7 @@
             {{- $logo := .logo | default "logo.svg" -}}
             {{- with resources.Get $logo -}}
                 <image>
-                    <link>{{ $.Permalink }}?utm_source=rss_feed</link>
+                    <link>{{ $.Permalink }}</link>
                     <title>{{ printf `%s` $title | html }}</title>
                     <url>{{ (. | fingerprint).Permalink }}</url>
                     {{ with (or (site.Param "subtitle") (site.Param "tagline")) }}
