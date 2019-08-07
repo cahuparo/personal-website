@@ -1,0 +1,56 @@
+==================================================================
+https://keybase.io/loredo
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of http://julian.pawlowski.me
+  * I am loredo (https://keybase.io/loredo) on keybase.
+  * I have a public key ASA-c63BANKICmiJtHrUlAfJ9m5zLyNS4UiNUJUq2xp3Ygo
+
+To do so, I am signing this object:
+
+{
+  "body": {
+    "key": {
+      "eldest_kid": "01010c025106b36b18e95f674ebe6dca5cefae3ec593cb952f827af2e4e9fcf2e91c0a",
+      "host": "keybase.io",
+      "kid": "01203e73adc100d2880a6889b47ad49407c9f66e732f2352e1488d50952adb1a77620a",
+      "uid": "e9b7812d7aa965fb5d61d2c3c63a1200",
+      "username": "loredo"
+    },
+    "merkle_root": {
+      "ctime": 1565139388,
+      "hash": "cbc2d29fda0fc21c3cdaf8bf2a14468b57ab96061557e7a57b1097b13c91b0648deb2587d6a7aabd481402ba0325db780b2ada69f18fc2f524f81adf385001e6",
+      "hash_meta": "c08384e6498be86f6adf20ccc5e5c1cea031b11e74723c93a3022659941de495",
+      "seqno": 5957991
+    },
+    "service": {
+      "entropy": "1crKFcr8ElyeN58ptjP3hufC",
+      "hostname": "julian.pawlowski.me",
+      "protocol": "http:"
+    },
+    "type": "web_service_binding",
+    "version": 2
+  },
+  "client": {
+    "name": "keybase.io go client",
+    "version": "4.2.0"
+  },
+  "ctime": 1565139402,
+  "expire_in": 504576000,
+  "prev": "268d4dc759b26a336ebdae3450b89169637485bebda94deef747a0e2be7c594f",
+  "seqno": 36,
+  "tag": "signature"
+}
+
+which yields the signature:
+
+hKRib2R5hqhkZXRhY2hlZMOpaGFzaF90eXBlCqNrZXnEIwEgPnOtwQDSiApoibR61JQHyfZucy8jUuFIjVCVKtsad2IKp3BheWxvYWTESpcCJMQgJo1Nx1myajNuva40ULiRaWN0hb69qU3u90eg4r58WU/EIMUfZqbCLocZb6rPs14KUEP+URPnox1bpjPyg0clzvWHAgHCo3NpZ8RAe6oIDvy1G00ouyQs5KK3Lnkq80L6sxTsN2a8dqVcnVqa7NPAg6En2ikzJx4xhKpuTISoPhahKvaJISHjTOuzBahzaWdfdHlwZSCkaGFzaIKkdHlwZQildmFsdWXEIIZvyg8QicO57K+N1WhSByqjr/zsdFf80ZcbsYHA0ZMjo3RhZ80CAqd2ZXJzaW9uAQ==
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/loredo
+
+==================================================================
