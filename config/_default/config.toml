@@ -43,6 +43,7 @@ enableRobotsTXT = true
 
 [Author]
   name = "Julian Pawlowski"
+  email = "julian.pawlowski@gmail.com"
   uri = "https://julian.pawlowski.me/about/"
 
 [outputs]
