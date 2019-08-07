@@ -118,17 +118,25 @@
                 {{- $continue := i18n "feed_item_summary_readmore" | default "Read&nbsp;more&nbsp;&#8230;" -}}
                 {{- $link := printf `%s?utm_source=rss_feed` .Permalink -}}
                 {{- $continue = printf `<p><a href=%q>%s</a></p>` $link $continue | safeHTML -}}
-                {{ if eq "" $description }}
-                    {{ if ne "" .Content }}
-                        {{ printf `<description><![CDATA[%s]]></description>` .Content | safeHTML }}
+                {{ with .Params.disable_feed_content }}
+                    {{ if ne "" $description }}
+                        {{ printf `<description><![CDATA[%s<p>&nbsp;</p>%s]]></description>` $description $continue | safeHTML -}}
                     {{ else }}
                         {{ printf `<description><![CDATA[%s]]></description>` $continue | safeHTML }}
                     {{ end }}
-                {{ else if eq "" .Content }}
-                    {{ printf `<description><![CDATA[%s<p>&nbsp;</p>%s]]></description>` $description $continue | safeHTML -}}
                 {{ else }}
-                    {{ printf `<description><![CDATA[%s]]></description>` $description | safeHTML }}
-                    {{ printf `<content:encoded><![CDATA[%s]]></content:encoded>` .Content | safeHTML }}
+                    {{ if eq "" $description }}
+                        {{ if ne "" .Content }}
+                            {{ printf `<description><![CDATA[%s]]></description>` .Content | safeHTML }}
+                        {{ else }}
+                            {{ printf `<description><![CDATA[%s]]></description>` $continue | safeHTML }}
+                        {{ end }}
+                    {{ else if eq "" .Content }}
+                        {{ printf `<description><![CDATA[%s<p>&nbsp;</p>%s]]></description>` $description $continue | safeHTML -}}
+                    {{ else }}
+                        {{ printf `<description><![CDATA[%s]]></description>` $description | safeHTML }}
+                        {{ printf `<content:encoded><![CDATA[%s]]></content:encoded>` .Content | safeHTML }}
+                    {{ end }}
                 {{ end }}
                 {{ with site.Taxonomies }}
                     {{ range $taxo,$_ := . }} <!-- Defaults taxos: "tags", "categories" -->
