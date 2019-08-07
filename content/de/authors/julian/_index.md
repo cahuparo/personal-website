@@ -46,6 +46,9 @@ social:
 - icon: github
   icon_pack: fab
   link: https://github.com/jpawlowski
+- icon: keybase
+  icon_pack: fab
+  link: https://keybase.io/loredo
 #- icon: youtube
 #  icon_pack: fab
 #  link: 'https://www.youtube.com/channel/UC9h6dQEptSqnBLdKKHlXLwQ'
