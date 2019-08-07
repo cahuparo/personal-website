@@ -114,36 +114,49 @@
                         {{- $description = . -}}
                     {{- end -}}
                 {{- end -}}
-                {{- $description = (cond (eq "" $description) "" ($description | markdownify)) -}}
+                {{- $description = (cond (eq "" $description) "" ($description | markdownify | emojify)) -}}
+                {{- $content := .Content -}}
+                {{- $subtitle := "" -}}
+                {{- with .Params.subtitle -}}
+                    {{ $subtitle = . -}}
+                    {{ $content = printf `<h2>%s</h2>%s` $subtitle $content | safeHTML -}}
+                {{- end -}}
+                {{- $description = (cond (eq "" $description) "" ($description | markdownify | emojify)) -}}
                 {{- $continue := i18n "feed_item_summary_readmore" | default "Read&nbsp;more&nbsp;&#8230;" -}}
                 {{- $link := printf `%s?utm_source=rss_feed` .Permalink -}}
                 {{- $continue = printf `<p><a href=%q>%s</a></p>` $link $continue | safeHTML -}}
                 {{ with .Params.disable_feed_content }}
                     {{ if ne "" $description }}
+                        {{ if ne "" $subtitle }}
+                            {{- $description = printf `<h2>%s</h2>%s` $subtitle $description | safeHTML -}}
+                        {{ end }}
                         {{ printf `<description><![CDATA[%s<p>&nbsp;</p>%s]]></description>` $description $continue | safeHTML -}}
                     {{ else }}
-                        {{ with .Subtitle }}
-                            {{ printf `<description><![CDATA[%s<p>&nbsp;</p>%s]]></description>` .Subtitle $continue | safeHTML }}
+                        {{ if ne "" $subtitle }}
+                            {{ printf `<description><![CDATA[%s%s]]></description>` $subtitle $continue | safeHTML }}
                         {{ else }}
                             {{ printf `<description><![CDATA[%s]]></description>` $continue | safeHTML }}
                         {{ end }}
                     {{ end }}
                 {{ else }}
                     {{ if eq "" $description }}
-                        {{ if ne "" .Content }}
-                            {{ printf `<description><![CDATA[%s]]></description>` .Content | safeHTML }}
+                        {{ if ne "" $content }}
+                            {{ printf `<description><![CDATA[%s]]></description>` $content | safeHTML }}
                         {{ else }}
-                            {{ with .Subtitle }}
-                                {{ printf `<description><![CDATA[%s<p>&nbsp;</p>%s]]></description>` .Subtitle $continue | safeHTML }}
+                            {{ if ne "" $subtitle }}
+                                {{ printf `<description><![CDATA[%s%s]]></description>` $subtitle $continue | safeHTML }}
                             {{ else }}
                                 {{ printf `<description><![CDATA[%s]]></description>` $continue | safeHTML }}
                             {{ end }}
                         {{ end }}
-                    {{ else if eq "" .Content }}
+                    {{ else if eq "" $content }}
+                        {{ if ne "" $subtitle }}
+                            {{- $description = printf `<h2>%s</h2>%s` $subtitle $description | safeHTML -}}
+                        {{ end }}
                         {{ printf `<description><![CDATA[%s<p>&nbsp;</p>%s]]></description>` $description $continue | safeHTML -}}
                     {{ else }}
                         {{ printf `<description><![CDATA[%s]]></description>` $description | safeHTML }}
-                        {{ printf `<content:encoded><![CDATA[%s]]></content:encoded>` .Content | safeHTML }}
+                        {{ printf `<content:encoded><![CDATA[%s]]></content:encoded>` $content | safeHTML }}
                     {{ end }}
                 {{ end }}
                 {{ with site.Taxonomies }}
