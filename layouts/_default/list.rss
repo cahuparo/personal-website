@@ -122,14 +122,22 @@
                     {{ if ne "" $description }}
                         {{ printf `<description><![CDATA[%s<p>&nbsp;</p>%s]]></description>` $description $continue | safeHTML -}}
                     {{ else }}
-                        {{ printf `<description><![CDATA[%s]]></description>` $continue | safeHTML }}
+                        {{ with .Subtitle }}
+                            {{ printf `<description><![CDATA[%s<p>&nbsp;</p>%s]]></description>` .Subtitle $continue | safeHTML }}
+                        {{ else }}
+                            {{ printf `<description><![CDATA[%s]]></description>` $continue | safeHTML }}
+                        {{ end }}
                     {{ end }}
                 {{ else }}
                     {{ if eq "" $description }}
                         {{ if ne "" .Content }}
                             {{ printf `<description><![CDATA[%s]]></description>` .Content | safeHTML }}
                         {{ else }}
-                            {{ printf `<description><![CDATA[%s]]></description>` $continue | safeHTML }}
+                            {{ with .Subtitle }}
+                                {{ printf `<description><![CDATA[%s<p>&nbsp;</p>%s]]></description>` .Subtitle $continue | safeHTML }}
+                            {{ else }}
+                                {{ printf `<description><![CDATA[%s]]></description>` $continue | safeHTML }}
+                            {{ end }}
                         {{ end }}
                     {{ else if eq "" .Content }}
                         {{ printf `<description><![CDATA[%s<p>&nbsp;</p>%s]]></description>` $description $continue | safeHTML -}}
