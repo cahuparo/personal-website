@@ -116,7 +116,8 @@
                 {{- end -}}
                 {{- $description = (cond (eq "" $description) "" ($description | markdownify)) -}}
                 {{- $continue := i18n "feed_item_summary_readmore" | default "Read&nbsp;more&nbsp;&#8230;" -}}
-                {{- $continue = printf `<p><a href=%q>%s</a></p>` .Permalink $continue | safeHTML -}}
+                {{- $link := printf `%s?utm_source=rss_feed` .Permalink -}}
+                {{- $continue = printf `<p><a href=%q>%s</a></p>` $link $continue | safeHTML -}}
                 {{ if eq "" $description }}
                     {{ if ne "" .Content }}
                         {{ printf `<description><![CDATA[%s]]></description>` .Content | safeHTML }}
