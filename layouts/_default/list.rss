@@ -39,8 +39,8 @@
         {{- end }}
         <lastBuildDate>{{ now.Format "Mon, 02 Jan 2006 15:04:05 -0700" | safeHTML }}</lastBuildDate>
         {{ with site.Copyright }}
-            {{- $copyright := . | replace "{year}" now.Year -}} {{/* In case the site.copyright uses a special string "{year}" */}}
-            {{- $copyright = $copyright | replace "&copy;" "©" -}}
+            {{- $copyright := replace . "{year}" now.Year -}} {{/* In case the site.copyright uses a special string "{year}" */}}
+            {{- $copyright = replace $copyright "&copy;" "©" -}}
             <copyright>{{ $copyright | plainify }}</copyright>
         {{- end }}
         {{ with .Param "feed" }}
