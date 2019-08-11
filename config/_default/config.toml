@@ -23,7 +23,7 @@ googleAnalytics = "UA-144239485-1"
 ############################
 
 # Name of Academic theme folder in `themes/`.
-theme = [ "hugo-atom-feed", "academic" ]
+theme = [ "web-feeds", "academic-jpawlowski" ]
 
 # Get last modified date for content from Git?
 enableGitInfo = false
@@ -47,10 +47,10 @@ enableRobotsTXT = true
   uri = "https://julian.pawlowski.me/about/"
 
 [outputs]
-  home = [ "HTML", "JSON", "RSS", "ATOM", "WebAppManifest" ]
-  section = [ "HTML", "RSS", "ATOM" ]
-  taxonomy = [ "HTML", "RSS", "ATOM" ]
-  taxonomyTerm = [ "HTML", "RSS", "ATOM" ]
+  home = [ "HTML", "JSONIndex", "RSS", "Atom", "JSONFeed", "WebAppManifest" ]
+  section = [ "HTML", "RSS", "Atom", "JSONFeed" ]
+  taxonomy = [ "HTML", "RSS", "Atom", "JSONFeed" ]
+  taxonomyTerm = [ "HTML", "RSS", "Atom", "JSONFeed" ]
 
 [mediaTypes."application/manifest+json"]
   suffixes = ["webmanifest"]
@@ -58,30 +58,6 @@ enableRobotsTXT = true
   name = "WebAppManifest"
   rel = "manifest"
   mediaType = "application/manifest+json"
-
-[mediaTypes."application/atom+xml"]
-  suffixes = ["atom"]
-[outputFormats.Atom]
-  # https://filext.com/file-extension/ATOM
-  name = "Atom"
-  mediaType = "application/atom+xml"
-  baseName = "feed" # generated file = <baseName>.<mediaType."application/atom+xml".suffixes[0]> = feed.atom
-  isPlainText = false
-  rel = "alternate"
-  isHTML = false
-  noUgly = true
-  permalinkable = false
-
-[mediaTypes."application/rss+xml"]
-  suffixes = ["rss"]
-[outputFormats.RSS]
-  mediaType = "application/rss+xml"
-  baseName = "feed"
-  isPlainText = false
-  rel = "alternate"
-  isHTML = false
-  noUgly = true
-  permalinkable = false
 
 # Configure BlackFriday Markdown rendering.
 #   See: https://gohugo.io/getting-started/configuration/#configure-blackfriday
