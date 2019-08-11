@@ -1,0 +1,8 @@
+[submodule "themes/web-feeds"]
+	path = themes/web-feeds
+	url = https://github.com/jpawlowski/hugo-web-feeds.git
+	branch = master
+[submodule "themes/academic-jpawlowski"]
+	path = themes/academic-jpawlowski
+	url = https://github.com/jpawlowski/hugo-academic.git
+	branch = master
