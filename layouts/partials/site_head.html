@@ -136,32 +136,6 @@
   {{ end }}
   {{ end }}
 
-  {{ if not .IsHome }}
-
-  {{- with .OutputFormats.Get "ATOM" }}
-    {{ printf "<link href=%q rel=\"alternate\" type=%q title=\"Section (Atom/Modern feed format)\" />" .Permalink .MediaType | safeHTML }}
-  {{- end -}}
-  {{- with .OutputFormats.Get "RSS" }}
-    {{ printf "<link href=%q rel=\"alternate\" type=%q title=\"Section (RSS/Legacy feed format)\" />" .Permalink .MediaType | safeHTML }}
-  {{- end -}}
-  {{ range .Translations }}
-  {{- $lang := .Lang -}}
-  {{- $langstr := index site.Data.i18n.languages .Lang -}}
-  {{- with .OutputFormats.Get "ATOM" }}
-    {{ printf "<link href=%q rel=\"alternate\" type=%q hreflang=%q title=\"[%s] Section (Atom/Modern feed format)\" />" .Permalink .MediaType $lang $langstr | safeHTML }}
-  {{- end -}}
-  {{- with .OutputFormats.Get "RSS" }}
-    {{ printf "<link href=%q rel=\"alternate\" type=%q hreflang=%q title=\"[%s] Section (RSS/Legacy feed format)\" />" .Permalink .MediaType $lang $langstr | safeHTML }}
-  {{ end -}}
-  {{ end -}}
-
-  {{ end -}}
-
-  <link href="{{.Site.BaseURL}}/feed.atom" rel="alternate" type="application/atom+xml" title="All english contents (Atom/Modern feed format)" />
-  <link href="{{.Site.BaseURL}}/feed.rss" rel="alternate" type="application/rss+xml" title="All english contents (RSS/Legacy feed format)" />
-  <link href="{{.Site.BaseURL}}/de/feed.atom" rel="alternate" type="application/atom+xml" title="Alle deutschen Inhalte (Atom/Modernes Feed Format)" />
-  <link href="{{.Site.BaseURL}}/de/feed.rss" rel="alternate" type="application/rss+xml" title="Alle deutschen Inhalte (RSS/Altes Feed Format)" />
-
   <link rel="manifest" href="{{ "index.webmanifest" | relURL }}">
   <link rel="icon" type="image/png" href="{{ "img/icon-32.png" | relURL }}">
   <link rel="apple-touch-icon" type="image/png" href="{{ "img/icon-192.png" | relURL }}">
