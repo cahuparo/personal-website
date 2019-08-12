@@ -52,13 +52,6 @@ enableRobotsTXT = true
   taxonomy = [ "HTML", "RSS", "Atom", "JSONFeed" ]
   taxonomyTerm = [ "HTML", "RSS", "Atom", "JSONFeed" ]
 
-[mediaTypes."application/manifest+json"]
-  suffixes = ["webmanifest"]
-[outputFormats.WebAppManifest]
-  name = "WebAppManifest"
-  rel = "manifest"
-  mediaType = "application/manifest+json"
-
 # Configure BlackFriday Markdown rendering.
 #   See: https://gohugo.io/getting-started/configuration/#configure-blackfriday
 [blackfriday]
