@@ -151,6 +151,7 @@ feedSections = [ "post" ]
   icon = "img/icon-72.png"
   logo = "img/icon-512.png"
   sections = [ "post" ]
+  item_id = "uuid"
 
 # Configuration of publication pages.
 [publications]
