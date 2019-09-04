@@ -1,4 +1,7 @@
-resources/_gen/
-public/
+/package-lock.json
+/lambda
+node_modules/
+/resources/_gen/
+/public/
 .idea/
 
