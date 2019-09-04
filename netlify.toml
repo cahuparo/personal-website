@@ -1,5 +1,5 @@
 [build]
-  command = "(pwd; cd /opt/build/repo/.netlify/functions; npm install); hugo --gc --minify -b $URL"
+  command = "(cd .netlify/functions; npm install); hugo --gc --minify -b $URL"
   publish = "public"
   functions = ".netlify/functions"
 
@@ -11,10 +11,10 @@
   WEBSUB_HUB = "https://jpawlowski.superfeedr.com/"
 
 [context.deploy-preview]
-  command = "(pwd; cd /opt/build/repo/.netlify/functions; npm install); hugo --gc --minify --buildFuture -b $DEPLOY_PRIME_URL"
+  command = "(cd .netlify/functions; npm install); hugo --gc --minify --buildFuture -b $DEPLOY_PRIME_URL"
 
 [context.branch-deploy]
-  command = "(pwd; cd /opt/build/repo/.netlify/functions; npm install); hugo --gc --minify -b $DEPLOY_PRIME_URL"
+  command = "(cd .netlify/functions; npm install); hugo --gc --minify -b $DEPLOY_PRIME_URL"
 
 # [[headers]]
 #   for = "/img/*"
