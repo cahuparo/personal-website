@@ -19,7 +19,7 @@ function install_update () {
 
   # - Update Netlify.toml with required Hugo version
   if [ -f ./netlify.toml ]; then
-    version=$(sed -n 's/^min_version = //p' themes/academic/theme.toml)
+    version=$(sed -n 's/^min_version = //p' themes/academic-jpawlowski/theme.toml)
     sed -i '' -e "s/HUGO_VERSION = .*/HUGO_VERSION = $version/g" ./netlify.toml
   fi
 
@@ -35,7 +35,7 @@ echo -e "Source Themes Academic v$version\n"
 
 # Display available updates
 echo -e "Checking for updates...\n"
-cd themes/academic
+cd themes/academic-jpawlowski
 git fetch
 git log --pretty=oneline --abbrev-commit --decorate HEAD..origin/master
 cd ../../

@@ -5,14 +5,21 @@
   "main": "",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start:lambda": "netlify-lambda serve .netlify/functions/",
-    "build:lambda": "netlify-lambda build .netlify/functions/"
+    "prebuild": "npm run build:lambda",
+    "build": "hugo version; npm install; hugo --gc --minify",
+    "build:lambda": "npm list netlify-lambda; netlify-lambda build .netlify/functions/",
+    "start:hugo": "hugo version; hugo --i18n-warnings server",
+    "start:lambda": "npm list netlify-lambda; netlify-lambda serve .netlify/functions/"
   },
   "author": "",
   "license": "MIT",
   "dependencies": {
     "dotenv": "latest",
+    "hugo-bin": "^0.45.1",
     "netlify-lambda": "latest",
     "request": "latest"
+  },
+  "hugo-bin": {
+    "buildTags": "extended"
   }
 }
