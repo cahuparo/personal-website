@@ -1,7 +1,7 @@
 [build]
-  command = "npm install; hugo --gc --minify -b $URL"
+  command = "npm install; hugo --gc --minify -b $URL; npm run build:lambda"
   publish = "public"
-  functions = ".netlify/functions"
+  functions = ".netlify-compiled-functions"
 
 [build.environment]
   HUGO_VERSION = "0.57.2"
@@ -11,10 +11,10 @@
   WEBSUB_HUB = "https://jpawlowski.superfeedr.com/"
 
 [context.deploy-preview]
-  command = "npm install; hugo --gc --minify --buildFuture -b $DEPLOY_PRIME_URL"
+  command = "npm install; hugo --gc --minify --buildFuture -b $DEPLOY_PRIME_URL; npm run build:lambda"
 
 [context.branch-deploy]
-  command = "npm install; hugo --gc --minify -b $DEPLOY_PRIME_URL"
+  command = "npm install; hugo --gc --minify -b $DEPLOY_PRIME_URL; npm run build:lambda"
 
 # [[headers]]
 #   for = "/img/*"
