@@ -3,7 +3,7 @@ exports.handler = function(event, context, callback) {
   const { WEBSUB_HUB } = process.env;
   if (e.payload.context == "production") {
     console.log("[WebSub] preparing to ping " + WEBSUB_HUB)
-    const request = require('request');
+    const request = require('request')
     request.post(
       `WEBSUB_HUB?hub.mode=publish&hub.url=${e.payload.url}/*`,
       function (error, response, body){
