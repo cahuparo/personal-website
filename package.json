@@ -1,23 +1,38 @@
 {
   "name": "personal-website",
-  "version": "1.0.0",
+  "version": "0.0.1",
+  "private": true,
+  "keywords": [
+    "hugo",
+    "hug-web-feeds",
+    "netlify",
+    "websub"
+  ],
   "description": "",
-  "main": "",
+  "main": "n/a",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "prebuild": "npm run build:lambda",
-    "build": "hugo version; npm install; hugo --gc --minify",
-    "build:lambda": "npm list netlify-lambda; netlify-lambda build .netlify/functions/",
-    "start:hugo": "hugo version; hugo --i18n-warnings server",
-    "start:lambda": "npm list netlify-lambda; netlify-lambda serve .netlify/functions/"
+    "develop": "hugo version; hugo --i18n-warnings server",
+    "dev": "npm run develop",
+    "start": "npm run develop",
+    "serve": "hugo version; hugo server --disableFastRender",
+    "create": "hugo new",
+    "prebuild": "npm run clean && npm run build:lambda",
+    "build": "URL=$(if [[ -n \"$URL\" ]]; then echo \"-b $URL\"; fi); hugo version; hugo --gc --minify $URL",
+    "preview": "DEPLOY_PRIME_URL=$(if [[ -n \"$DEPLOY_PRIME_URL\" ]]; then echo \"-b $DEPLOY_PRIME_URL\"; fi); hugo version; hugo --gc --minify --buildFuture $DEPLOY_PRIME_URL",
+    "clean": "rimraf public .cache .netlify-compiled-functions",
+    "prebuild:lambda": "npm install",
+    "build:lambda": "netlify-lambda build .netlify/functions/",
+    "start:lambda": "netlify-lambda serve .netlify/functions/"
   },
-  "author": "",
+  "author": "Julian Pawlowski <julian.pawlowski@gmail.com>",
   "license": "MIT",
   "dependencies": {
     "dotenv": "latest",
     "hugo-bin": "^0.45.1",
     "netlify-lambda": "latest",
-    "request": "latest"
+    "request": "latest",
+    "rimraf": "latest"
   },
   "hugo-bin": {
     "buildTags": "extended"
