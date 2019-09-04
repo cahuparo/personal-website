@@ -2,8 +2,8 @@ exports.handler = function(event, context, callback) {
   var e = JSON.parse(event.body);
   const { WEBSUB_HUB } = process.env;
   if (e.payload.context == "production") {
+    console.log("[WebSub] preparing to ping " + WEBSUB_HUB)
     const request = require('request');
-    console.log(`[WebSub] preparing to ping WEBSUB_HUB`)
     request.post(
       `WEBSUB_HUB?hub.mode=publish&hub.url=${e.payload.url}/*`,
       function (error, response, body){
@@ -17,7 +17,7 @@ exports.handler = function(event, context, callback) {
       }
     );
   } else {
-    console.log("[WebSub] ping to WEBSUB_HUB suppressed in non-production context");
+    console.log("[WebSub] ping to " + WEBSUB_HUB + " suppressed in non-production context");
     callback(null, {statusCode: 200});
   }
 }
