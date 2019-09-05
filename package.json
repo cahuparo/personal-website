@@ -28,11 +28,11 @@
   "author": "Julian Pawlowski <julian.pawlowski@gmail.com>",
   "license": "MIT",
   "dependencies": {
-    "dotenv": "latest",
+    "dotenv": "^8.1.0",
     "hugo-bin": "^0.45.2",
-    "netlify-lambda": "latest",
-    "request": "latest",
-    "rimraf": "latest"
+    "netlify-lambda": "^1.6.3",
+    "request": "^2.88.0",
+    "rimraf": "^3.0.0"
   },
   "hugo-bin": {
     "buildTags": "extended"

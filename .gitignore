@@ -1,7 +1,5 @@
-/package-lock.json
 /.netlify/build/
 node_modules/
 /resources/_gen/
 /public/
 .idea/
-
