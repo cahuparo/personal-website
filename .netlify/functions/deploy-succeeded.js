@@ -2,6 +2,7 @@ require('dotenv').config()
 const request = require('request')
 const { WEBSUB_HUB } = process.env
 exports.handler = function(event, context, callback) {
+  console.log("[WebSub] body received: " + event.body)
   var e = JSON.parse(event.body)
   if (e.payload.context == "production") {
     console.log("[WebSub] preparing to ping " + WEBSUB_HUB)
