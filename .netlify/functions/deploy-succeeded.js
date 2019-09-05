@@ -2,7 +2,6 @@ require('dotenv').config()
 const request = require('request')
 const { WEBSUB_HUB } = process.env
 exports.handler = function(event, context, callback) {
-  console.log("[WebSub] body received: " + event.body)
   var e = JSON.parse(event.body)
   if (e.payload.context == "production") {
     console.log("[WebSub] preparing to ping " + WEBSUB_HUB)
@@ -19,7 +18,7 @@ exports.handler = function(event, context, callback) {
       }
     )
   } else {
-    console.log("[WebSub] ping to " + WEBSUB_HUB + " suppressed in non-production context")
+    console.log("[WebSub] ping to " + WEBSUB_HUB + " suppressed in " + e.payload.context + " context")
     callback(null, {statusCode: 200})
   }
 }
