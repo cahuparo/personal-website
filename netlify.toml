@@ -1,7 +1,7 @@
 [build]
   command = "npm run build"
   publish = "public"
-  functions = ".netlify-compiled-functions"
+  functions = ".netlify/build/functions"
 
 [build.environment]
 #  HUGO_VERSION = "0.57.2"
@@ -15,19 +15,6 @@
 
 [context.branch-deploy]
   command = "npm run preview"
-
-# [[headers]]
-#   for = "/img/*"
-#   [headers.values]
-#     Cache-Control = "public, s-max-age=604800"
-# [[headers]]
-#   for = "*.css"
-#   [headers.values]
-#     Cache-Control = "public, s-max-age=604800"
-# [[headers]]
-#   for = "*.js"
-#   [headers.values]
-#     Cache-Control = "public, s-max-age=604800"
 
 [[headers]]
   for = "*.webmanifest"

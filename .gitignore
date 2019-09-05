@@ -1,5 +1,5 @@
 /package-lock.json
-/.netlify-compiled-functions
+/.netlify/build/
 node_modules/
 /resources/_gen/
 /public/

@@ -7,7 +7,7 @@ subtitle = "My personal website and blog"
 #   Latest themes (may require updating Academic): https://sourcethemes.com/academic/themes/
 #   Browse built-in themes in `themes/academic/data/themes/`
 #   Browse user installed themes in `data/themes/`
-theme = "julian"
+theme = "custom"
 
 # Enable users to switch between day and night mode?
 day_night = true
