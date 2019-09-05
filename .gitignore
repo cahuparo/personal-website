@@ -1,5 +1,6 @@
-/.netlify/build/
+/.netlify/*
+!/.netlify/src/
 node_modules/
-/resources/_gen/
-/public/
+/resources/_gen/*
+/public/*
 .idea/
