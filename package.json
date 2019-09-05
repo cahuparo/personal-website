@@ -28,7 +28,7 @@
   "license": "MIT",
   "dependencies": {
     "dotenv": "latest",
-    "hugo-bin": "^0.45.1",
+    "hugo-bin": "^0.45.2",
     "netlify-lambda": "latest",
     "request": "latest",
     "rimraf": "latest"
