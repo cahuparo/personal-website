@@ -3,7 +3,7 @@ const request = require('request')
 const { WEBSUB_HUB } = process.env
 exports.handler = function(event, context, callback) {
   if (typeof WEBSUB_HUB == 'undefined') {
-    console.log("[WebSub] No WebSub Hub defined to ping")
+    console.log("[WebSub] Define WEBSUB_HUB environment variable to enable ping")
     process.env.SILENCE_EMPTY_LAMBDA_WARNING = true
     callback(null, {statusCode: 204})
   } else {
