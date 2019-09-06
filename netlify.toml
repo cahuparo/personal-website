@@ -1,5 +1,5 @@
 [build]
-  command = "npm run build; (cd themes/web-feeds; npm run build)"
+  command = "npm run build; (cd themes/web-feeds; npm install; npm run build)"
   publish = "public"
   functions = ".netlify/build/functions"
 
@@ -10,10 +10,10 @@
   HUGO_ENV = "production"
 
 [context.deploy-preview]
-  command = "npm run preview; (cd themes/web-feeds; npm run build)"
+  command = "npm run preview; (cd themes/web-feeds; npm install; npm run build)"
 
 [context.branch-deploy]
-  command = "npm run preview; (cd themes/web-feeds; npm run build)"
+  command = "npm run preview; (cd themes/web-feeds; npm install; npm run build)"
 
 [[headers]]
   for = "*.webmanifest"

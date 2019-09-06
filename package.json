@@ -20,7 +20,7 @@
     "dev": "npm run develop",
     "start": "npm run develop",
     "create": "hugo new",
-    "prebuild": "env; npm run clean",
+    "prebuild": "npm run clean",
     "build": "URL=$(if [ -n \"$URL\" ]; then echo \"-b $URL\"; fi); hugo version; hugo --gc --minify $URL",
     "preview": "npm run prebuild; DEPLOY_PRIME_URL=$(if [ -n \"$DEPLOY_PRIME_URL\" ]; then echo \"-b $DEPLOY_PRIME_URL\"; fi); hugo version; hugo --gc --minify --buildFuture $DEPLOY_PRIME_URL",
     "clean": "rimraf public .cache .netlify/functions .netlify/build/"
