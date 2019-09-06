@@ -1,38 +1,50 @@
 {
+  "//": [
+    "+++ README +++",
+    "This is a template package.json to begin with.",
+    "Copy to your Hugo project root folder and run",
+    "`npm install` to install dependencies."
+  ],
   "name": "personal-website",
   "version": "0.0.1",
   "private": true,
   "keywords": [
     "hugo",
-    "hug-web-feeds",
-    "netlify",
-    "websub"
+    "netlify"
   ],
   "description": "",
   "main": "n/a",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "serve": "hugo version; hugo server --disableFastRender",
     "develop": "hugo version; hugo --i18n-warnings server",
     "dev": "npm run develop",
     "start": "npm run develop",
-    "serve": "hugo version; hugo server --disableFastRender",
     "create": "hugo new",
     "prebuild": "npm run clean && npm run build:lambda",
     "build": "URL=$(if [ -n \"$URL\" ]; then echo \"-b $URL\"; fi); hugo version; hugo --gc --minify $URL",
     "preview": "npm run prebuild; DEPLOY_PRIME_URL=$(if [ -n \"$DEPLOY_PRIME_URL\" ]; then echo \"-b $DEPLOY_PRIME_URL\"; fi); hugo version; hugo --gc --minify --buildFuture $DEPLOY_PRIME_URL",
-    "clean": "rimraf public .cache .netlify/functions .netlify/build/",
-    "prebuild:lambda": "mkdir -p .netlify/functions; find themes -type d -name functions -path '*/.netlify/*' -mindepth 3 -maxdepth 3 -exec cp -rnv {} .netlify/ \\;; find .netlify -path '.netlify/src/*' -type d -name functions -mindepth 2 -maxdepth 2 -exec cp -rfv {} .netlify/ \\;",
-    "build:lambda": "netlify-lambda build .netlify/functions/",
-    "start:lambda": "netlify-lambda serve .netlify/functions/"
+    "clean": "rimraf public .cache .netlify/functions .netlify/build/"
+  },
+  "scriptsComments": {
+    "serve": "Run Hugo in lazy rendering mode during local development.",
+    "develop": "Run Hugo in fast rendering mode during local development.",
+    "dev": "Alias for `develop`.",
+    "start": "Alias for `develop`.",
+    "create": "Create a new Hugo page",
+    "prebuild": "Clean before every full build.",
+    "build": "Build Hugo production website with optional URL environment variable.",
+    "preview": "Build Hugo preview website with optional DEPLOY_PRIME_URL environment variable.",
+    "clean": "Cleanup temporal files."
   },
   "author": "Julian Pawlowski <julian.pawlowski@gmail.com>",
   "license": "MIT",
   "dependencies": {
-    "dotenv": "^8.1.0",
     "hugo-bin": "^0.45.2",
     "netlify-lambda": "^1.6.3",
-    "request": "^2.88.0",
     "rimraf": "^3.0.0"
+  },
+  "dependenciesComments": {
+    "hugo-bin": "This will set the Hugo version to be used. Note that the NPM package version is different from the actual Hugo binary version."
   },
   "hugo-bin": {
     "buildTags": "extended"

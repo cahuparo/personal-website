@@ -1,5 +1,5 @@
 [build]
-  command = "npm run build"
+  command = "npm run build; (cd themes/web-feeds; npm run build)"
   publish = "public"
   functions = ".netlify/build/functions"
 
@@ -8,13 +8,12 @@
 
 [context.production.environment]
   HUGO_ENV = "production"
-  WEBSUB_HUB = "https://jpawlowski.superfeedr.com/"
 
 [context.deploy-preview]
-  command = "npm run preview"
+  command = "npm run preview; (cd themes/web-feeds; npm run build)"
 
 [context.branch-deploy]
-  command = "npm run preview"
+  command = "npm run preview; (cd themes/web-feeds; npm run build)"
 
 [[headers]]
   for = "*.webmanifest"
