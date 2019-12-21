@@ -1,16 +1,19 @@
 subtitle = "Meine persönliche Website und Blog"
-address = "Büro: Elsenheimerstraße 61, München, Deutschland"
+address = {street = "Büro: Elsenheimerstr 61", city = "München", region = "Bayern", postcode = "80687", country = "Deutschland", country_code = "DE"}
 contact_links = [
   {icon = "twitter", icon_pack = "fab", name = "Direktnachricht an @Loredo", link = "https://twitter.com/loredo"},
   {icon = "telegram", icon_pack = "fab", name = "Textnachricht an @Loredo", link = "https://telegram.me/Loredo"},
 ]
 date_format = "02.01.2006"
 time_format = "15:04"
-zoom = 6
 
-# currently no translated pages can be edited due to broken link
-#   see https://github.com/gcushen/hugo-academic/issues/1232
-edit_page = {repo_url = "https://github.com/jpawlowski/personal-website", repo_branch = "master", editable = {docs = false, page = false, post = false}}
+edit_page = {repo_url = "https://github.com/jpawlowski/personal-website", content_dir = "content/de", repo_branch = "master", editable = {docs = true, page = true, post = true}}
+
+[map]
+  engine = 2
+  api_key = ""
+  zoom = 6
 
 [publications]
   date_format = "02.01.2006"
+  citation_style = "apa"

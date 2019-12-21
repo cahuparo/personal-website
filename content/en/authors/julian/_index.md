@@ -15,7 +15,7 @@ role: Digital Strategy & Innovation Advisor
 # Organizations/Affiliations
 organizations:
 - name: digatus it group AG
-  url: "https://digatus.de/"
+  url: "https://www.digatus.de/"
 
 # Short bio (displayed in user profile at end of posts)
 bio: "<span style='font-style:italic;'>About the author:</span>
@@ -75,7 +75,7 @@ email: "julian@pawlowski.me"
 
 I define myself as a visionary innovation and technology evangelist.
 
-As part of the [digatus](https://digatus.de/) team, I am offering sustainable support in IT governance, IT strategy, and the future corporate vision on CIO-like level. This is very much appreciated by customers who want to expand their business and improve their attractiveness for employees of the generations [Y](https://en.wikipedia.org/wiki/Millennials) and [Z](https://en.wikipedia.org/wiki/Generation_Z).
+As part of the [digatus](https://www.digatus.de/) team, I am offering sustainable support in IT governance, IT strategy, and the future corporate vision on CIO-like level. This is very much appreciated by customers who want to expand their business and improve their attractiveness for employees of the generations [Y](https://en.wikipedia.org/wiki/Millennials) and [Z](https://en.wikipedia.org/wiki/Generation_Z).
 
 I am a strategic business consultant for a modern workplace and for secure, cloud-driven identity management and infrastructure. With sleek concepts, I integrate bleeding-edge [Microsoft 365](https://www.microsoft.com/microsoft-365) cloud technologies with on-premises line of business applications of all sizes.
 

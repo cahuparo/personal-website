@@ -15,7 +15,7 @@ role: Digital Strategy & Innovation Advisor
 # Organizations/Affiliations
 organizations:
 - name: digatus it group AG
-  url: "https://digatus.de/"
+  url: "https://www.digatus.de/"
 
 # Short bio (displayed in user profile at end of posts)
 bio: "<span style='font-style:italic;'>Über den Autor:</span>
