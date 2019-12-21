@@ -4,6 +4,7 @@ share: false
 commentable: false
 editable: false
 disablefeed: true
+markup: blackfriday
 ---
 
 <p>Personal data (usually referred to just as "data" below) will only be processed by us to the extent necessary and for the purpose of providing a functional and user-friendly website, including its contents, and the services offered there.</p>
@@ -13,7 +14,7 @@ disablefeed: true
 <p>I. Information about us as controllers of your data<br>II. The rights of users and data subjects<br>III. Information about the data processing</p>
 <h3>I. Information about us as controllers of your data</h3>
 <p>The party responsible for this website (the "controller") for purposes of data protection law is:</p>
-<p>Julian Pawlowski<br>Pählstraße 6 B<br>81377 Munich<br>Germany</p>
+<p>Julian Pawlowski<br>Paehlstr. 6 B<br>81377 Munich<br>Germany</p>
 <p>Email: &#106;&#117;&#108;&#105;&#097;&#110;&#064;&#112;&#097;&#119;&#108;&#111;&#119;&#115;&#107;&#105;&#046;&#109;&#101;</p>
 <p>The controller's data protection officer is:</p>
 <p>Julian Pawlowski</p>

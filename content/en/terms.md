@@ -8,39 +8,34 @@ aliases:
 - /impress/
 - /terms/
 DisableFeed: true
+markup: blackfriday
 ---
 
 ### Information in accordance with Section 5 TMG
 
-<div itemscope itemtype="http://schema.org/Person">
-  <span itemprop="name">Julian Pawlowski</span><br />
-  <div itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
-    <span itemprop="streetAddress">Paehlstr. 6 B</span><br />
-    <span itemprop="addressLocality">Munich</span>,
-    <span itemprop="addressRegion">Bavaria</span><br />
-    <span itemprop="postalCode">81377</span><br />
-    <span itemprop="addressCountry">Germany</span><br />
-  </div>
+<div>
+  Julian Pawlowski<br>
+  Paehlstr. 6 B<br>
+  81377 Munich<br>
+  Germany<br>
+</div>
 
 ### Contact
 
-  Phone: <span itemprop="telephone">+&#052;&#057;&#032;&#056;&#057;&#032;&#052;&#050;&#048;&#057;&#053;&#053;&#051;&#055;&#051;</span><br />
-  Fax: <span itemprop="telephone">+&#052;&#057;&#032;&#051;&#050;&#032;&#050;&#050;&#057;&#057;&#056;&#054;&#054;&#050;&#051;&#049;&#050;</span><br />
-  Email: <span itemprop="email">&#106;&#117;&#108;&#105;&#097;&#110;&#064;&#112;&#097;&#119;&#108;&#111;&#119;&#115;&#107;&#105;&#046;&#109;&#101;</span>
+<div>
+  Phone: +&#052;&#057;&#032;&#056;&#057;&#032;&#052;&#050;&#048;&#057;&#053;&#053;&#051;&#055;&#051;<br>
+  Fax: +&#052;&#057;&#032;&#051;&#050;&#032;&#050;&#050;&#057;&#057;&#056;&#054;&#054;&#050;&#051;&#049;&#050;<br>
+  Email: &#106;&#117;&#108;&#105;&#097;&#110;&#064;&#112;&#097;&#119;&#108;&#111;&#119;&#115;&#107;&#105;&#046;&#109;&#101;
 </div>
 
 
 ### Responsible for the content according to Section 55 (2) RStV
 
-<div itemscope itemtype="http://schema.org/Person">
-  <span itemprop="name">Julian Pawlowski</span><br />
-  <div itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
-    <span itemprop="streetAddress">Paehlstr. 6 B</span><br />
-    <span itemprop="addressLocality">Munich</span>,
-    <span itemprop="addressRegion">Bavaria</span><br />
-    <span itemprop="postalCode">81377</span><br />
-    <span itemprop="addressCountry">Germany</span><br />
-  </div>
+<div>
+  Julian Pawlowski<br>
+  Paehlstr. 6 B<br>
+  81377 Munich<br>
+  Germany<br>
 </div>
 
 
@@ -48,7 +43,7 @@ DisableFeed: true
 
 This website is powered by the
 <a href="https://sourcethemes.com/academic/" target="_blank" rel="noopener">Academic theme</a> for
-<a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> and is hosted on <a href="https://www.netlify.com/" target="_blank" rel="noopener">Netlify</a>.<br />
+<a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> and is hosted on <a href="https://www.netlify.com/" target="_blank" rel="noopener">Netlify</a>.<br>
 Source code is maintained at [Github](https://github.com/jpawlowski/personal-website).
 
 

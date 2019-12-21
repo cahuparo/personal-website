@@ -1,5 +1,6 @@
 subtitle = "Meine persönliche Website und Blog"
-address = {street = "Büro: Elsenheimerstr 61", city = "München", region = "Bayern", postcode = "80687", country = "Deutschland", country_code = "DE"}
+address = {street = "<em>Büro:</em><br />Elsenheimerstraße 61", city = "München", region = "Bayern", postcode = "80687", country = "Deutschland", country_code = "DE"}
+directions = "Gehen Sie durch den Haupteingang und nutzen Sie den Aufzug zum digatus Büro im 4. Stock"
 contact_links = [
   {icon = "twitter", icon_pack = "fab", name = "Direktnachricht an @Loredo", link = "https://twitter.com/loredo"},
   {icon = "telegram", icon_pack = "fab", name = "Textnachricht an @Loredo", link = "https://telegram.me/Loredo"},
@@ -8,6 +9,13 @@ date_format = "02.01.2006"
 time_format = "15:04"
 
 edit_page = {repo_url = "https://github.com/jpawlowski/personal-website", content_dir = "content/de", repo_branch = "master", editable = {docs = true, page = true, post = true}}
+
+[address_formats]
+  en-us = {order = ['street', 'city', 'region', 'postcode', ], delimiters = [', ', ', ', ' ', '']}
+  en-gb = {order = ['street', 'city', 'region', 'postcode'], delimiters = [', ', ', ', ', ', '']}
+  de = {order = ['street', 'postcode', 'city'], delimiters = ['<br>', ' ', '']}
+  fr-fr = {order = ['street', 'postcode', 'city'], delimiters = ['<br>', ' ', '']}
+  zh = {order = ['postcode', 'region', 'city', 'street'], delimiters = [' ', ' ', ' ', '']}
 
 [map]
   engine = 2

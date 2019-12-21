@@ -19,6 +19,10 @@ lastmod: 2015-04-17T12:35:14+02:00
 featured: false
 draft: false
 
+#TODO remove this fix for ToC generation as soon as bug in Hugo 0.60+ was fixed
+# see https://sourcethemes.com/academic/docs/writing-markdown-latex/#table-of-contents
+markup: blackfriday
+
 # Featured image
 # To use, add an image named `featured.jpg/png` to your page's folder.
 # Focal points: Smart, Center, TopLeft, Top, TopRight, Left, Right, BottomLeft, Bottom, BottomRight.
