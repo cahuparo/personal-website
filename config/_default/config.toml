@@ -44,10 +44,14 @@ enableRobotsTXT = true
   uri = "https://julian.pawlowski.me/about/"
 
 [outputs]
-  home = [ "HTML", "JSONIndex", "RSS", "Atom", "JSONFeed", "WebAppManifest" ]
-  section = [ "HTML", "RSS", "Atom", "JSONFeed" ]
-  taxonomy = [ "HTML", "RSS", "Atom", "JSONFeed" ]
-  taxonomyTerm = [ "HTML", "RSS", "Atom", "JSONFeed" ]
+  # home = [ "HTML", "JSONIndex", "RSS", "Atom", "JSONFeed", "WebAppManifest" ]
+  # section = [ "HTML", "RSS", "Atom", "JSONFeed" ]
+  # taxonomy = [ "HTML", "RSS", "Atom", "JSONFeed" ]
+  # taxonomyTerm = [ "HTML", "RSS", "Atom", "JSONFeed" ]
+  home = [ "HTML", "JSONIndex", "RSS", "Atom", "WebAppManifest" ]
+  section = [ "HTML", "RSS", "Atom" ]
+  taxonomy = [ "HTML", "RSS", "Atom" ]
+  taxonomyTerm = [ "HTML", "RSS", "Atom" ]
 
 # Configure BlackFriday Markdown rendering.
 #   See: https://gohugo.io/getting-started/configuration/#configure-blackfriday
