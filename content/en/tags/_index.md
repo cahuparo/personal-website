@@ -1,5 +1,5 @@
 ---
-title: Liste of Tags
+title: List of Tags
 
 # View.
 #   1 = List
