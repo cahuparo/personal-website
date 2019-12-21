@@ -50,6 +50,8 @@ enableRobotsTXT = true
   # taxonomyTerm = [ "HTML", "RSS", "Atom", "JSONFeed" ]
   home = [ "HTML", "JSONIndex", "RSS", "Atom", "WebAppManifest" ]
   section = [ "HTML", "RSS", "Atom" ]
+  taxonomy = [ "HTML", "RSS", "Atom" ]
+  taxonomyTerm = [ "HTML", "RSS", "Atom" ]
 
 [markup]
   defaultMarkdownHandler = "goldmark"
