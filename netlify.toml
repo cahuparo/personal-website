@@ -4,7 +4,7 @@
   functions = ".netlify/build/functions"
 
 [build.environment]
-#  HUGO_VERSION = "0.57.2"
+#  HUGO_VERSION = "0.60.1"
 
 [context.production.environment]
   HUGO_ENV = "production"
