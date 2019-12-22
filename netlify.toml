@@ -4,17 +4,18 @@
   functions = ".netlify/build/functions"
 
 [build.environment]
-  HUGO_VERSION = "0.60.1"
+# Note: Hugo version control shifted to packages.json
+#  HUGO_VERSION = "0.60.1"
 
 [context.production.environment]
   HUGO_ENV = "production"
   NETLIFY_FUNCTIONS = ".netlify/build/functions"
 
 [context.deploy-preview]
-  command = "npm run preview"
+  command = "npm run preview && (cd themes/web-feeds; npm install && npm run build)"
 
 [context.branch-deploy]
-  command = "npm run preview"
+#  command = "npm run preview && (cd themes/web-feeds; npm install && npm run build)"
 
 [[headers]]
   for = "*.webmanifest"
