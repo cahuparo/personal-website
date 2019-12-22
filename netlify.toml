@@ -15,9 +15,7 @@
   command = "npm run preview && (cd themes/web-feeds; npm install && npm run build)"
 
 [context.branch-deploy]
-  HUGO_ENV = "production"
-  NETLIFY_FUNCTIONS = ".netlify/build/functions"
-#  command = "npm run preview && (cd themes/web-feeds; npm install && npm run build)"
+  command = "npm run preview && (cd themes/web-feeds; npm install && npm run build)"
 
 [[headers]]
   for = "*.webmanifest"
