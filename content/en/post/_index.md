@@ -1,5 +1,6 @@
 ---
 title: Blog Posts
+disable_feed: true
 
 # View.
 #   1 = List

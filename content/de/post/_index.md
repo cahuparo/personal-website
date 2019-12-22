@@ -1,5 +1,6 @@
 ---
 title: Blogbeiträge
+disable_feed: true
 
 # View.
 #   1 = List

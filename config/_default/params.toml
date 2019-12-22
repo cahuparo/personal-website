@@ -272,8 +272,6 @@ plugins_js  = []
 # Also see RFC3987 and RFC2141
 id = "urn:uuid:874a1312-edd1-406a-8fdd-b8ee6a29e6d1"
 
-feedSections = [ "post" ]
-
 [feed]
   icon = "img/icon-72.png"
   logo = "img/icon-512.png"
