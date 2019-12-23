@@ -11,7 +11,7 @@ tags:
 categories: [ "Personal" ]
 date: 2019-08-03T10:57:47+02:00
 lastmod: 2019-08-03T10:57:47+02:00
-featured: true
+featured: false
 draft: false
 
 # Featured image
