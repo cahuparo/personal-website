@@ -10,7 +10,7 @@ tags:
 - Office 365
 - Azure AD
 - Licensing
-- License Managements
+- License Management
 - Identity Management
 - Access Management
 - IdM
