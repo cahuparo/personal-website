@@ -300,7 +300,7 @@ With the introduction of an E5 package variant in 2016, Microsoft renamed their 
 
 At that time, Microsoft introduced new Advanced Threat Protection features in Windows Defender and as cloud security topics started to become important for a broader enterprise audience, it seemed legit to point out the additional security benefits that you would not get from an EMS package.
 
-It might even have been moderately too early for such package. Increased endpoint protection requirements on mobile clients because they were no longer secured by network firewalls and stuff was something that wasn't on everyones list just yet.
+It might even have been moderately too early for such package. Increased endpoint protection requirements on mobile clients, because they were no longer secured by network firewalls and stuff, was something that wasn't on everyones list just yet.
 
 **Microsoft 365 (M365)**
 
