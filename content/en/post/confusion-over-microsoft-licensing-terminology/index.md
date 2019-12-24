@@ -10,6 +10,11 @@ tags:
 - Office 365
 - Azure AD
 - Licensing
+- License Managements
+- Identity Management
+- Access Management
+- IdM
+- IAM
 categories: [ "IT-Operations" ]
 date: 2019-12-23T14:21:49+01:00
 lastmod: 2019-12-24T11:21:49+01:00
