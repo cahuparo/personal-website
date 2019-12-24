@@ -170,6 +170,8 @@ A product is _defined_, _designed_ and _formed_ precisely to support the whole l
 
 For most of the services, Microsoft is selling different _product variants_ that will provide different feature sets to you, depending on how much you are willing to spend. Are you connecting the dots to the service plans from above already? Great, this is what they have been developed for in the first place.
 
+Sales people might often use the term _Stock Keeping Unit_ (SKU) which simply refers to a particular product variant. It has actually also become a technical term because during implementation of the product variant as a product license with service plans, Microsoft programmers had make use of that same term to describe what they are implementing. This is why a lot of tech discussions on the internet will also use SKU but in fact they are talking about a service plan. Sometimes for tech people SKU is even a unique identifier of the service plan, but most of the time they won't tell you which identifer exactly (remember there is a textual identifier and a UUID?). You always have to imply this from the context and this is why doing research on the internet about Microsoft licenses is so exhausting.
+
 Reasonably often, there is a direct 1-to-1 relationship between a product variant and a service plan. Both then actually mean the identical thing, just one is the non-technical term, the other is the technical term.
 
 Following our imaginary example about a service plan structure from above, this looks extremely similar for a product and its variants:
