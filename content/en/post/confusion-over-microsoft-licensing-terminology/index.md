@@ -129,7 +129,9 @@ SERVICE NAME
 
 A practical example for this would be the Azure Active Directory service: There is a basic plan free of charge, and there are two paid premium plans.
 
-Another pattern I identified is that when it comes to some enhanced security features, there is often a Plan 1 for monitor-only or manual control/operation. Then there is a Plan 2 which will allow you to automate stuff, provide active help for end users, or bring some intelligence into the game and provide useful benefits for your IT governance. This is not only valid for Azure Active Directory, but also for example also _Cloud App Security_ (CAS) and _Microsoft Information Protection_ (MIP, in progress to be renamed from Azure Information Protection, AIP).
+What you can note from this particular example as well is, that the free plan does not start with a name Plan 1, the free plan is simply called Basic. For other services however, even the free service plan starts with a name of Plan 1. It is sometimes inconsistently named, in particular when looking behind the marketing facade. What you can see there is that service plans are created very early in the process, and as they got an internal name that – due to technical limitations – can not be changed thereafter anymore, it is pretty obvious that the selling aspect is still undefined at that point in time. Naturally there is a display name that can be changed later on to better fit into the marketing machinery and this display name quite often is completely different. Indeed, it is very fascinating to sneak around in the technical details because there is so much to make conclusions from it. Somebody familiar with the matter might ask "Why are they using a fixed name, why are they not using a random universally unique identifier ([UUID](https://en.wikipedia.org/wiki/Universally_unique_identifier)) like everyone else does?". In fact, this is what Microsoft has started to do now in parallel for newer implementations. However, it seems they can't get rid of the textual identifiers quite soon and probably never will, so they will just stay in parallel for compatibility reasons.
+
+Another pattern I identified is that when it comes to some enhanced security features, there is often a Plan 1 for monitor-only or manual control/operation. Then there is a Plan 2 which will allow you to automate stuff, provide active help for end users, or bring some intelligence into the game and provide useful benefits for your IT governance. This is not only valid for Azure Active Directory, but for example also _Cloud App Security_ (CAS) and _Microsoft Information Protection_ (MIP, in progress to be renamed from Azure Information Protection, AIP).
 
 **Dependant service plans**
 
@@ -141,9 +143,9 @@ In some cases, there can also be dependant service plans that seem to be totally
 
 **Service plan conflicts**
 
-Depending on how a particular service works, there can also be conflicting service plans for it. [Typical examples](https://docs.microsoft.com/azure/active-directory/users-groups-roles/licensing-groups-resolve-problems#conflicting-service-plans) are service plans for SharePoint Online and Exchange Online. These services are unable to merge multiple service plans into a superset of features they ultimately apply to the end user, especially not when there is multiple product licenses for the same user.
+Depending on how a particular service works, there can also be conflicting service plans for it. [Typical examples](https://docs.microsoft.com/azure/active-directory/users-groups-roles/licensing-groups-resolve-problems#conflicting-service-plans) are service plans for SharePoint Online and Exchange Online. These services are unable to merge multiple service plans into a superset of features they ultimately apply to the end user, especially not when there is multiple product licenses involved and many include a service plan for the same service.
 
-This can happen if you apply multiple licenses to the same user. For example, if you are dealing with Project Online or Dynamics 365 licenses, they will bring their own service plan for SharePoint Online Plan 2. This is to ensure users have the full feature set of SharePoint Online available in order to work with the Dynamics platform, even though they otherwise might only have a very basic license like for frontline workers (F1) or even no other license at all. In that case, the inferior SharePoint Online service plan needs to be disabled first so that the full service plan can be enabled.
+This can happen if you assign multiple licenses to the same user. For example, if you are dealing with Project Online or Dynamics 365 licenses, they will bring their own service plan for SharePoint Online Plan 2. This is to ensure users have the full feature set of SharePoint Online available in order to work with the Dynamics platform, even though they otherwise might only have a very basic license like for frontline workers (F1) or even no other license at all. In that case, the inferior SharePoint Online service plan needs to be disabled first so that the full service plan can be enabled.
 
 For those interested, there is a list available from Microsoft [here](https://docs.microsoft.com/azure/active-directory/users-groups-roles/licensing-service-plan-reference#service-plans-that-cannot-be-assigned-at-the-same-time).
 
@@ -360,9 +362,9 @@ PACKAGE NAME, variant 2
 PRODUCT NAME, variant 1
   │
   └─── PRODUCT/SERVICE NAME, Plan 1
-  │       - Feature 1
-  │       - Feature 2
-  │       - Feature 3
+          - Feature 1
+          - Feature 2
+          - Feature 3
 
 PRODUCT NAME, variant 2
   │
@@ -372,13 +374,13 @@ PRODUCT NAME, variant 2
   │       - Feature 3
   │
   └─── PRODUCT/SERVICE NAME, Plan 2
-  │       - Feature 1
-  │       - Feature 2
-  │       - Feature 3
+          - Feature 1
+          - Feature 2
+          - Feature 3
 ````
 
 From a technical standpoint, the flattened structure makes a lot of sense. Well, technicians wish they could even get rid of the topmost layer, representing the product license, and just assign service plans directly to their users. That would really be helpful to easily manage user provisioning sometimes but of course, it makes a little sense to stay with what you had essentially bought in the first place.
 
-Eventually, the product license (don't say plan…) is what you need to assign to a user first to control what service plans that are in that license being enabled for the user. It is a trivial task unless you start using more services than what is included into a certain license, and when you need to optimise your costs. Assigning licenses to groups and working with group memberships instead helps for many cases (see GBL, [group-based licensing](https://docs.microsoft.com/en-us/azure/active-directory/fundamentals/active-directory-licensing-whatis-azure-portal)). Besides the fact that for this feature, you (of course) need to have an Azure AD Premium license, it is not the answer of everything. Also mid-sized and maybe even small organisations have an extended need to properly govern their licenses, e.g. to integrate into corporate Identity Management (IdM) systems and automate the whole life cycle management of user identities. Making the right use of GBL and transferring it into the right architecture to make the orchestral sound great is not an easy task at all.
+Eventually, the product license (don't say plan… right?) is what you need to assign to a user first to control what service plans that are in that license being enabled for the user. It is a trivial task unless you start using more services than what is included into a certain license, and when you need to optimise your costs. Assigning licenses to groups and working with group memberships instead helps for many cases (see GBL, [group-based licensing](https://docs.microsoft.com/en-us/azure/active-directory/fundamentals/active-directory-licensing-whatis-azure-portal)). Besides the fact that for this feature, you (of course) need to have an Azure AD Premium license, it is not the answer of everything. Also mid-sized and maybe even small organisations have an extended need to properly govern their licenses, e.g. to integrate into corporate Identity Management (IdM) systems and automate the whole lifecycle management of user identities. Making the right use of GBL and transferring it into the right architecture to make the orchestral sound great is not an easy task at all.
 
 Good luck the next time you come into contact with Microsoft online licenses.
