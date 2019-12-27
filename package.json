@@ -16,7 +16,7 @@
   "main": "n/a",
   "scripts": {
     "serve": "hugo version; hugo server --disableFastRender",
-    "develop": "hugo version; hugo --i18n-warnings server",
+    "develop": "hugo version; hugo --i18n-warnings --buildFuture --buildDrafts server",
     "dev": "npm run develop",
     "start": "npm run develop",
     "create": "hugo new",
