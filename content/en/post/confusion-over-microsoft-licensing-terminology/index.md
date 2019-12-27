@@ -17,7 +17,7 @@ tags:
 - IAM
 categories: [ "IT-Operations" ]
 date: 2019-12-23T14:21:49+01:00
-lastmod: 2019-12-24T11:21:49+01:00
+lastmod: 2019-12-27T12:21:49+01:00
 featured: true
 draft: false
 
@@ -150,7 +150,7 @@ In some cases, there can also be dependant service plans that seem to be totally
 
 Depending on how a particular service works, there can also be conflicting service plans for it. [Typical examples](https://docs.microsoft.com/azure/active-directory/users-groups-roles/licensing-groups-resolve-problems#conflicting-service-plans) are service plans for SharePoint Online and Exchange Online. These services are unable to merge multiple service plans into a superset of features they ultimately apply to the end user, especially not when there is multiple product licenses involved and many include a service plan for the same service.
 
-This can happen if you assign multiple licenses to the same user. For example, if you are dealing with Project Online or Dynamics 365 licenses, they will bring their own service plan for SharePoint Online Plan 2. This is to ensure users have the full feature set of SharePoint Online available in order to work with the Dynamics platform, even though they otherwise might only have a very basic license like for frontline workers (F1) or even no other license at all. In that case, the inferior SharePoint Online service plan needs to be disabled first so that the full service plan can be enabled.
+This can happen if you assign multiple licenses to the same user. For example, if you are dealing with Project Online or Dynamics 365 licenses, they will bring their own service plan for SharePoint Online Plan 2. This is to ensure users have the full feature set of SharePoint Online available in order to work with the Dynamics platform, even though they otherwise might only have a very basic license like for firstline workers (F1) or even no other license at all. In that case, the inferior SharePoint Online service plan needs to be disabled first so that the full service plan can be enabled.
 
 For those interested, there is a list available from Microsoft [here](https://docs.microsoft.com/azure/active-directory/users-groups-roles/licensing-service-plan-reference#service-plans-that-cannot-be-assigned-at-the-same-time).
 
@@ -279,13 +279,19 @@ Needless to say, when Microsoft was first designing their new online services al
 
 However, these days Microsoft has removed _Enterprise_ from the package names because essentially this is what the _E_ in _E1_ or _E2_ already represents. In fact, the E-_x_ notation became so popular and well known that you can detect this on a whole lot of other packages that Microsoft offers for enterprise customers, not just Office 365. We also got other variants for Small, Medium, and Mid-sized organisations. As those companies typically know they are not enterprise and often don't even want to be seen as such, product variants for those companies seem to avoid to include the term "enterprise", even the E-_x_ notation. Currently, all non-enterprise offerings are simplified to just be named _Business_, likely because all the choices between small, medium, and mid-sized was moderately overwhelming for companies that simply don't have to deal with their IT that much.
 
-Wait, did I just say _Office 365 E**2**_? You got me; this package variant is not for sale anymore and got replaced by _Office 365 E3_. As you might have guessed, it is the same situation for _Office 365 E4_ which got replaced by _Office 365 E5_ some time ago. Now you even know the secret why you might have thought that Microsoft can't count from 1 to 5… makes sense now? And finally you also know why there is packages like _Enterprise Mobility & Security E3_ and _Enterprise Mobilits & Security E5_, or _Microsoft 365 E3_ and _Microsoft 365 E5_, but no E1, E2, E4 variants at all: It is simply coming from the success of the Office 365 package variants where it all started with. You can't blame the marketing guys to just continue with what seems familiar to a lot of people already, can you?
+Wait, did I just say _Office 365 E**2**_? You got me; this package variant is not for sale anymore and got replaced by _Office 365 E3_. As you might have guessed, it is the same situation for _Office 365 E4_ which got replaced by _Office 365 E5_ some time ago. Now you even know the secret why you might have thought that Microsoft can't count from 1 to 5… makes sense now? And finally you also know why there are packages like _Enterprise Mobility & Security E3_ and _Enterprise Mobilits & Security E5_, or _Microsoft 365 E3_ and _Microsoft 365 E5_, but no E1, E2, E4 variants at all: It is simply coming from the success of the Office 365 package variants where it all started with. You can't blame the marketing guys to just continue with what seems familiar to a lot of people already, can you?
 
-Did you already notice that for newer package variants, there is also the letter _F_ involved instead of _E_? F is for frontline workers, meaning it is a bundle of services with their lowest feature set. What you will see here is that service plans that come with such package variant will often include the term _kiosk_ (or even just _K1_) which expresses that the service can only be used in a web browser. Fortunately Microsoft has realized that frontline workers often are not using a desktop PC anymore but are equipped with mobile devices like smartphones or even tablets. Restricting access to a web browser only for these devices is quite inconvenient so access options were now extended to Microsofts mobile apps for those kind of package variants. The term _kiosk_ now seems a bit outdated but you might still face it here and there, knowing that it is not just a kiosk desktop computer in the lobby anymore.
+Did you already notice that for newer package variants, there is also the letter _F_ involved instead of _E_? F is for firstline workers, meaning it is a bundle of services with their lowest feature set. What you will see here is that service plans that come with such package variant will often include the term _deskless_ or _kiosk_ (or even sjust _K1_) which expresses that the service can only be used in a web browser. Fortunately Microsoft has realized that firstline workers often are not using a desktop PC anymore but are equipped with mobile devices like smartphones or even tablets. Restricting access to a web browser only for these devices is quite inconvenient so access options were now extended to Microsoft's mobile apps for those kind of package variants. The term _kiosk_ now seems a bit outdated but you might still face it here and there, knowing that it is not just a kiosk desktop computer in the lobby anymore.
 
 #### What is the connection between all the different package families?
 
 If you wonder how Microsoft had come up with all the different packages and what their (potential) history was, I am now sharing some of my own thoughts. If you are doing research on the internet and any of the legacy package names will cross your way, you should be able to put it in better perspective. (This might be the part now where I mainly do glass balling… you have been warned.)
+
+**Business Productivity Online Suite (BPOS) - _DEPRECATED_**
+
+There was a predecessor of Office 365: The _Business Productivity Online Suite_ was the very first approach to provide Software-as-a-Service and was based on the 2007 product versions of Exchange Server and SharePoint Server. Looking back to it from today, this was more like a field study to learn about the missing peaces and gather feedback from larger enterprise customers.
+
+Surprisingly, the abbreviation _BPOS_ is still present in a few areas so when it appears to you somewhere, you know where it comes from.
 
 **Office 365 (O365)**
 
@@ -299,7 +305,7 @@ Also, both buzzwords _Mobility_ and _Security_ likewise are extremely important 
 
 **Enterprise Cloud Suite (ECS) - _DEPRECATED_**
 
-As many enterprise customers were buying both packages _Office 365_ and _Enterprise Mobility & Security_ already, they have asked a lot about the still missing piece of Windows 10 being an integrated part of Microsofts cloud. So in 2015, Microsoft introduced a new package consisting of _Office 365 E3_ + _Enterprise Mobility & Security E3_ + _Windows 10 Enterprise E3_. They named it _Enterprise Cloud Suite_. Adding the enterprise edition of Windows to this was mainly about license optimisation at that time so the benefits were mainly by financials or had improved IT operational aspects.
+As many enterprise customers were buying both packages _Office 365_ and _Enterprise Mobility & Security_ already, they have asked a lot about the still missing piece of Windows 10 being an integrated part of Microsoft's cloud. So in 2015, Microsoft introduced a new package consisting of _Office 365 E3_ + _Enterprise Mobility & Security E3_ + _Windows 10 Enterprise E3_. They named it _Enterprise Cloud Suite_. Adding the enterprise edition of Windows to this was mainly about license optimisation at that time so the benefits were mainly by financials or had improved IT operational aspects.
 
 **Secure Productive Enterprise (SPE) - _DEPRECATED_**
 
